@@ -1,0 +1,57 @@
+body{
+    font-size:16px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #f1a054;
+}
+.navbar{
+    background-color: #a84905;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(48, 16, 2);
+}
+.brand-logo {
+    height: 80px; 
+    width: auto;  
+  }
+  
+.btn{
+    color: #492003;
+    background-color: #c56f1f;
+    outline-color:#5f2b06;
+    border-color: #c56f1f;
+    border-width: 2px;
+    border-style: solid;
+}
+.dropdown-menu{
+    background-color: #a84905;
+    border: none;
+}
+.dropdown-item{
+    color: #000000;
+}
+.dropdown-item:hover{
+    color: #000000;
+}
+.dropdown-item:hover{
+    background-color: #eb9648;
+}
+.btn:hover{
+    outline-color: #5f2b06;
+    border-color: #5f2b06;
+    border-style: solid;
+    background-color: #5f2b06;
+    color: white;
+}
+.parrafo{
+    color: rgb(10, 10, 43);
+}
+li{
+    list-style: none;
+}
+ul{
+    list-style: none;
+}
