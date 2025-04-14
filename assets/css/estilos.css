@@ -1,11 +1,11 @@
 body{
     font-size:16px;
-    font-family: Arial, sans-serif;
-    color: #000000;
-    background-color: #f1a054;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important ; 
+    color: #f7f3f3;
+    background-color: #c26945;
 }
 .navbar{
-    background-color: #a84905;
+    background-color: #983602;
 }
 h1{
     font-size: 2.5rem;
@@ -54,4 +54,13 @@ li{
 }
 ul{
     list-style: none;
+}
+.estilo-footer{
+    background-color: #f7f3f3;
+
+}
+.estilo-linea{
+    border: 1px solid #431701; 
+    width: 100%; 
+    margin: 20px 0;
 }
