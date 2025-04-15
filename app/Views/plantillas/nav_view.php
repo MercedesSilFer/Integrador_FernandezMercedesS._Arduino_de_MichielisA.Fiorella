@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-lg"> 
+<nav class="navbar sticky-top navbar-expand-lg"> 
   <div class="container-fluid">
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
       aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +8,7 @@
 
     <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
       <div class="row w-100 align-items-center">
-      <div class="col-2 text-center">
+        <div class="col-2 text-center">
           <img class="brand-logo" src="<?php echo base_url('assets/img/kurundu-logo.png'); ?>" alt="Kurundu Logo">
         </div>
         <div class="col-4">
@@ -17,11 +16,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<?php echo base_url();?>">Inicio</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <?php echo "Catalogo"; ?>
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="catalogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo "Catalogo"; ?>
               </a>
-              <ul class="dropdown-menu catalogo-menu">
+              <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
                 <li><a class="dropdown-item catalogo-item" href="#"><?php echo "Femenino"; ?></a></li>
                 <li><a class="dropdown-item catalogo-item" href="#"><?php echo "Masculino"; ?></a></li>
                 <li><a class="dropdown-item catalogo-item" href="#"><?php echo "Otros"; ?></a></li>
@@ -42,18 +41,17 @@
             <button class="btn" type="submit"><?php echo "Buscar"; ?></button>
           </form>
         </div>
-        <div class="col-3 justify-content-center">
-        <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="col-3 d-flex justify-content-center align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?php echo "Acceder"; ?>
-              </a>
-              <ul class="dropdown-menu acceso-menu">
-                <li><a class="dropdown-item acceso-item" href="#">Iniciar sesión</a></li>
-                <li><a class="dropdown-item acceso-item" href="#"><?php echo "Registrarse"; ?></a></li>
-              </ul>
-            </li>
+            </a>
+            <ul class="dropdown-menu acceso-menu text-center">
+              <li><a class="dropdown-item acceso-item" href="#">Iniciar sesión</a></li>
+              <li><a class="dropdown-item acceso-item" href="#"><?php echo "Registrarse"; ?></a></li>
+            </ul>
+          </li>
         </div>
-
       </div>
     </div>
   </div>

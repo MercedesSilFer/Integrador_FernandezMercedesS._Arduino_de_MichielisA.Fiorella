@@ -18,7 +18,7 @@ class Home extends BaseController
     public function contacto()
     {
         $data['titulo']= "Contacto";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Contacto_view').view('plantillas/footer_view');
     }
 }
 
