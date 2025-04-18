@@ -43,27 +43,27 @@ h1{
     margin-top: 0;
   }
   
-  .dropdown-menu {
+.dropdown-menu {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
   
-  .catalogo-menu {
+.catalogo-menu {
     padding: 0.5rem 0;
   }
   
-  .catalogo-item, .nav-link {
+.catalogo-item, .nav-link {
     padding: 0.5rem 1.5rem;
     transition: all 0.2s ease;
   }
   
-  .catalogo-item:hover, .nav-link:hover {
+.catalogo-item:hover, .nav-link:hover {
     background-color: #e77c463a;
     color: #000;
   }
 
-  .contacto{
+.contacto{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +75,7 @@ h1{
     width: 100%;    
     display: flex;
   }
-  .contacto-form{
+.contacto-form{
     padding: 20px;
     width: 55%;
     height: 40%;
@@ -88,25 +88,51 @@ h1{
     box-shadow: -8px 6px 10px #5f5f5f56;
   }
 
-  label{
+label{
     display: flex;
     flex-direction: column;
   }
   
-  .input-styles {
+.input-styles {
     width: 270px;
     height: 30px;
     border: 2px solid #ddd2d2;
     background-color: #e9e3e3;
     border-radius: 10px;
   }
-  .input-styles-text{
+.input-styles-text{
     border: 2px solid #ddd2d2;
     background-color: #e9e3e3;
     border-radius: 10px;
     width: 270px;
   }
   
+.estilo-figcaption{
+    color: #60290d
+  }
+  .separador {
+    padding-top: 95px;
+    margin-top: -95px;
+}
+.separador2 {
+    margin-top: 120px;
+  }
+  .estilo-tex-comer{
+    color: #60290d;
+    font-size: 14px;
+  }
+
+  .estilo-a{
+    color: #60290d;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .estilo-a:hover{
+    color: #60290d;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.5;
+  }
   /* diseño responsivo */
   @media (max-width: 768px) {
     .contacto {

@@ -56,7 +56,7 @@
           <a class="nav-link dropdown-toggle text-start" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Acceder</a>
             <ul class="dropdown-menu acceso-menu text-center">
-              <li><a class="dropdown-item nav-link" href="#">Iniciar sesión</a></li>
+              <li><a class="dropdown-item nav-link" href="#">Mi cuenta </a></li>
               <li><a class="dropdown-item nav-link" href="#">Registrarse</a></li>
             </ul>
           </li>
