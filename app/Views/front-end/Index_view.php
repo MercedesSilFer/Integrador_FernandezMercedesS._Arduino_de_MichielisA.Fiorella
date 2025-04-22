@@ -1,52 +1,48 @@
-<div class="container-fluid px-0">
-    <!-- Carousel principal-->
-    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicadores -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<div class="container-fluid mt-3"> 
+    <div class="row align-items-center">
+        <div class="col">            
+            <h1>Explora nuestro mundo</h1>
+            <p>Descubre la artesanía única de Kurundú cueros y sumérgete en la belleza del cuero genuino.</p>
+            <p></p>
+            <p><button class="btn btn-primary">Ver catálogo</button></p>
         </div>
-        
-        <!-- Slides -->
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="position-relative h-100">
-                    <!-- Solo una imagen por slide -->
-                    <img src="<?php echo base_url('assets/img/Imagen1carousel.jpg'); ?>" 
-                         class="d-block w-100 img-fluid carousel-image" 
-                         alt="Descripción detallada del producto 1">
+        <div class="col text-center">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="<?php echo base_url('assets/img/fotocarousel4.jpg'); ?>" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Accesorios Atemporales!!</h5>
+                    <p>La mejor calidad en carteras y mochilas de cuero</p>
+                    </div>
+                </div>
+               
+                
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="<?php echo base_url('assets/img/fotocarousel5.jpg'); ?>" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Diseños exclusivos!!</h5>
+                    <p>Descubre la autenticidad del cuero artesanal en cada detalle.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo base_url('assets/img/fotocarousel1.jpg'); ?>" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Cápsula Kurundú color </h5>
+                    <p>Exploramos el color en accesorios que tonos intensos!</p>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="position-relative h-100">
-                    <img src="<?php echo base_url('assets/img/Imagen2carousel.jpg'); ?>" 
-                         class="d-block w-100 img-fluid carousel-image" 
-                         alt="Descripción detallada del producto 2">
-                </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="position-relative h-100">
-                    <img src="<?php echo base_url('assets/img/Imagen3Carousel.jpg'); ?>" 
-                         class="d-block w-100 img-fluid carousel-image" 
-                         alt="Descripción detallada del producto 3">
-                </div>
-            </div>
-        </div>
-        
-        <!-- Controles de navegación con etiquetas ARIA -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
+            <span class="visually-hidden">Next</span>
+            </button>
+             </div>
+        </div>
     </div>
 </div>
