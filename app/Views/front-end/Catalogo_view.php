@@ -15,6 +15,9 @@
     <li class="nav-item">
         <a class="nav-link" href="#">Mochilas</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Riñoneras</a>
+    </li>
     </ul>
     
 
@@ -125,7 +128,7 @@
         <div class="card">
             <img src="<?php echo base_url('assets/img/mochilanatural.jpg');?>" alt="" style="width:100%">
             <h1>Mochila</h1>
-            <p class="price">$90.000,00</p>
+            <p class="price">$125.000,00</p>
             <p></p>
             <p><button>Agregar al carrito</button></p>
         </div>
@@ -134,12 +137,52 @@
         <div class="card">
             <img src="<?php echo base_url('assets/img/mochilanegra.jpg');?>" alt="" style="width:100%">
             <h1>Mochila</h1>
-            <p class="price">$90.000,00</p>
+            <p class="price">$125.000,00</p>
             <p></p>
             <p><button>Agregar al carrito</button></p>
         </div>
         </div>
   </div>
 </div>
-
+<div class="container text-center">
+    <h3>Riñoneras</h3>
+    <div class="row align-items-center">
+        <div class="col">
+        <div class="card">
+            <img src="<?php echo base_url('assets/img/rinonerametalazul.jpg');?>" alt="" style="width:100%">
+            <h1>Riñonera</h1>
+            <p class="price">$50.000,00</p>
+            <p></p>
+            <p><button>Agregar al carrito</button></p>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card">
+            <img src="<?php echo base_url('assets/img/riñoneramarronchocolate.jpg');?>" alt="" style="width:100%">
+            <h1>Riñonera</h1>
+            <p class="price">$50.000,00</p>
+            <p></p>
+            <p><button>Agregar al carrito</button></p>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card">
+            <img src="<?php echo base_url('assets/img/rinoneranatural.jpg');?>" alt="" style="width:100%">
+            <h1>Riñonera</h1>
+            <p class="price">$50.000,00</p>
+            <p></p>
+            <p><button>Agregar al carrito</button></p>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card">
+            <img src="<?php echo base_url('assets/img/rinonerametal.jpg');?>" alt="" style="width:100%">
+            <h1>Riñonera</h1>
+            <p class="price">$50.000,00</p>
+            <p></p>
+            <p><button>Agregar al carrito</button></p>
+        </div>
+        </div>
+    </div>
+</div>
 </section>

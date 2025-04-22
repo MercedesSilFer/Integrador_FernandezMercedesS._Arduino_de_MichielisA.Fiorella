@@ -39,7 +39,7 @@
           <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
             <li><a class="dropdown-item catalogo-item" href="#">Tote bags</a></li>
             <li><a class="dropdown-item catalogo-item" href="#">Carteras</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Cintos</a></li>
+            <li><a class="dropdown-item catalogo-item" href="#">Riñoneras</a></li>
             <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
             <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
           </ul>
