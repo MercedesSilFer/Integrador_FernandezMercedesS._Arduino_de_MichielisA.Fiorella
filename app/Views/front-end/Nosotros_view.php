@@ -7,12 +7,12 @@
          alta calidad, curtiduría vegetal y un enfoque minimalista que respeta el medioambiente.</p>
        </div>
        <div class="col">
-        <img src="<?php echo base_url('assets/img/');?>" alt="Kurundú Cueros" class="img-fluid">
+        <img src="<?php echo base_url('assets/img/Riñonera negra.jpg');?>" alt="Kurundú Cueros" class="img-fluid">
        </div>
     </div>
     <div class="row">
         <div class="col">
-            <img src="<?php echo base_url('assets/img/');?>" alt="Kurundú Cueros" class="img-fluid">
+            <img src="<?php echo base_url('assets/img/cartera Elisa.jpg');?>" alt="Kurundú Cueros" class="img-fluid">
         </div>
        <div class="col">
             <h2>Nuestra Pasión</h2>

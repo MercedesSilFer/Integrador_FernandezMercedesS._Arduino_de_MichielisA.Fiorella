@@ -133,6 +133,39 @@ label{
     text-decoration: none;
     opacity: 0.5;
   }
+  .carousel-imagen{
+    height: 68vh; /* Reduce la altura al 70% del viewport */  
+    object-fit: cover;
+    min-height: 300px
+  }
+  .card {
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 15px;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #60290d;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
   /* diseño responsivo */
   @media (max-width: 768px) {
     .contacto {

@@ -17,22 +17,16 @@
               <a class="nav-link" aria-current="page" href="<?php echo base_url();?>">Inicio</a>
             </li>
             <li class="nav-item dropdown dropdown-hover">
-              <a class="nav-link dropdown-toggle" href="#" role="button" id="catalogDropdown" data-bs-toggle="dropdown" aria-expanded="true">
-                Catalogo</a>
+              <a class="nav-link" href="" role="button" id="catalogDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+                Catálogo</a>
               <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
-                <li><a class="dropdown-item catalogo-item" href="#">Bandoleras</a></li>
+                <li><a class="dropdown-item catalogo-item" href="">Bandoleras</a></li>
                 <li><a class="dropdown-item catalogo-item" href="#">Mochilas</a></li>
                 <li><a class="dropdown-item catalogo-item" href="#">Cintos</a></li>
                 <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
                 <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
               </ul>
-              <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
-                <li><a class="dropdown-item catalogo-item" href="#">Bandoleras</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Mochilas</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Cintos</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
-              </ul>
+              
             </li>
             <li class="nav-item">
               <a class="nav-link" href=<?php echo base_url('nosotros');?> >Nosotros</a>
