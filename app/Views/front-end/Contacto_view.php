@@ -1,6 +1,5 @@
 <section class= "contacto"> 
-<form class="contacto-form" method="post">
-   
+<form class="section-form" method="post">
       <h3 class="section-title">Contáctanos</h3>
       <label>
         Nombre y apellido*

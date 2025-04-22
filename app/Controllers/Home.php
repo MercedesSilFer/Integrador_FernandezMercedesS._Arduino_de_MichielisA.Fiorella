@@ -23,13 +23,23 @@ class Home extends BaseController
     public function comercializacion()
     {
         $data['titulo']= "Comercialización";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/comercializacion').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Comercializacion_view').view('plantillas/footer_view');
+    }
+    public function registrarse()
+    {
+        $data['titulo']= "Registrarse";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Registrarse_view').view('plantillas/footer_view');
+    }
+    public function ingresar()
+    {
+        $data['titulo']= "ingresar";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Ingresar_view').view('plantillas/footer_view');
     }
     public function catalogo()
     {
-        $data['titulo']= "Catálogo";    
-        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/catalogo').view('plantillas/footer_view');
+        $data['titulo']= "catalogo";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('plantillas/footer_view');
     }
-
+    
 }
 

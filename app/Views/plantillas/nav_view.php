@@ -1,59 +1,85 @@
-<nav class="navbar sticky-top navbar-expand-lg"> 
+<nav class="navbar sticky-top py-2 navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Logo y botón toggler -->
+       <!-- FALTA MODIFICAR TAMAÑO DEL LOGO, SI LO VES NECESARIO. F.-->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand px-2" href="<?php echo base_url(); ?>">
+        <img class="brand-logo img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-    <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-      <div class="row w-100 align-items-center">
-        <div class="col-1 text-start px-1">
-          <img class="brand-logo" src="<?php echo base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo">
-        </div>
-        <div class="col-6">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="<?php echo base_url();?>">Inicio</a>
-            </li>
-            <li class="nav-item dropdown dropdown-hover">
-              <a class="nav-link" href="" role="button" id="catalogDropdown" data-bs-toggle="dropdown" aria-expanded="true">
-                Catálogo</a>
-              <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
-                <li><a class="dropdown-item catalogo-item" href="">Bandoleras</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Mochilas</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Cintos</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
-                <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
+    <!-- Contenido colapsable -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex flex-column flex-lg-row w-100 align-items-lg-center">
+        <!-- Menú principal -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="<?php echo base_url(); ?>">Inicio</a>
+          </li>
+          
+          <!-- Dropdown de Catálogo optimizado -->
+          <li class="nav-item dropdown dropdown-hover">
+          <div class="d-flex align-items-center">
+            <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">
+              Catálogo
+            </a>
+            <a class="dropdown-toggle dropdown-toggle-split " 
+              role="button" 
+              id="catalogDropdown"
+              data-bs-toggle="dropdown" 
+              aria-expanded="false">
+              <span class="visually-hidden">catalogoDropdown</span>
+            </a>
+          </div>
+          <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
+            <li><a class="dropdown-item catalogo-item" href="#">Tote bags</a></li>
+            <li><a class="dropdown-item catalogo-item" href="#">Carteras</a></li>
+            <li><a class="dropdown-item catalogo-item" href="#">Cintos</a></li>
+            <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
+            <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('nosotros'); ?>">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- Buscador y acceso -->
+        <div class="d-flex flex-column flex-lg-row align-items-start gap-3">
+          <!-- Buscador-->
+          <form class="d-flex my-2 my-lg-0" role="search">
+            <div class="input-group">
+              <input class="form-control focus-ring focus-ring-secondary" type="search" 
+                     placeholder="Búsqueda" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            </div>
+          </form>
+
+          <!-- Dropdown de Acceso -->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" 
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                Acceder
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end acceso-menu">
+                <li><a class="dropdown-item nav-link" href="<?php echo base_url('ingresar'); ?>">Iniciar sesión</a></li>
+                <li><a class="dropdown-item nav-link" href="<?php echo base_url('registrarse'); ?>">Registrarse</a></li>
               </ul>
-              
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=<?php echo base_url('nosotros');?> >Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercializacion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('contacto');?>">Contacto</a>
             </li>
           </ul>
-        </div>
-        <div class="col-3 d-flex justify-content-start">
-          <form class="d-flex" role="search">
-            <input class="form-control me-1" type="search" placeholder="Búsqueda" aria-label="Search">
-            <button class="btn" type="submit">Buscar</button>
-          </form>
-        </div>
-        <div class="col-2 d-flex justiify-text-end align-items-end">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-start" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Acceder</a>
-            <ul class="dropdown-menu acceso-menu text-center">
-              <li><a class="dropdown-item nav-link" href="#">Mi cuenta </a></li>
-              <li><a class="dropdown-item nav-link" href="#">Registrarse</a></li>
-            </ul>
-          </li>
         </div>
       </div>
     </div>

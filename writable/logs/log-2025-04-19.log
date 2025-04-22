@@ -1,0 +1,24 @@
+CRITICAL - 2025-04-19 23:49:33 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-04-19 23:51:42 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-04-19 23:51:47 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-04-19 23:51:50 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-04-19 23:52:33 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-04-19 23:52:35 --> ErrorException: Cannot redeclare App\Controllers\Home::comercializacion()
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
