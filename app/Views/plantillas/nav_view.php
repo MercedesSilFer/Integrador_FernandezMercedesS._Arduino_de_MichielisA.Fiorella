@@ -57,30 +57,44 @@
         </ul>
 
         <!-- Buscador y acceso -->
-        <div class="d-flex flex-column flex-lg-row align-items-start gap-3">
-          <!-- Buscador-->
-          <form class="d-flex my-2 my-lg-0" role="search">
-            <div class="input-group">
-              <input class="form-control focus-ring focus-ring-secondary" type="search" 
-                     placeholder="Búsqueda" aria-label="Search">
-              <button class="btn btn-outline-secondary" type="submit">Buscar</button>
-            </div>
-          </form>
+<div class="d-flex flex-column flex-lg-row align-items-center gap-4">
+  <!-- Buscador -->
+  <form class="d-flex my-2 my-lg-0 flex-grow-1" role="search">
+    <div class="input-group flex-grow-1">
+      <input class="form-control focus-ring focus-ring-secondary w-lg-50" type="search" 
+             placeholder="Búsqueda" aria-label="Search">
+      <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+    </div>
+  </form>
 
-          <!-- Dropdown de Acceso -->
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" 
-                 data-bs-toggle="dropdown" aria-expanded="false">
-                Acceder
-              </a>
-              <ul class="dropdown-menu dropdown-menu-lg-end acceso-menu">
-                <li><a class="dropdown-item nav-link" href="<?php echo base_url('ingresar'); ?>">Iniciar sesión</a></li>
-                <li><a class="dropdown-item nav-link" href="<?php echo base_url('registrarse'); ?>">Registrarse</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <!-- Ícono de carrito y dropdown de acceso -->
+  <div class="d-flex align-items-center gap-5">
+    <!-- Carrito de compras -->
+    <a href="#carrito-de-compras" class="text-decoration-none position-relative">
+    <img src="<?php echo base_url('assets/img/cart.svg'); ?>" 
+      class=" img-fluid rounded w-100" 
+        alt="Carrito de compras" 
+       loading="lazy"> <!-- Icono de carrito -->
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+        0 <!-- número de items en el carrito -->
+      </span>
+    </a>
+
+    <!-- Dropdown de Acceso -->
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Acceder
+        </a>
+        <ul class="dropdown-menu dropdown-menu-lg-end acceso-menu">
+          <li><a class="dropdown-item nav-link" href="<?php echo base_url('ingresar'); ?>">Iniciar sesión</a></li>
+          <li><a class="dropdown-item nav-link" href="<?php echo base_url('registrarse'); ?>">Registrarse</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
       </div>
     </div>
   </div>

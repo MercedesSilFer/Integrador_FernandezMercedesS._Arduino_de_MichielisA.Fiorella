@@ -120,8 +120,24 @@
                             * Por favor revisá bien tu pedido antes de concretar la compra. Solemos ser muy agiles con los envios.
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Carrito de Compras -->
+            <div id="carrito-de-compras" class="content-section separador2">
+                <div class="text-start estilo-tex-comer">
+                    <h3 class="section-title border-bottom">Carrito de Compras</h3>
+                    <div class="section-body">
+                        <p>
+                            Desde el carrito de compras, podrás visualizar el contenido de tu compra y modificar tu pedido.<br>
+                            No podemos garantizar el stock de los artículos que tengas en tu carrito compras.<br>
+                            Si al momento de recibir tu pedido no tenemos algún producto en stock, te avisaremos para que tengas la posibilidad de solicitar el reembolso, cambiarlo por otro ó esperar hasta el nuevo ingreso del producto.<br><br>
+                        </p>
+                    </div>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -129,10 +145,15 @@
             <!-- Sección Formas de Pago -->
             <div id="formas-de-pago" class="content-section separador2">
                 <div class="text-start estilo-tex-comer">
-                    <h3 class="section-title border-bottom">Formas de pago</h3>
+                <h3 class="section-title border-bottom">Formas de pago</h3>
                     <div class="section-body">
                         <p>Podés abonar tu compra de las siguientes maneras:</p>
-                        
+                        <div class="payment-method mt-4">
+                            <h5>Transferencia bancaria</h5>
+                            <p>
+                                Una vez que realices tu pedido, te enviaremos un mail con los datos de la cuenta para que puedas realizar la transferencia.
+                            </p>
+                        </div>
                         <div class="payment-method mt-4">
                             <h5>Mercado Pago</h5>
                             <p>
@@ -156,15 +177,9 @@
                                  loading="lazy">
                         </div>
                         
-                        <div class="payment-method mt-4">
-                            <h5>Transferencia bancaria</h5>
-                            <p>
-                                Una vez que realices tu pedido, te enviaremos un mail con los datos de la cuenta para que puedas realizar la transferencia.
-                            </p>
-                        </div>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -199,29 +214,11 @@
                         Una vez realizado el envío les comunicaremos el código de seguimiento, como para que puedan ver el estado del envio de su pedido.<br><br>
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Sección Carrito de Compras -->
-            <div id="carrito-de-compras" class="content-section separador2">
-                <div class="text-start estilo-tex-comer">
-                    <h3 class="section-title border-bottom">Carrito de Compras</h3>
-                    <div class="section-body">
-                        <p>
-                            Desde el carrito de compras, podrás visualizar el contenido de tu compra y modificar tu pedido.<br>
-                            No podemos garantizar el stock de los artículos que tengas en tu carrito compras.<br>
-                            Si al momento de recibir tu pedido no tenemos algún producto en stock, te avisaremos para que tengas la posibilidad de solicitar el reembolso, cambiarlo por otro ó esperar hasta el nuevo ingreso del producto.<br><br>
-                        </p>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Sección Estado del Pedido -->
             <div id="estado-del-pedido" class="content-section separador2">
                 <div class="text-start estilo-tex-comer">
@@ -233,8 +230,8 @@
                             No será posible cancelar o modificar tu pedido si ya fue enviado.<br><br>
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -344,8 +341,8 @@
                         </div>
                     </div>
 
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>

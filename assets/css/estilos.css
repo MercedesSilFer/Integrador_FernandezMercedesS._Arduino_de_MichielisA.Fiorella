@@ -220,7 +220,8 @@ a{
 }
 
 .separador2 {
-  margin-top: 120px;
+  margin-top: 10%;
+  padding-top: 12%;
 }
 
 /* ========== FOOTER ========== */
@@ -273,8 +274,8 @@ a{
   }
   
   /* Formulario de contacto */
-  .contacto-form {
-    width: 95%;
+  .section-form {
+    width: 98%;
     height: 60%;
     margin: 50px;
   }
