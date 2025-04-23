@@ -44,7 +44,7 @@
         <h5>Legal</h5>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Privacidad</a></li>
-          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Términos y Condiciones</a></li>
+          <li class="mb-2"><a href="<?php echo base_url('terminosYcondiciones'); ?>" class="text-white-50 text-decoration-none">Términos y Condiciones</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Envío</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Reembolso</a></li>
         </ul>
