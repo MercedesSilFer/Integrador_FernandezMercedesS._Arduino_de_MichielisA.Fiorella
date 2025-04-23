@@ -193,12 +193,6 @@
                             Posibles opciones de entrega:<br>
                             -Retirar tu pedido en nuestra tienda, Enrique Jasid 6058, Corrientes, Argentina<br> GRATUITO
                         </p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.586869250758!2d-58.77806812486254!3d-27.482118317234907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b015176fedd%3A0x3481552506c84ebf!2sKurund%C3%BA%20cueros!5e0!3m2!1ses!2sar!4v1744931312518!5m2!1ses!2sar" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
                         <p>La persona que acude a recoger el pedido, deberá presentar el comprobante del pedido y su DNI.<br>
                             Costo de envío bonificado para compras superiores a $ 100.000<br>
                         </p>
