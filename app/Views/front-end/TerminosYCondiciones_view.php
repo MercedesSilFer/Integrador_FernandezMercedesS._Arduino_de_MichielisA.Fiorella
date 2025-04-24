@@ -1,49 +1,49 @@
-<section class="terminos-y-condiciones">
+<section class="terminos-y-condiciones py-2 px-3 mx-3">
     <div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
-        <h1><strong>Términos y Condiciones de Kurundú</strong></h1>
+        <h1>Términos y Condiciones de Kurundú</h1>
         
-        <h2><strong>1. Aceptación de los Términos</strong></h2>
+        <h2>Aceptación de los Términos</h2>
         <p class="ds-markdown-paragraph">
-            Al acceder y utilizar el sitio web de <strong>Kurundú</strong>, así como al realizar compras a través de este medio, 
-            usted acepta los presentes <strong>Términos y Condiciones</strong>, así como nuestras <strong>Políticas de Privacidad</strong>. 
+            Al acceder y utilizar el sitio web de Kurundú, así como al realizar compras a través de este medio, 
+            usted acepta los presentes Términos y Condiciones, así como nuestras Políticas de Privacidad. 
             Si no está de acuerdo con alguno de estos términos, le recomendamos no utilizar nuestros servicios.
         </p>
         
-        <h2><strong>2. Registro de Usuario</strong></h2>
+        <h2>Registro de Usuario</h2>
         <p class="ds-markdown-paragraph">
-            Para realizar una compra en <strong>Kurundú</strong>, es necesario registrarse como usuario. El proceso de registro es sencillo 
+            Para realizar una compra en Kurundú, es necesario registrarse como usuario. El proceso de registro es sencillo 
             y solo solicitamos información imprescindible para agilizar futuras compras. Una vez registrado, podrá gestionar sus pedidos 
             de manera más eficiente.
         </p>
         
-        <h2><strong>3. Proceso de Compra</strong></h2>
+        <h2>Proceso de Compra</h2>
         <ul>
             <li>
                 <p class="ds-markdown-paragraph">
-                    <strong>Selección de productos</strong>: Elija el o los productos deseados, verificando tallas, colores y disponibilidad.
+                    Selección de productos: Elija el o los productos deseados, verificando tallas, colores y disponibilidad.
                 </p>
             </li>
             <li>
                 <p class="ds-markdown-paragraph">
-                    <strong>Datos personales</strong>: Al ingresar tu nombre y apellido, el sistema completará automáticamente los datos registrados.
+                    Datos personales: Al ingresar tu nombre y apellido, el sistema completará automáticamente los datos registrados.
                 </p>
             </li>
             <li>
                 <p class="ds-markdown-paragraph">
-                    <strong>Dirección de envío</strong>: Se mostrará la dirección configurada en tu cuenta.
+                    Dirección de envío: Se mostrará la dirección configurada en tu cuenta.
                 </p>
             </li>
             <li>
-                <p class="ds-markdown-paragraph"><strong>Métodos de envío</strong>:</p>
+                <p class="ds-markdown-paragraph">Métodos de envío:</p>
                 <ul>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            <strong>Envío Estándar</strong> (generalmente por Correo Argentino).
+                            Envío Estándar (generalmente por Correo Argentino).
                         </p>
                     </li>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            <strong>Retiro en tienda</strong> (sin costo).
+                             Retiro en tienda (sin costo).
                         </p>
                     </li>
                 </ul>
@@ -56,19 +56,24 @@
                     </li>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            Tarjeta de débito o crédito a través de <strong>Mercado Pago</strong>.
+                            Tarjeta de débito o crédito a través de Mercado Pago.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="ds-markdown-paragraph">
+                            PayPal.
                         </p>
                     </li>
                 </ul>
             </li>
             <li>
                 <p class="ds-markdown-paragraph">
-                    <strong>Confirmación de compra</strong>: Una vez abonado, recibirás un mensaje de <strong>orden confirmada</strong>.
+                    Confirmación de compra: Una vez abonado, recibirás un mensaje de orden confirmada.
                 </p>
             </li>
         </ul>
         
-        <p class="ds-markdown-paragraph"><strong>Importante</strong>:</p>
+        <p class="ds-markdown-paragraph">Importante:</p>
         <ul>
             <li>
                 <p class="ds-markdown-paragraph">Verifique su pedido antes de finalizar la compra.</p>
@@ -91,26 +96,25 @@
                 </ul>
             </li>
         </ul>
-        
-        <h2><strong>4. Política de Envíos</strong></h2>
+        <h2>Política de Envíos</h2>
         <p class="ds-markdown-paragraph">Las opciones de envío varían según la dirección de entrega:</p>
         <ul>
             <li>
-                <p class="ds-markdown-paragraph"><strong>Retiro en tienda</strong>: <strong>Gratuito</strong>.</p>
+                <p class="ds-markdown-paragraph">Retiro gratuito en la tienda: .</p>
                 <ul>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            El retiro debe realizarse presentando <strong>comprobante de pedido y DNI</strong>.
+                            El retiro debe realizarse presentando comprobante de pedido y DNI.
                         </p>
                     </li>
                 </ul>
             </li>
             <li>
-                <p class="ds-markdown-paragraph"><strong>Envíos nacionales</strong>:</p>
+                <p class="ds-markdown-paragraph">Envíos nacionales:</p>
                 <ul>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            <strong>Envío bonificado</strong> en compras superiores a <strong>$100.000</strong>.
+                            Envío bonificado en compras superiores a ARS 100.000.
                         </p>
                     </li>
                 </ul>
@@ -120,28 +124,27 @@
                 <ul>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            A través de <strong>FedEx</strong>, con costo calculado según productos y destino.
+                            A través de la compañía FedEx, con costo calculado según productos y destino.
                         </p>
                     </li>
                     <li>
                         <p class="ds-markdown-paragraph">
-                            <strong>Envío bonificado</strong> en compras superiores a <strong>USD 200</strong>.
+                            Envío bonificadoen compras superiores a USD 200.
                         </p>
                     </li>
                 </ul>
             </li>
-        </ul>
-        
+        </ul>        
         <p class="ds-markdown-paragraph">
-            Una vez despachado el pedido, se enviará un <strong>código de seguimiento</strong>.<br>
-            <strong>No se podrán cancelar ni modificar pedidos ya enviados.</strong>
+            Una vez despachado el pedido, se enviará un código de seguimiento.
+            <br>
+            No se podrán cancelar ni modificar pedidos ya enviados.
         </p>
-        
-        <h2><strong>5. Garantías y Soporte Postventa</strong></h2>
+        <h2>Garantías y Soporte Postventa</h2>
         <ul>
             <li>
                 <p class="ds-markdown-paragraph">
-                    Todos nuestros productos cuentan con garantía según normativas vigentes.
+                    Todos nuestros productos cuentan con garantía según las normativas vigentes.
                 </p>
             </li>
             <li>
@@ -151,17 +154,17 @@
             </li>
         </ul>
         
-        <h2><strong>6. Modificaciones de los Términos</strong></h2>
+        <h2>Modificaciones de los Términos</h2>
         <p class="ds-markdown-paragraph">
             <strong>Kurundú</strong> se reserva el derecho de actualizar estos términos en cualquier momento. 
             Los cambios entrarán en vigor una vez publicados en el sitio web.
         </p>
-        
-        <h2><strong>7. Contacto</strong></h2>
+        <h2>Contacto</h2>
         <p class="ds-markdown-paragraph">
             Para cualquier duda o reclamo, puede comunicarse a través de:<br>
-            📧 <strong><a href="mailto:kurundudemismanos@gmail.com" target="_blank" rel="noreferrer">kurundudemismanos@gmail.com</a></strong><br>
-            📞 <strong>+54 11 1234-5678</strong>
+            <a class="a-parrafos" href="mailto:kurundudemismanos@gmail.com" target="_blank" rel="noreferrer">kurundudemismanos@gmail.com</a></strong><br>
+            <a class="a-parrafos" href="https://wa.me/5493794676021 " class="text-decoration-none"  target="_blank">+54 9 379 4676021 
+          </a>
         </p>
         
     </div>
