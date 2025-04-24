@@ -35,13 +35,13 @@
             id="catalogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Catálogo
           </a>
-          <ul class="dropdown-menu" aria-labelledby="catalogDropdown">
-            <li><a class="dropdown-item" href="<?= base_url('catalogo/tote-bags'); ?>">Tote bags</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('catalogo/carteras'); ?>">Carteras</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('catalogo/rinoneras'); ?>">Riñoneras</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('catalogo/capsula'); ?>">Cápsula Kurundu Color</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('catalogo/otros'); ?>">Otros</a></li>
-          </ul>
+          <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('totebags'); ?>">Tote bags</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('carteras'); ?>">Carteras</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('mochilas'); ?>">Mochilas</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('rinoneras'); ?>">Riñoneras</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('coleccion'); ?>">Colección Cápsula Color</a></li>
+          </ul>  
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $ruta == 'nosotros' ? 'active' : '' ?>" href="<?= base_url('nosotros'); ?>">Nosotros</a>

@@ -14,3 +14,9 @@ $routes->get('ingresar', 'Home::ingresar');
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('eventos', 'Home::eventos');   
 $routes->get('terminosYcondiciones', 'Home::terminosYcondiciones');
+$routes->get('totebags', 'Home::totebags');
+$routes->get('carteras', 'Home::carteras');
+$routes->get('mochilas', 'Home::mochilas');
+$routes->get('rinoneras', 'Home::rinoneras');
+$routes->get('coleccion', 'Home::coleccion');
+

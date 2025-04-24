@@ -38,7 +38,7 @@ class Home extends BaseController
     public function catalogo()
     {
         $data['titulo']= "catalogo";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/carterasXL').view('front-end/carteras').view('front-end/mochilas').view('front-end/rinoneras').view('front-end/coleccioncapsula').view('plantillas/footer_view');
     }
     public function eventos()
     {
@@ -50,7 +50,30 @@ class Home extends BaseController
         $data['titulo']= "terminosYcondiciones";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/TerminosYCondiciones_view').view('plantillas/footer_view');
     }
-    
-    
+    public function totebags()
+    {
+        $data['titulo']= "Tote bags";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/carterasXL').view('plantillas/footer_view');
+    }
+    public function carteras()
+    {
+        $data['titulo']= "Carteras";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/carteras').view('plantillas/footer_view');
+    }
+    public function mochilas()
+    {
+        $data['titulo']= "Mochilas";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/mochilas').view('plantillas/footer_view');
+    }
+    public function rinoneras()
+    {
+        $data['titulo']= "Riñoneras";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/rinoneras').view('plantillas/footer_view');
+    }
+    public function coleccion()
+    {
+        $data['titulo']= "Colección Cápsula Color";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/coleccioncapsula').view('plantillas/footer_view');
+    }
 }
 
