@@ -4,27 +4,27 @@
  NO ES FUNCIONAL NI RESPONSIVO. F.-->
     <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Todos</a>
+        <a class="nav-link active" aria-current="page" href="#arribacatalogo">Todos</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Tote bags</a>
+        <a class="nav-link" href="#totebag">Tote bags</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Carteras</a>
+        <a class="nav-link" href="#carteras">Carteras</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Mochilas</a>
+        <a class="nav-link" href="#mochilas">Mochilas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Riñoneras</a>
+        <a class="nav-link" href="#rinoneras">Riñoneras</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Cápsula Kurundú color</a>
+        <a class="nav-link" href="#capsula">Cápsula Kurundú color</a>
     </li>
     </ul>
     
 
-<div class="container text-center">
+<div id="arribacatalogo" id="totebag" class="container text-center mt-5 pt-5">
     <h3>Tote bags</h3>
   <div class="row align-items-center">
     <div class="col">
@@ -65,7 +65,7 @@
     </div>
 </div>
 </div>
-<div class="container text-center">
+<div id="carteras" class="container text-center pt-5">  
     <h3>Carteras</h3>
     <div class="row align-items-center">
         <div class="col">
@@ -106,7 +106,7 @@
         </div>
     </div>
 </div>
-<div class="container text-center">
+<div id="mochilas"class="container text-center mt-5 pt-5">
     <h3>Mochilas</h3>   
     <div class="row align-items-center">
         <div class="col">
@@ -147,7 +147,7 @@
         </div>
   </div>
 </div>
-<div class="container text-center">
+<div id="rinoneras" class="container text-center mt-5 pt-5">
     <h3>Riñoneras</h3>
     <div class="row align-items-center">
         <div class="col">
@@ -188,7 +188,7 @@
         </div>
     </div>
 </div>
-<div class="container text-center">
+<div id="capsula" class="container text-center mt-5 pt-5">
     <h3>Colección cápsula color</h3>
     <div class="row align-items-center">
         <div class="col">
