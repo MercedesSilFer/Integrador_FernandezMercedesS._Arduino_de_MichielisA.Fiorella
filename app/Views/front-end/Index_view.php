@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" class=" btn-light mt-1 mb-4">Ver Más</button>
+        <button type="button" class=" btn-light mt-1 mb-4" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
     </div>
     <div class="col">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -141,7 +141,7 @@
             </div>
         </div>
     </div>
-    <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+    <button type="button" class="btn-light mt-1 mb-4" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
     </div>
     <div class="col">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -157,7 +157,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+        <button type="button" class="btn-light mt-1 mb-4" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
     </div>
     <div class="col">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+        <button type="button" class="btn-light mt-1 mb-4" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
     </div>
   </div>
   <hr class="bg-light opacity-25 my-1">

@@ -1,4 +1,4 @@
-<div id="carteras" class="container text-center pt-5">  
+<div id="carteras" class="container text-center mt-5 pt-5">  
     <h3>Carteras</h3>
     <div class="row align-items-center">
         <div class="col">
