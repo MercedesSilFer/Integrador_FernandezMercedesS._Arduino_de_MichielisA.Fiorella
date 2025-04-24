@@ -37,11 +37,11 @@
             </a>
           </div>
           <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
-            <li><a class="dropdown-item catalogo-item" href="#">Tote bags</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Carteras</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Riñoneras</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('totebags'); ?>">Tote bags</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('carteras'); ?>">Carteras</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('mochilas'); ?>">Mochilas</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('rinoneras'); ?>">Riñoneras</a></li>
+            <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('coleccion'); ?>">Colección Cápsula Color</a></li>
           </ul>
         </li>
 
