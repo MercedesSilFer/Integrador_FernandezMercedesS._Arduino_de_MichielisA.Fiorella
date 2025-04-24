@@ -40,6 +40,11 @@ class Home extends BaseController
         $data['titulo']= "catalogo";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('plantillas/footer_view');
     }
+    public function eventos()
+    {
+        $data['titulo']= "Eventos";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/eventos').view('plantillas/footer_view');
+    }
     public function terminosYcondiciones()
     {
         $data['titulo']= "terminosYcondiciones";

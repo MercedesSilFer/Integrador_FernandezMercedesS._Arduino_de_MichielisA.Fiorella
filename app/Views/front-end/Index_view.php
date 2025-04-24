@@ -38,7 +38,7 @@
                     <img src="<?php echo base_url('assets/img/fotocarousel1.jpg'); ?>" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50  rounded-2 p-4">
                     <h5>Cápsula Kurundú color </h5>
-                    <p>Exploramos el color en accesorios que tonos intensos!</p>
+                    <p>Exploramos el color en accesorios de tonos intensos!</p>
                     </div>
                 </div>
             </div>

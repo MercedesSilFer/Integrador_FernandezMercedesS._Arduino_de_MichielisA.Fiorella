@@ -12,4 +12,5 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('registrarse', 'Home::registrarse');
 $routes->get('ingresar', 'Home::ingresar');
 $routes->get('catalogo', 'Home::catalogo');
+$routes->get('eventos', 'Home::eventos');   
 $routes->get('terminosYcondiciones', 'Home::terminosYcondiciones');

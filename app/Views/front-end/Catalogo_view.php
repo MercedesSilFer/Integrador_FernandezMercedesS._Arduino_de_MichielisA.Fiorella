@@ -18,6 +18,9 @@
     <li class="nav-item">
         <a class="nav-link" href="#">Riñoneras</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Cápsula Kurundú color</a>
+    </li>
     </ul>
     
 

@@ -62,6 +62,16 @@ li, ul {
 .card button:hover {
   opacity: 0.7;
 }
+/* ========== TARJETAS-INICIO ========== */ 
+.tarjetas{
+  background-color: #f4f0ed;
+  color:#60290d;
+  font-size: 25px;
+}
+.tarjeta{
+  color:#60290d;
+  font-size: 25px;
+}
 /* ========== NAVBAR ========== */
 .navbar {
   background-color: white;
