@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<div class="container  mt-3 mb-3 pt-3 pb-3"> 
-    <div class="row align-items-center">
-        <div class="col tarjeta">            
-           <h1> Explora nuestro mundo!</h1>
-            <P>Descubre la artesanía única de Kurundú cueros y sumérgete en la belleza del cuero genuino.</p>
-            <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('catalogo'); ?>'">Ver catálogo</button></p>
-=======
 <div class="container-fluid custom mt-3"> 
     <div class="row align-items-center">
         <div class="col justify-content-center mx-5 px-4">            
@@ -22,7 +14,6 @@
             <br>
             <hr>
             
->>>>>>> 444f921eccc7c030f0edcd4970198a101f4db37a
         </div>
         <div class="col text-center">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
