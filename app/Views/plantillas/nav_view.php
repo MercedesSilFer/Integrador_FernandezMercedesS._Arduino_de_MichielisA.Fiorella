@@ -1,100 +1,85 @@
-<nav class="navbar sticky-top py-2 navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
   <div class="container-fluid">
-    <!-- Logo y botón toggler -->
-       <!-- FALTA MODIFICAR TAMAÑO DEL LOGO, SI LO VES NECESARIO. F.-->
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand px-2" href="<?php echo base_url(); ?>">
-        <img class="brand-logo img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+    <!-- Logo y toggler - ahora en una sola fila -->
+    <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
+      <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+    </a>
+    
+    <!-- Elementos del lado derecho (carrito y acceso) visibles en mobile -->
+    <div class="d-flex d-lg-none align-items-center gap-3 order-lg-1">
+      <!-- Carrito - visible en mobile -->
+      <a href="<?= base_url('carrito'); ?>" class="text-decoration-none position-relative">
+        <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 30px;" loading="lazy">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-              aria-expanded="false" aria-label="Toggle navigation">
+      
+      <!-- Botón toggler -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
 
     <!-- Contenido colapsable -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="d-flex flex-column flex-lg-row w-100 align-items-lg-center">
-        <!-- Menú principal -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="<?php echo base_url(); ?>">Inicio</a>
-          </li>
-          
-          <!-- Dropdown de Catálogo optimizado -->
-          <li class="nav-item dropdown dropdown-hover">
-          <div class="d-flex align-items-center">
-            <a class="nav-link" href="<?php echo base_url('catalogo'); ?>">
-              Catálogo
-            </a>
-            <a class="dropdown-toggle dropdown-toggle-split " 
-              role="button" 
-              id="catalogDropdown"
-              data-bs-toggle="dropdown" 
-              aria-expanded="false">
-              <span class="visually-hidden">catalogoDropdown</span>
-            </a>
-          </div>
-          <ul class="dropdown-menu catalogo-menu" aria-labelledby="catalogDropdown">
-            <li><a class="dropdown-item catalogo-item" href="#">Tote bags</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Carteras</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Riñoneras</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Cápsula Kurundu Color</a></li>
-            <li><a class="dropdown-item catalogo-item" href="#">Otros</a></li>
+    <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
+      <?php $ruta = service('uri')->getSegment(1); ?>
+
+      <!-- Menú principal centrado -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url(); ?>">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle <?= $ruta == 'catalogo' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>"
+            id="catalogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogo
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="catalogDropdown">
+            <li><a class="dropdown-item" href="<?= base_url('catalogo/tote-bags'); ?>">Tote bags</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('catalogo/carteras'); ?>">Carteras</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('catalogo/rinoneras'); ?>">Riñoneras</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('catalogo/capsula'); ?>">Cápsula Kurundu Color</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('catalogo/otros'); ?>">Otros</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $ruta == 'nosotros' ? 'active' : '' ?>" href="<?= base_url('nosotros'); ?>">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $ruta == 'comercializacion' ? 'active' : '' ?>" href="<?= base_url('comercializacion'); ?>">Comercialización</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $ruta == 'contacto' ? 'active' : '' ?>" href="<?= base_url('contacto'); ?>">Contacto</a>
+        </li>
+      </ul>
 
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('nosotros'); ?>">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('comercializacion'); ?>">Comercialización</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a>
-          </li>
-        </ul>
+      <!-- Elementos del lado derecho (buscador, carrito y acceso) -->
+      <div class="d-flex flex-column flex-lg-row align-items-end gap-3">
+        <!-- Buscador - oculto en mobile para ahorrar espacio -->
+        <form class="busqueda d-none d-lg-flex" role="search" action="<?= base_url('buscar'); ?>" method="get">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search" name="q">
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+          </div>
+        </form>
 
-        <!-- Buscador y acceso -->
-<div class="d-flex flex-column flex-lg-row align-items-center gap-4">
-  <!-- Buscador -->
-  <form class="d-flex my-2 my-lg-0 flex-grow-1" role="search">
-    <div class="input-group flex-grow-1">
-      <input class="form-control focus-ring focus-ring-secondary w-lg-50" type="search" 
-             placeholder="Búsqueda" aria-label="Search">
-      <button class="btn btn-outline-secondary" type="submit">Buscar</button>
-    </div>
-  </form>
-
-  <!-- Ícono de carrito y dropdown de acceso -->
-  <div class="d-flex align-items-center gap-5">
-    <!-- Carrito de compras -->
-    <a href="#carrito-de-compras" class="text-decoration-none position-relative">
-    <img src="<?php echo base_url('assets/img/cart.svg'); ?>" 
-      class=" img-fluid rounded w-100" 
-        alt="Carrito de compras" 
-       loading="lazy"> <!-- Icono de carrito -->
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
-        0 <!-- número de items en el carrito -->
-      </span>
-    </a>
-
-    <!-- Dropdown de Acceso -->
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" 
-           data-bs-toggle="dropdown" aria-expanded="false">
-          Acceder
+        <!-- Carrito - visible solo en desktop (en mobile ya está arriba) -->
+        <a href="<?= base_url('carrito'); ?>" class="text-decoration-none position-relative d-none d-lg-block">
+          <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 30px;" loading="lazy">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
         </a>
-        <ul class="dropdown-menu dropdown-menu-lg-end acceso-menu">
-          <li><a class="dropdown-item nav-link" href="<?php echo base_url('ingresar'); ?>">Iniciar sesión</a></li>
-          <li><a class="dropdown-item nav-link" href="<?php echo base_url('registrarse'); ?>">Registrarse</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+
+        <!-- Acceso -->
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Acceder
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 
-<div class="container-fluid custom mt-3"> 
+<div class="container-fluid mt-3"> 
     <div class="row align-items-center">
         <div class="col justify-content-center mx-5 px-4">            
             <h1 class="bienvenida">¡Explorá nuestro mundo!</h1>
@@ -77,7 +77,6 @@
             </div>
         </div>
         <a class="text-center nav-link col-4 mx-auto" href="<?php echo base_url('catalogo'); ?>">Ver más productos</a>
-        <hr>
     </div>
 </div>
 <hr class="bg-light opacity-25 my-1">
@@ -178,28 +177,29 @@
   </div>
   <hr class="bg-light opacity-25 my-1">
   <div class="container text-center tarjetas mt-3 mb-3 pt-3 pb-3">
-  <h1>Tendencias & Noticias</h1>
-   <div class="row align-items-center">
-    <div class="col">
-    <img src="<?php echo base_url('assets/img/feriapurodiseño1.jpg'); ?>" class="d-block w-100" alt="...">  
-    </div>     
-    <div class="col">
-    <P>Participamos en desfiles y ferias, exponiendo nuestro espíritu emprendedor en eventos locales y nacionales.</P>
-    <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
-    <p>Enterate de los próximos eventos en nuestras redes sociales.</P> 
+    <h1>Tendencias & Noticias</h1>
+    <div class="row align-items-center">
+        <div class="col">
+            <img src="<?php echo base_url('assets/img/feriapurodiseño1.jpg'); ?>" class="d-block w-100" alt="...">  
+        </div>     
+            <div class="col">
+            <P>Participamos en desfiles y ferias, exponiendo nuestro espíritu emprendedor en eventos locales y nacionales.</P>
+            <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
+                <p>Enterate de los próximos eventos en nuestras redes sociales.</P> 
 
-    </div>
-    </div>
+            </div>
+        </div>
   </div>
   <hr class="bg-light opacity-25 my-1">
-<div class="container text-center tarjetas mt-3 mb-3 pt-3 pb-3">
-   <div class="row align-items-center">
-    <div class="col">
-    <img src="<?php echo base_url('assets/img/hechoencorrientes.jpg'); ?>" class="d-block w-100" alt="...">  
-    </div>     
-    <div class="col">
-    <P>Formamos parte de la marca HECHO EN CORRIENTES, un espacio que revaloriza la identidad de los productos regionales.</P>
+    <div class="container text-center tarjetas mt-3 mb-3 pt-3 pb-3">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="<?php echo base_url('assets/img/hechoencorrientes.jpg'); ?>" class="d-block w-100" alt="...">  
+                </div>     
+                    <div class="col">
+                    <P>Formamos parte de la marca HECHO EN CORRIENTES, un espacio que revaloriza la identidad de los productos regionales.</P>
+                    </div>
+            </div>
+        </div>
     </div>
-    </div>
-  </div>
 </div>
