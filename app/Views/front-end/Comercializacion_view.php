@@ -120,8 +120,24 @@
                             * Por favor revisá bien tu pedido antes de concretar la compra. Solemos ser muy agiles con los envios.
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Carrito de Compras -->
+            <div id="carrito-de-compras" class="content-section separador2">
+                <div class="text-start estilo-tex-comer">
+                    <h3 class="section-title border-bottom">Carrito de Compras</h3>
+                    <div class="section-body">
+                        <p>
+                            Desde el carrito de compras, podrás visualizar el contenido de tu compra y modificar tu pedido.<br>
+                            No podemos garantizar el stock de los artículos que tengas en tu carrito compras.<br>
+                            Si al momento de recibir tu pedido no tenemos algún producto en stock, te avisaremos para que tengas la posibilidad de solicitar el reembolso, cambiarlo por otro ó esperar hasta el nuevo ingreso del producto.<br><br>
+                        </p>
+                    </div>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -129,10 +145,15 @@
             <!-- Sección Formas de Pago -->
             <div id="formas-de-pago" class="content-section separador2">
                 <div class="text-start estilo-tex-comer">
-                    <h3 class="section-title border-bottom">Formas de pago</h3>
+                <h3 class="section-title border-bottom">Formas de pago</h3>
                     <div class="section-body">
                         <p>Podés abonar tu compra de las siguientes maneras:</p>
-                        
+                        <div class="payment-method mt-4">
+                            <h5>Transferencia bancaria</h5>
+                            <p>
+                                Una vez que realices tu pedido, te enviaremos un mail con los datos de la cuenta para que puedas realizar la transferencia.
+                            </p>
+                        </div>
                         <div class="payment-method mt-4">
                             <h5>Mercado Pago</h5>
                             <p>
@@ -156,15 +177,9 @@
                                  loading="lazy">
                         </div>
                         
-                        <div class="payment-method mt-4">
-                            <h5>Transferencia bancaria</h5>
-                            <p>
-                                Una vez que realices tu pedido, te enviaremos un mail con los datos de la cuenta para que puedas realizar la transferencia.
-                            </p>
-                        </div>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -178,12 +193,6 @@
                             Posibles opciones de entrega:<br>
                             -Retirar tu pedido en nuestra tienda, Enrique Jasid 6058, Corrientes, Argentina<br> GRATUITO
                         </p>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.586869250758!2d-58.77806812486254!3d-27.482118317234907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b015176fedd%3A0x3481552506c84ebf!2sKurund%C3%BA%20cueros!5e0!3m2!1ses!2sar!4v1744931312518!5m2!1ses!2sar" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
                         <p>La persona que acude a recoger el pedido, deberá presentar el comprobante del pedido y su DNI.<br>
                             Costo de envío bonificado para compras superiores a $ 100.000<br>
                         </p>
@@ -199,29 +208,11 @@
                         Una vez realizado el envío les comunicaremos el código de seguimiento, como para que puedan ver el estado del envio de su pedido.<br><br>
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Sección Carrito de Compras -->
-            <div id="carrito-de-compras" class="content-section separador2">
-                <div class="text-start estilo-tex-comer">
-                    <h3 class="section-title border-bottom">Carrito de Compras</h3>
-                    <div class="section-body">
-                        <p>
-                            Desde el carrito de compras, podrás visualizar el contenido de tu compra y modificar tu pedido.<br>
-                            No podemos garantizar el stock de los artículos que tengas en tu carrito compras.<br>
-                            Si al momento de recibir tu pedido no tenemos algún producto en stock, te avisaremos para que tengas la posibilidad de solicitar el reembolso, cambiarlo por otro ó esperar hasta el nuevo ingreso del producto.<br><br>
-                        </p>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Sección Estado del Pedido -->
             <div id="estado-del-pedido" class="content-section separador2">
                 <div class="text-start estilo-tex-comer">
@@ -233,8 +224,8 @@
                             No será posible cancelar o modificar tu pedido si ya fue enviado.<br><br>
                         </p>
                     </div>
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
@@ -344,10 +335,25 @@
                         </div>
                     </div>
 
-                    <div class="text-center mt-4">
-                        <a class="btn" href="#arriba" role="button">Volver</a>
+                    <div class="text-end mt-4">
+                        <a class="btn-light" href="#arriba" role="button">Volver</a>
                     </div>
                 </div>
             </div>
+            <div class="text-start estilo-tex-comer mb-4">
+                <h3 class="section-title mb-4 border-bottom pb-2">¿Aún tenés dudas?</h3>
+                <p>Te invitamos a <a class="a-parrafos" href="<?php echo base_url('contacto'); ?>">contactarnos</a>
+                    para aclarar tus consultas, y a conocer más sobre nuestros 
+                    <a class="a-parrafos" href="<?php echo base_url('termynosYcondiciones'); ?>">términos y condiciones</a>,
+                    donde te contamos con más detalles toda la información que necesitas saber acerca de nuestra página. 
+                </p>
+                <br>
+                <hr>
+            </div>
+
         </div>
+
+
+
+
     </section>
