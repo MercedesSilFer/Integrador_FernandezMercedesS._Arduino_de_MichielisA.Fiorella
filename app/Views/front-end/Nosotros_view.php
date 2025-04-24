@@ -1,6 +1,6 @@
 
 <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
        <div class="col">
        <h2>Sobre Nosotros</h2>
        <p>En Kurundú cueros, creamos marroquinería sostenible y atemporal, utilizando cuero argentino de
