@@ -1,6 +1,6 @@
 
 <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
        <div class="col">
        <h2>Sobre Nosotros</h2>
        <p>En Kurundú cueros, creamos marroquinería sostenible y atemporal, utilizando cuero argentino de
@@ -10,7 +10,7 @@
         <img src="<?php echo base_url('assets/img/Riñonera negra.jpg');?>" alt="Kurundú Cueros" class="img-fluid">
        </div>
     </div>
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col">
             <img src="<?php echo base_url('assets/img/cartera Elisa.jpg');?>" alt="Kurundú Cueros" class="img-fluid">
         </div>

@@ -1,11 +1,10 @@
 
-<div class="container-fluid mt-3"> 
+<div class="container  mt-3 mb-3 pt-3 pb-3"> 
     <div class="row align-items-center">
-        <div class="col">            
-            <h1>Explora nuestro mundo</h1>
-            <p>Descubre la artesanía única de Kurundú cueros y sumérgete en la belleza del cuero genuino.</p>
-            <p></p>
-            <p><button class="btn btn-primary">Ver catálogo</button></p>
+        <div class="col tarjeta">            
+           <h1> Explora nuestro mundo!</h1>
+            <P>Descubre la artesanía única de Kurundú cueros y sumérgete en la belleza del cuero genuino.</p>
+            <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('catalogo'); ?>'">Ver catálogo</button></p>
         </div>
         <div class="col text-center">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -30,7 +29,7 @@
                     <img src="<?php echo base_url('assets/img/fotocarousel1.jpg'); ?>" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                     <h5>Cápsula Kurundú color </h5>
-                    <p>Exploramos el color en accesorios que tonos intensos!</p>
+                    <p>Exploramos el color en accesorios de tonos intensos!</p>
                     </div>
                 </div>
             </div>
@@ -45,4 +44,127 @@
              </div>
         </div>
     </div>
+</div>
+<hr class="bg-light opacity-25 my-1">
+<div class="container text-center mt-3 mb-5 pt-5 pb-5">
+    <h1>Galería</h1>
+  <div class="row align-items-center">
+    <div class="col col">
+    <img src="<?php echo base_url('assets/img/galeria2.jpg'); ?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="col ">
+    <img src="<?php echo base_url('assets/img/galeria5.jpg'); ?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/galeria6.jpg'); ?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/galeria7.jpg'); ?>" class="d-block w-100" alt="...">  
+    </div>
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/galeria8.jpg'); ?>" class="d-block w-100" alt="...">  
+    </div>
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/galeria4.jpg'); ?>" class="d-block w-100" alt="...">
+    </div>
+  
+</div>
+<hr class="bg-light opacity-25 my-1">
+<div class="container text-center mt-3 mb-5 pt-5 pb-5">
+    <h1>Lo Más Buscado</h1>
+  <div class="row align-items-center">
+    <div class="col">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="<?php echo base_url('assets/img/Cartera azulXL.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="<?php echo base_url('assets/img/Cartera negra XL.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="<?php echo base_url('assets/img/Cartera marrón claro XL.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button type="button" class=" btn-light mt-1 mb-4">Ver Más</button>
+    </div>
+    <div class="col">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="<?php echo base_url('assets/img/carteraeusabiamarron.jpg'); ?>" class="d-block w-100" alt="...">
+    
+            </div>
+            <div class="carousel-item">
+                <img src="<?php echo base_url('assets/img/carteraeusebiaverde.jpg'); ?>" class="d-block w-100" alt="...">
+    
+            </div>
+            <div class="carousel-item">
+                <img src="<?php echo base_url('assets/img/eusebiaclasica.jpg'); ?>" class="d-block w-100" alt="...">
+      
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+    </div>
+    <div class="col">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<?php echo base_url('assets/img/capsula3.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo base_url('assets/img/capsula2.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo base_url('assets/img/capsula1.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+    </div>
+    <div class="col">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<?php echo base_url('assets/img/bandolera4.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo base_url('assets/img/bandolera2.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo base_url('assets/img/bandolera3.jpg'); ?>" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-light mt-1 mb-4">Ver Más</button>
+    </div>
+  </div>
+  <hr class="bg-light opacity-25 my-1">
+  <div class="container text-center tarjetas mt-3 mb-3 pt-3 pb-3">
+  <h1>Tendencias & Noticias</h1>
+   <div class="row align-items-center">
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/feriapurodiseño1.jpg'); ?>" class="d-block w-100" alt="...">  
+    </div>     
+    <div class="col">
+    <P>Participamos en desfiles y ferias, exponiendo nuestro espíritu emprendedor en eventos locales y nacionales.</P>
+    <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
+    <p>Enterate de los próximos eventos en nuestras redes sociales.</P> 
+
+    </div>
+    </div>
+  </div>
+  <hr class="bg-light opacity-25 my-1">
+<div class="container text-center tarjetas mt-3 mb-3 pt-3 pb-3">
+   <div class="row align-items-center">
+    <div class="col">
+    <img src="<?php echo base_url('assets/img/hechoencorrientes.jpg'); ?>" class="d-block w-100" alt="...">  
+    </div>     
+    <div class="col">
+    <P>Formamos parte de la marca HECHO EN CORRIENTES, un espacio que revaloriza la identidad de los productos regionales.</P>
+    </div>
+    </div>
+  </div>
 </div>
