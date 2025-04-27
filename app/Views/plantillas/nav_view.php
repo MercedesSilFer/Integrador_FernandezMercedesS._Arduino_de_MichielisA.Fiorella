@@ -31,7 +31,7 @@
           <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url(); ?>">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle <?= $ruta == 'catalogo' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>"
+          <a class="nav-link dropdown-toggle-visually-hidden <?= $ruta == 'catalogo' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>"
             id="catalogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Catálogo
           </a>
@@ -72,7 +72,7 @@
 
         <!-- Acceso -->
         <div class="dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle-visually-hidden" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Acceder
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
