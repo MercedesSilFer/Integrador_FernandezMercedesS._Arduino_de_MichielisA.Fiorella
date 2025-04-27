@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
   <div class="container-fluid">
     <!-- Logo y toggler - ahora en una sola fila -->
     <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
@@ -31,7 +32,7 @@
           <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url(); ?>">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle <?= $ruta == 'catalogo' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>"
+          <a class="nav-link dropdown-toggle-visually-hidden <?= $ruta == 'catalogo' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>"
             id="catalogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Catálogo
           </a>
@@ -84,3 +85,4 @@
     </div>
   </div>
 </nav>
+</div>

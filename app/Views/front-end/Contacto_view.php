@@ -1,16 +1,16 @@
 <section class="contacto">
   
-  <div class= "container-mensaje">
+  <div class= "container-fluid container-mensaje">
   <form class="section-form" method="post">
-        <h3 class="section-title">Escrbinos</h3>
-        <label>
+        <h3 class="section-title">Escribinos</h3>
+        <label for="nombreContacto">
           Nombre y apellido*
-          <input type="text" name="nombre" class="input-styles" placeholder="Juan Perez" required>
+          <input type="text" id="nombreContacto" name="nombre" class="input-styles" placeholder="Juan Perez" required>
         </label>
         <br>
-        <label>
+        <label for="emailContacto">
           Correo electrónico*
-          <input type="email" name="email" class="input-styles" placeholder="juanperez432@example.com" required>
+          <input id="emailContacto" type="email" name="email" class="input-styles" placeholder="juanperez432@example.com" required>
         </label>
         <br>
         <div class="mb-3">
@@ -18,7 +18,7 @@
           <textarea class="input-styles-text form-control" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
         <div class="button-container">
-          <button class="btn mt-4" type="submit">Enviar</button>
+          <button id="btnContacto"class="btn mt-4" type="submit">Enviar</button>
         </div>
     </form>
 </div>

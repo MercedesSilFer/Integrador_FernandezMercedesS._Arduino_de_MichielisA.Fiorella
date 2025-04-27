@@ -76,7 +76,8 @@ li, ul {
 .navbar {
   background-color: white;
   font-weight: 520;
-  height: 100px;
+  height: auto;
+  min-height: 100px
 }
 
 .nav-link.active{
@@ -176,8 +177,30 @@ li, ul {
   background-image: url('../img/IMG_1515.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   min-height: 550px;
   width: 100%;
+}
+.container-mensaje2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #a0350b;
+  min-height: 550px;
+  width: 100%;
+}
+
+.container-ingresar{
+  background-image: url('../img/rinoneramasculina.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container-registrarse{
+  background-image: url('../img/cintosinicio.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .contacto{
   color:#91370e;
