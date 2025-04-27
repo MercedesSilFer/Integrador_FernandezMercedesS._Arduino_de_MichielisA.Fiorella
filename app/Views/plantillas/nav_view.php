@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
   <div class="container-fluid">
     <!-- Logo y toggler - ahora en una sola fila -->
     <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
@@ -84,3 +85,4 @@
     </div>
   </div>
 </nav>
+</div>
