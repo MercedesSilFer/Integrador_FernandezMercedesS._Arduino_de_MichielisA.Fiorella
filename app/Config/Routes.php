@@ -13,7 +13,7 @@ $routes->get('registrarse', 'Home::registrarse');
 $routes->get('ingresar', 'Home::ingresar');
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('eventos', 'Home::eventos');   
-$routes->get('terminosYcondiciones', 'Home::terminosYcondiciones');
+$routes->get('terminos-y-condiciones', 'Home::terminosYcondiciones');
 $routes->get('totebags', 'Home::totebags');
 $routes->get('carteras', 'Home::carteras');
 $routes->get('mochilas', 'Home::mochilas');

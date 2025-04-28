@@ -1,0 +1,26 @@
+CRITICAL - 2025-04-28 00:19:38 --> ErrorException: Undefined variable $ruta
+[Method: GET, Route: coleccion]
+in APPPATH\Views\front-end\Catalogo_view.php on line 18.
+ 1 APPPATH\Views\front-end\Catalogo_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ruta', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\front-end\\Catalogo_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\front-end\\Catalogo_view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front-end/Catalogo_view', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('front-end/Catalogo_view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->coleccion()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-28 19:09:26 --> ParseError: syntax error, unexpected token "-", expecting "("
+[Method: GET, Route: contacto]
+in APPPATH\Controllers\Home.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

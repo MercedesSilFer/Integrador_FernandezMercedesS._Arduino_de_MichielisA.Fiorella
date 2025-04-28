@@ -47,8 +47,8 @@ class Home extends BaseController
     }
     public function terminosYcondiciones()
     {
-        $data['titulo']= "terminosYcondiciones";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/TerminosYCondiciones_view').view('plantillas/footer_view');
+        $data['titulo']= "términos de uso";
+        return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Terminos-y-condiciones_view').view('plantillas/footer_view');
     }
     public function totebags()
     {
