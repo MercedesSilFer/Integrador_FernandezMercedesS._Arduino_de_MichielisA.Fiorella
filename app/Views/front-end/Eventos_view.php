@@ -1,9 +1,9 @@
 <section>
-<div class="container text-center">
-    <h1>Tendencias & Noticias</h1>
+<div class="container text-center bg-body-tertiary">
+    <h1 class="bienvenida">Tendencias & Noticias</h1>
   <div class="row align-items-center mt-5 mb-5 pt-3 pb-3 justify-content-evenly">
     <div class="col-12 col-lg-3 col-md-12">
-        <h2>Corrientes diseña Edición 2019</h2>
+        <h2 class="text-decoration-none">Corrientes diseña Edición 2019</h2>
     <p>Este sábado 30-3 en las Escalinatas del Teatro Vera mega desfile con grandes diseñadores locales. También vas a poder disfrutar de bandas en vivo, moda y diseño.</p>
     </div>
     <div class="col-12 col-lg-3 col-md-7">
@@ -16,7 +16,7 @@
 </div>
   <div class="row align-items-center mt-5 mb-5 pt-3 pb-3 justify-content-evenly" >
   <div class="col-12 col-lg-3 col-md-12">
-    <h2>Feria Puro Diseño Edición 2018</h2> 
+    <h2 class="text-decoration-none">Feria Puro Diseño Edición 2018</h2> 
     <p>La Feria Puro Diseño es un evento que reúne a los mejores diseñadores y marcas de Argentina, ofreciendo una amplia variedad de productos de diseño contemporáneo. En esta edición, podrás encontrar desde moda hasta decoración, todo con un enfoque en la calidad y la creatividad.</p>
     </div>
     <div class="col-12 col-lg-3 col-md-7 ">
