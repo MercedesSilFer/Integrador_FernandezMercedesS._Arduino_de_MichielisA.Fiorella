@@ -10,6 +10,7 @@ body {
   font-weight: bold;
   text-align: center;
   color: rgb(226, 148, 112);
+  text-decoration: none;
 }
 h1{
   color:#290e01;
@@ -220,6 +221,9 @@ li, ul {
   object-fit: cover;
   height: 90vh;
   min-height: 300px;
+}
+.carousel-caption p{
+  color: white;
 }
 
 /* ========== CONTACTO ========== */
