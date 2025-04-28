@@ -1,7 +1,7 @@
 
 <div class="container-fluid mt-3"> 
     <div class="row align-items-center justify-content-evenly">
-            <div class="col-12 col-md-10 col-lg-5 justify-content-center mx-4 px-4">            
+            <div class="col-12 col-md-10 col-lg-5 justify-content-center px-4">            
                 <h1 class="bienvenida">¡Explorá nuestro mundo!</h1>
                 <br>
                 <p>Descubrí la artesanía sostenible, atemporal y única que tenemos para ofrecerte en Kurundú Cueros 

@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <!-- Logo y toggler - ahora en una sola fila -->
     <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
-      <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+      <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px; width: auto;">
     </a>
     
     <!-- Elementos del lado derecho (carrito y acceso) visibles en mobile -->
