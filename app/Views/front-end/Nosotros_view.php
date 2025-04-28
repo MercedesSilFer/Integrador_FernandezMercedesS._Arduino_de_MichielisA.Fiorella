@@ -26,7 +26,7 @@
                 <img src="<?php echo base_url('assets/img/hechoencorrientes.jpg'); ?>" class="d-block w-100" alt="...">  
                 </div>     
                     <div class="col-sm-12 col-md-6 mt-2">
-                    <P>Formamos parte de la marca HECHO EN CORRIENTES, un espacio que revaloriza la identidad de los productos regionales.</P>
+                    <p>Formamos parte de la marca HECHO EN CORRIENTES, un espacio que revaloriza la identidad de los productos regionales.</P>
                     </div>
             </div>
         </div>

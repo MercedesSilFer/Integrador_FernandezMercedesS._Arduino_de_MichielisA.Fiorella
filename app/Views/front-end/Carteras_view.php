@@ -1,7 +1,7 @@
-<div id="carteras" class="container-fluid text-center mt-3 pt-2">  
+<div id="carteras" class="container-fluid text-center mt-2 pt-2">  
     <h3>Carteras</h3>
     <hr>
-    <div class="catalogo-mobile">
+    <div class="catalogo-mobile mb-5 pb-5">
     <div class="row justify-content-center">
             <div class="col-6 col-xl-3 mt-2"> 
                 <div class="card w-75 h-auto mx-auto">

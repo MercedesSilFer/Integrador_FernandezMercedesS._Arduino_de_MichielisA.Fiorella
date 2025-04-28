@@ -1,8 +1,8 @@
-<div id="rinoneras" class="container-fluid text-center mt-3 pt-2">  
+<div id="coleccion" class="container-fluid text-center mt-3 py-2">  
     <h3>Colección cápsula color</h3>
     <p>Sección de nuestros productos más coloridos</p>
     <hr>
-    <div class="catalogo-mobile">
+    <div class="catalogo-mobile mb-5">
     <div class="row justify-content-center">
             <div class="col-6 col-xl-3 mt-2"> 
                 <div class="card w-75 h-auto mx-auto">

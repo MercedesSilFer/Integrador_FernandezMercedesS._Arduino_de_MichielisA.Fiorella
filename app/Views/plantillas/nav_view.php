@@ -12,10 +12,11 @@
         
         <!-- Carrito y toggler -->
         <div class="d-flex align-items-center gap-3">
-          <a href="<?= base_url('carrito'); ?>" class="text-decoration-none position-relative">
-            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 30px;" loading="lazy">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
-          </a>
+          <button class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
+            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
+            <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
+          </button>
           
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
             data-bs-target="#mobileMenu" aria-controls="mobileMenu"
@@ -44,18 +45,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $ruta == 'contacto' ? 'active' : '' ?>" href="<?= base_url('contacto'); ?>">Contacto</a>
-        </li>
-      </ul>
-      
+        </li>     
       <!-- Acceso mobile -->
-      <div class="dropdown my-3">
-        <a class="nav-link dropdown-toggle-visually-hidden" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Acceder
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
-          <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
-        </ul>
+        <li><a class="nav-link" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
+        <li><a class="nav-link" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
+      </ul>
       </div>
     </div>
   </div>
@@ -113,11 +107,11 @@
               <button class="btn btn-outline-secondary" type="submit">Buscar</button>
             </div>
           </form>
-
-          <a href="<?= base_url('carrito'); ?>" class="text-decoration-none position-relative">
-            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 30px;" loading="lazy">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
-          </a>
+          <button class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
+            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
+            <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
+          </button>
 
           <div class="dropdown">
           <button class="nav-link dropdown-toggle-visually-hidden <?= $ruta == '' ? 'active' : '' ?>" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
@@ -130,4 +124,13 @@
       </div>
     </div>
   </nav>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel" style="width: 100%; max-width: 400px;">
+  <div class="offcanvas-header bg-body-tertiary">
+    <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito de compras</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body bg-body-tertiary px-2">
+    <p>Su carrito se encuentra vacío actualmente</p>
+  </div>
 </div>

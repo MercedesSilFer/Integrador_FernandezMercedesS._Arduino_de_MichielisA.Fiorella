@@ -1,4 +1,4 @@
-<footer class="estilo-footer text-white mt-3 py-3 gx-0">
+<footer class="estilo-footer text-white py-4 gx-0">
   <div class="container-fluid">
     <div class="row justify-content-center">
       <!-- Columna 1: Logo y descripción -->
@@ -44,7 +44,7 @@
         <h5>Legal</h5>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Privacidad</a></li>
-          <li class="mb-2"><a href="<?php echo base_url('terminosYcondiciones'); ?>" class="text-white-50 text-decoration-none">Términos y Condiciones</a></li>
+          <li class="mb-2"><a href="<?php echo base_url('terminos-y-condiciones'); ?>" class="text-white-50 text-decoration-none">Términos y Condiciones</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Envío</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Política de Reembolso</a></li>
         </ul>

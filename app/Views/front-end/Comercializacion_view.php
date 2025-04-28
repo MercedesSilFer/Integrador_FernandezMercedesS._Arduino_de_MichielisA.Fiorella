@@ -344,7 +344,7 @@
                 <h3 class="section-title mb-4 border-bottom pb-2">¿Aún tenés dudas?</h3>
                 <p>Te invitamos a <a class="a-parrafos" href="<?php echo base_url('contacto'); ?>">contactarnos</a>
                     para aclarar tus consultas, y a conocer más sobre nuestros 
-                    <a class="a-parrafos" href="<?php echo base_url('termynosYcondiciones'); ?>">términos y condiciones</a>,
+                    <a class="a-parrafos" href="<?php echo base_url('terminos-y-condiciones'); ?>">términos y condiciones</a>,
                     donde te contamos con más detalles toda la información que necesitas saber acerca de nuestra página. 
                 </p>
                 <br>
