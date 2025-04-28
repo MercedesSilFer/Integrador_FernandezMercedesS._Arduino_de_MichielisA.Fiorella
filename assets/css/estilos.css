@@ -11,7 +11,16 @@ body {
   text-align: center;
   color: rgb(226, 148, 112);
 }
-
+h2{
+  color: #642c10;
+  font-weight:400;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+h3{
+  color:#290e01;
+  font-weight:700;
+}
 .a-parrafos{
   color: #b34108;
   transition: all 0.2s ease;
@@ -20,8 +29,8 @@ body {
   text-decoration: underline;
   color: #b94813;
 }
-.parrafo {
-  color: rgb(10, 10, 43);
+p {
+  color:#290e01;
 }
 
 li, ul {
@@ -41,28 +50,25 @@ li, ul {
   text-align: center;
   font-family: arial;
 }
-
+.catalogo-mobile h4{
+  font-size:medium;
+  color:#1f0a00;
+  font-weight: bold;
+}
+.catalogo-mobile .price{
+  font-size: medium;
+}
 .price {
-  color: grey;
+  color: rgb(41, 40, 40);
   font-size: 22px;
 }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #60290d;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+
 
 .card button:hover {
   opacity: 0.7;
 }
-/* ========== TARJETAS-INICIO ========== */ 
+/* ========== TARJETAS========== */ 
 .tarjetas{
   background-color: #f4f0ed;
   color:#60290d;
@@ -76,8 +82,7 @@ li, ul {
 .navbar {
   background-color: white;
   font-weight: 520;
-  height: auto;
-  min-height: 100px
+  height: 100px;
 }
 
 .nav-link.active{
@@ -122,7 +127,26 @@ li, ul {
   background-color: #b6471b;
   color: white;
 }
+.btn-offcanvas{
+  color: #a0350b;
+  background-color: white;
+  outline-color: white;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
 
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #60290d;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
 
 /* ========== DROPDOWNS ========== */
 .dropdown-hover:hover .dropdown-menu {
@@ -178,30 +202,8 @@ li, ul {
   background-image: url('../img/IMG_1515.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   min-height: 550px;
   width: 100%;
-}
-.container-mensaje2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #a0350b;
-  min-height: 550px;
-  width: 100%;
-}
-
-.container-ingresar{
-  background-image: url('../img/rinoneramasculina.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.container-registrarse{
-  background-image: url('../img/cintosinicio.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 .contacto{
   color:#91370e;
@@ -217,7 +219,6 @@ li, ul {
   box-shadow: -8px 6px 10px #5f5f5f56;
   color: #91370e;
 }
-/* =======================*/
 /* ========== FORMULARIOS ========== */
 label {
   display: flex;
@@ -278,11 +279,23 @@ a{
   padding-top: 12%;
 }
 
-/*===========TERMINOS DE USO==========*/
+/*===========acceso==========*/
 
+.registrarse{
+  background-image: url('../img/IMG_1515.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 550px;
+  width: 100%;
+}
 
-
-
+.ingresar{
+  background-image: url('../img/IMG_1515.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 550px;
+  width: 100%;
+}
 
 /* ========== FOOTER ========== */
 .estilo-footer {

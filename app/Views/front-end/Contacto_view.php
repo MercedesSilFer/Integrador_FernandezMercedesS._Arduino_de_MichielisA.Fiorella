@@ -2,7 +2,7 @@
   
   <div class= "container-fluid container-mensaje">
   <form class="section-form" method="post">
-        <h3 class="section-title">Escribinos</h3>
+        <h3 class="section-title">¡Contactate con Kurundu!</h3>
         <label for="nombreContacto">
           Nombre y apellido*
           <input type="text" id="nombreContacto" name="nombre" class="input-styles" placeholder="Juan Perez" required>
