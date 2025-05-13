@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2025 a las 16:01:38
+-- Tiempo de generación: 13-05-2025 a las 15:06:27
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_fernandezmercedess._arduino_de_michielisa.fiorella`
+-- Base de datos: `bd_fernandezmercedess__arduino_de_michielisa_fiorella`
 --
 
 -- --------------------------------------------------------
@@ -116,6 +116,28 @@ ALTER TABLE `perfil`
 ALTER TABLE `personas`
   ADD PRIMARY KEY (`id_persona`),
   ADD UNIQUE KEY `id_perfil` (`id_perfil`);
+
+--
+-- Indices de la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD UNIQUE KEY `id_categoria` (`id_categoria`);
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `personas`
+--
+ALTER TABLE `personas`
+  ADD CONSTRAINT `personas_ibfk_1` FOREIGN KEY (`id_perfil`) REFERENCES `perfil` (`id_perfil`);
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
