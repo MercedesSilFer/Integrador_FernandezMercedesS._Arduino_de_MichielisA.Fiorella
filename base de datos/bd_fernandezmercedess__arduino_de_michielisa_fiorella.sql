@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2025 a las 15:06:27
+-- Tiempo de generación: 13-05-2025 a las 16:49:58
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -57,6 +57,14 @@ CREATE TABLE `perfil` (
   `tipo_perfil` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `perfil`
+--
+
+INSERT INTO `perfil` (`id_perfil`, `tipo_perfil`) VALUES
+(1, 'Administrador'),
+(2, 'cliente');
+
 -- --------------------------------------------------------
 
 --
@@ -85,7 +93,9 @@ CREATE TABLE `productos` (
   `precio_producto` decimal(10,0) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `descripcion_producto` text NOT NULL,
-  `imagen_producto` varchar(200) NOT NULL
+  `imagen_producto` varchar(200) NOT NULL,
+  `stock_producto` int(4) NOT NULL,
+  `estado_producto` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -115,13 +125,24 @@ ALTER TABLE `perfil`
 --
 ALTER TABLE `personas`
   ADD PRIMARY KEY (`id_persona`),
-  ADD UNIQUE KEY `id_perfil` (`id_perfil`);
+  ADD UNIQUE KEY `id_perfil` (`id_perfil`),
+  ADD UNIQUE KEY `email_persona` (`email_persona`);
 
 --
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD UNIQUE KEY `id_categoria` (`id_categoria`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `perfil`
+--
+ALTER TABLE `perfil`
+  MODIFY `id_perfil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
