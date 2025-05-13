@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class Personas_model extends Model
 {
-    protected $table      = 'users';
-    protected $primaryKey = 'id';
+    protected $table      = 'personas';
+    protected $primaryKey = 'id_persona';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nombre_remitente', 'apellido_remitente', 'email_mensaje', 'contenido_mensaje'];
+    protected $allowedFields = ['nombre_persona', 'apellido_persona', 'email_persona', 'contrasena_persona', 'estado_persona', 'id_perfil'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
