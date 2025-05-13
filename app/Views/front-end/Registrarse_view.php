@@ -3,9 +3,15 @@
     <div class="col-md-4 container-mensaje">
       <form class="section-form w-md-50" method="post">
         <h3 class="section-title">Registrarse</h3>
-        <label for="nombreApellido"class="">
-          Nombre y apellido*
-          <input type="text" id="nombreApellido" name="nombre" class="input-styles" placeholder="Juan Perez" required>
+        <!-- separar nombre y apellido -->
+        <label for="nombre" class="">
+          Nombre*
+          <input type="text" id="nombre" name="nombre" class="input-styles" placeholder="Juan" required>
+        </label>
+        <br>
+        <label for="apellido" class="">
+          Apellido*
+          <input type="text" id="apellido" name="apellido" class="input-styles" placeholder="Perez" required>
         </label>
         <br>
         <label for="cuilUsuario"class="">
