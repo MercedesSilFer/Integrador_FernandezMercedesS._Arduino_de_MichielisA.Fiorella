@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2025 a las 16:49:58
+-- Tiempo de generación: 20-05-2025 a las 15:56:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_fernandezmercedess__arduino_de_michielisa_fiorella`
+-- Base de datos: `bd_fernandezmercedess._arduino_de_michielisa.fiorella`
 --
 
 -- --------------------------------------------------------
@@ -45,6 +45,13 @@ CREATE TABLE `mensaje` (
   `email_mensaje` varchar(100) NOT NULL,
   `contenido_mensaje` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `mensaje`
+--
+
+INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `email_mensaje`, `contenido_mensaje`) VALUES
+(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj');
 
 -- --------------------------------------------------------
 
@@ -75,10 +82,13 @@ CREATE TABLE `personas` (
   `id_persona` int(11) NOT NULL,
   `nombre_persona` varchar(50) NOT NULL,
   `apellido_persona` varchar(50) NOT NULL,
+  `cuil_persona` int(11) NOT NULL,
   `email_persona` varchar(100) NOT NULL,
   `contrasena_persona` varchar(50) NOT NULL,
   `estado_persona` tinyint(1) NOT NULL,
-  `id_perfil` int(11) NOT NULL
+  `id_perfil` int(11) NOT NULL,
+  `domicilio_persona` varchar(50) NOT NULL,
+  `telefono_persona` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -137,6 +147,12 @@ ALTER TABLE `productos`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `mensaje`
+--
+ALTER TABLE `mensaje`
+  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `perfil`

@@ -1,7 +1,24 @@
 <section class="contacto">
   
   <div class= "container-fluid container-mensaje">
-  <form class="section-form" method="post">
+    <div class="row pt-5 mt-5">
+      <div class="col-12">
+        <?php if (!empty ($validation)) : ?>
+          <div class="alert alert-danger" role="alert">
+            <ul>
+              <?php foreach ($validation as $error) : ?>
+                <li><?= esc($error) ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endif ?>
+
+        <?php if (session('mensaje_mensaje')) {
+          echo session ('mensaje_mensaje');
+        }?>
+      </div>
+    </div>
+  <?php echo form_open('contacto', ['class' => 'section-form', 'method' => 'post']); ?>
         <h3 class="section-title">¡Contactate con Kurundu!</h3>
         <label for="nombre" class="">
           Nombre*
@@ -15,17 +32,17 @@
         <br>
         <label for="emailContacto">
           Correo electrónico*
-          <input id="emailContacto" type="email" name="email" class="input-styles" placeholder="juanperez432@example.com" required>
+          <input id="emailContacto" type="email" name="correo" class="input-styles" placeholder="juanperez432@example.com" required>
         </label>
         <br>
         <div class="mb-3">
           <label for="exampleFormControlTextarea" class="form-label">Mensaje*</label>
-          <textarea class="input-styles-text form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+          <textarea class="input-styles-text form-control" name="mensaje" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
         <div class="button-container">
           <button id="btnContacto"class="btn mt-4" type="submit">Enviar</button>
         </div>
-    </form>
+    <?php echo form_close(); ?>
 </div>
 <div class="contacto-container text-center mt-4">
   <div class="row">

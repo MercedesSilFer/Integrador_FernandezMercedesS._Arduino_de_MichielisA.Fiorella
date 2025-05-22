@@ -7,9 +7,15 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('nosotros', 'Home::nosotros');
+
 $routes->get('contacto', 'Home::contacto');
+$routes->post('contacto', 'Personas_controller::add_consulta');
+
 $routes->get('comercializacion', 'Home::comercializacion');
+
 $routes->get('registrarse', 'Home::registrarse');
+$routes->post('registrarse', 'Personas_controller::registrarse');
+
 $routes->get('ingresar', 'Home::ingresar');
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('eventos', 'Home::eventos');   
@@ -19,4 +25,6 @@ $routes->get('carteras', 'Home::carteras');
 $routes->get('mochilas', 'Home::mochilas');
 $routes->get('rinoneras', 'Home::rinoneras');
 $routes->get('coleccion', 'Home::coleccion');
+
+
 
