@@ -13,8 +13,8 @@
           </div>
         <?php endif ?>
 
-        <?php if (session('mensaje_mensaje')) {
-          echo session ('mensaje_mensaje');
+        <?php if (session('contenido_mensaje')) {
+          echo session ('contenido_mensaje');
         }?>
       </div>
     </div>

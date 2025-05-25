@@ -47,22 +47,23 @@
         <div class="button-container">
           <button id="btnRegistrarse" class="btn mt-3" type="submit">Registrarse</button>
         </div>
+        <?php echo form_close(); ?>
         <div class="col-12 mt-2">
-        <?php if (!empty ($validation)) : ?>
-          <div class="alert alert-danger m-3" role="alert">
-            <ul>
-              <?php foreach ($validation as $error) : ?>
-                <li><?= esc($error) ?></li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        <?php endif ?>
+          <?php if (!empty ($validation)) : ?>
+            <div class="alert alert-danger m-3" role="alert">
+              <ul>
+                <?php foreach ($validation as $error) : ?>
+                 <li><?= esc($error) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endif ?>
 
-        <?php if (session('mensaje_mensaje')) {
-          echo session ('mensaje_mensaje');
-        }?>
-      </div>
-      <?php echo form_close(); ?>
+          <?php if (session('contenido_mensaje')) {
+            echo session ('contenido_mensaje');
+          }?>
+        </div>
+      
     </div>
   </div>
 </section>

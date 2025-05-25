@@ -23,6 +23,11 @@ class Personas_controller extends BaseController
             [   // Errors
                 'nombre' => [
                     'required' => 'El nombre es requerido',
+                    'max_length' => 'El nombre debe tener como máximo 30 caracteres',
+                ],
+                'apellido' => [
+                    'required' => 'El apellido es requerido',
+                    'max_length' => 'El apellido debe tener como máximo 50 caracteres',
                 ],
                 'correo' => [
                     'required' => 'El correo electrónico es obligatorio',
@@ -31,7 +36,7 @@ class Personas_controller extends BaseController
                 'mensaje' => [
                     'required' => 'El mensaje es requerido',
                     'min_length' =>'El mensaje debe tener como mínimo 10 caracteres',
-                    'max_length'    => 'El mensaje debe tener como máximo 200 caracteres',
+                    'max_length'    => 'El mensaje debe tener como máximo 250 caracteres',
                 ],
             ]
         );
@@ -68,16 +73,18 @@ class Personas_controller extends BaseController
                 'apellido' => 'required|max_length[50]',
                 'correo' => 'required|valid_email|is_unique[personas.email_persona]',
                 'cuil' => 'required|min_length[11]',
-                'domicilio' => 'max_length[100]',
+                'domicilio' => 'required|max_length[100]',
                 'contrasena' => 'required|min_length[8]|max_length[20]',
                 'contrasena_confirm' => 'required|matches[contrasena]',
             ],
             [   // Errors
                 'nombre' => [
                     'required' => 'El nombre es requerido',
+                    'max_length' => 'El nombre debe tener como máximo 30 caracteres',
                 ],
                 'apellido' => [
                     'required' => 'El apellido es requerido',
+                    'max_length' => 'El apellido debe tener como máximo 50 caracteres',
                 ],
                 'correo' => [
                     'required' => 'El correo electrónico es obligatorio',
@@ -86,10 +93,11 @@ class Personas_controller extends BaseController
                 ],
                 'cuil' => [
                     'required' => 'El CUIL es requerido',
-                    'min_length' =>'El CUIL debe ser válido',
+                    'min_length' =>'El CUIL debe tener 11 dígitos',
                 ],
                 'domicilio' => [
                     'max_length'    => 'El domicilio debe tener como máximo 100 caracteres',
+                    'required' => 'El domicilio es requerido',
                 ],
                 'contrasena' => [
                     'required' => 'La contraseña es requerida',
@@ -166,7 +174,7 @@ class Personas_controller extends BaseController
 
         $persona_model = new Personas_model();
         $persona = $persona_model -> where ('email_persona', $email) ->first();
-        echo 'aaaaa'; die;
+        //echo 'aaaaa'; die;
         if ($persona && password_verify($pass, $persona['contrasena_persona'])){
             
             $data=[
@@ -182,13 +190,21 @@ class Personas_controller extends BaseController
                     return redirect()->route('admin');
                     break;
                 case 2:
-                    return redirect()->route('index');
+                    return redirect()->route('index')->with('contenido_mensaje', 'Se ha iniciado sesión exitosamente!');
                     break;
                 default:
                     return redirect()->route('index');
                     break;
             }
 
+        }else{
+            echo 'Contraseña incorrecta';
+            $data['titulo'] = 'Iniciar Sesión';
+            $data['validation'] = $validation->getErrors();
+            return view('plantillas/header_view', $data)
+                . view('plantillas/nav_view')
+                . view('front-end/Ingresar_view', $data)
+                . view('plantillas/footer_view');
         }
     }
 }
