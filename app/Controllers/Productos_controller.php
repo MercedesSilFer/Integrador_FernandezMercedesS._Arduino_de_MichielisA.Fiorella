@@ -13,7 +13,7 @@ class Productos_controller extends BaseController
         $categoriaModel = new \App\Models\Categorias_model();
         $categorias = $categoriaModel->findAll();
 
-        return view('backend.php/form_cargar_prod', [
+        return view('Backend/form_cargar_prod', [
                 'categorias' => $categorias
             ]);
 
@@ -67,13 +67,13 @@ class Productos_controller extends BaseController
             $producto = new Productos_model();
             $producto->insert($data);
 
-            return redirect()->route('contacto')->with('contenido_mensaje', 'Su consulta se envió exitosamente!');
+            return redirect()->route('cargar')->with('contenido_mensaje', 'Su consulta se envió exitosamente!');
         } else {
-            $data['titulo'] = 'Contacto';
+            $data['titulo'] = 'Cargar productos';
             $data['validation'] = $validation->getErrors();
             return view('plantillas/header_view', $data)
                 . view('plantillas/nav_view')
-                . view('front-end/Contacto_view', $data)
+                . view('front-end/form_cargar_prod', $data)
                 . view('plantillas/footer_view');
         }
     }

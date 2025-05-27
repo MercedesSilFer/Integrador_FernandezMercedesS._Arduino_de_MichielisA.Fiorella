@@ -1612,4 +1612,23 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
 DEBUG - 2025-05-27 13:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-27 13:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-27 13:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 >>>>>>> 0a96a2ff9f52c9a44bf360a5bed4d8f0754871f6
+=======
+DEBUG - 2025-05-27 13:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-27 13:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-27 13:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-27 13:34:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/form_cargar_prod.php"
+[Method: GET, Route: cargar]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/form_cargar_prod.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/form_cargar_prod', [], true)
+ 3 APPPATH\Controllers\Home.php(80): view('backend/form_cargar_prod')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->cargar_producto()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-27 13:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> cd7d818673887963f5b80a6d15448e4c0c1f3253
