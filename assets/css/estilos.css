@@ -92,10 +92,8 @@ li, ul {
 }
 
 .nav-link.active{
-  background-color: #f3864770;
-  color: #000;
-  border-color:#f3864770;
-  border-radius: 5%;
+  color: #a0350b;
+  text-decoration: underline;
 }
 .nav-link {
   color: #a0350b;

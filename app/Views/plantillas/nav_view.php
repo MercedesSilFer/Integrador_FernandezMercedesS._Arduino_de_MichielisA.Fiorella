@@ -119,20 +119,27 @@
               <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search" name="q">
               <button class="btn btn-outline-secondary" type="submit">Buscar</button>
             </div>
-          </form>
-          <button class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
-            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
-            <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
-          </button>
-
-          <div class="dropdown">
-          <button class="nav-link dropdown-toggle-visually-hidden <?= $ruta == '' ? 'active' : '' ?>" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
-              <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
-            </ul>
-          </div>
+          </form>       
+          <?php if (session('login')){?>
+            <button class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
+              <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
+              <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
+            </button>
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li><a class="nav-link" href="<?= base_url('personas'); ?>"> <?= esc(session('nombre_sesion')) ?></a></li>
+                <li><a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+              </ul>
+          <?php }?>
+           <?php if(!session('login')){?>
+            <div class="dropdown">
+              <button class="nav-link dropdown-toggle-visually-hidden <?= $ruta == '' ? 'active' : '' ?>" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
+              </ul>
+            </div>
+          <?php }?>
         </div>
       </div>
     </div>
