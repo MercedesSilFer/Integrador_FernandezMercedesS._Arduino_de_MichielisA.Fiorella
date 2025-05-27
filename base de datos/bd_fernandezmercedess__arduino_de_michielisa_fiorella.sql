@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-05-2025 a las 14:46:26
+-- Tiempo de generación: 27-05-2025 a las 15:23:45
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -98,7 +98,7 @@ CREATE TABLE `personas` (
 INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
 (8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
 (9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
-(11, 'Juan', 'Perez', 2147483647, 'popopop@gmail.com', '$2y$10$HGkgEgWQhKbE5S0baA8vQ.6Q3AK.zV94cOaaH0zcOHUnRlH5EcXIy', 1, '567 fffff', 0, 2);
+(12, 'Juan', 'Perez', 2147483647, 'popopop@gmail.com', '$2y$10$y8u/j8M7qiBsHT7215HMxO88R8si51r.1kAdxDh1ylOF1ZaZrIxLa', 1, '567 fffff', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -179,7 +179,7 @@ ALTER TABLE `perfil`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
