@@ -47,12 +47,25 @@
           <a class="nav-link <?= $ruta == 'contacto' ? 'active' : '' ?>" href="<?= base_url('contacto'); ?>">Contacto</a>
         </li>     
       <!-- Acceso mobile -->
+       <?php if(session('ingresar')){ ?>
+        <li class="">
+          <a class="nav-link" href="<?= base_url('ver_carrito'); ?>">Ver carrito</a>
+        </li>
+        <li class="">
+          <a class="nav-link" href=" "><?php echo session('nombre'); ?></a>
+        </li>
+        <li class="">
+          <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
+        </li>
+      <?php } else { ?>
         <li><a class="nav-link" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
         <li><a class="nav-link" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
+      <?php } ?>
       </ul>
       </div>
     </div>
   </div>
+
 
   <!-- ========== VERSIÓN DESKTOP (mayor o igual a md) ========== -->
 <div class="container-fluid gx-0 d-none d-lg-block">

@@ -1,0 +1,1636 @@
+DEBUG - 2025-05-25 01:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 01:31:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'bd_fernandezmercedess_arduino_de_michielisa_fiorella' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bd_fernandezmer...', 3306, '', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('mariana@gmail.c...', 'personas.email_...', Array)
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('mariana@gmail.c...', 'personas.email_...', Array, NULL, 'correo')
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('correo', 'correo', 'mariana@gmail.c...', Array, Array, 'correo')
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(114): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'bd_fernandezmercedess_arduino_de_michielisa_fiorella' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('mariana@gmail.c...', 'personas.email_...', Array)
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('mariana@gmail.c...', 'personas.email_...', Array, NULL, 'correo')
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('correo', 'correo', 'mariana@gmail.c...', Array, Array, 'correo')
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(114): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-05-25 01:31:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'bd_fernandezmercedess_arduino_de_michielisa_fiorella'
+[Method: POST, Route: registrarse]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('mariana@gmail.com', 'personas.email_persona', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('mariana@gmail.com', 'personas.email_persona', [...], null, 'correo')
+ 6 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('correo', 'correo', 'mariana@gmail.com', [...], [...], 'correo')
+ 7 APPPATH\Controllers\Personas_controller.php(114): CodeIgniter\Validation\Validation->run()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 01:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 01:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:01:24 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:01:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:01:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:01:24 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:02:33 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:02:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:02:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:02:33 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:02:42 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:02:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:02:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:02:42 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:03:38 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:03:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:03:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:03:38 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` IS NULL
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:06:57 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:06:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:06:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:06:57 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 02:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:13:21 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 02:13:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:13:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:13:21 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:15:04 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-05-25 02:15:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+[Method: POST, Route: registrarse]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:15:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$FpXDRI8IBVQooYSbYj5sPe1LnEyB4xrSxPRTtAnqLnUo/Remhxd9C\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$FpXDRI8IBVQooYSbYj5sPe1LnEyB4xrSxPRTtAnqLnUo/Remhxd9C\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:15:04 --> [Caused by] mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$FpXDRI8IBVQooYSbYj5sPe1LnEyB4xrSxPRTtAnqLnUo/Remhxd9C\', \'23456788760\', \'San Juan 349\', 1, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$FpXDRI8IBVQooYSbYj5sPe1LnEyB4xrSxPRTtAnqLnUo/Remhxd9C\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$FpXDRI8IBVQooYSbYj5sPe1LnEyB4xrSxPRTtAnqLnUo/Remhxd9C\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:28:31 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-05-25 02:28:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+[Method: POST, Route: registrarse]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:28:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$Qc42Z7ej6cuff7trrCamWepbI0f0peTA6X8xCB7iQr9ucpe30MEhe\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$Qc42Z7ej6cuff7trrCamWepbI0f0peTA6X8xCB7iQr9ucpe30MEhe\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:28:31 --> [Caused by] mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$Qc42Z7ej6cuff7trrCamWepbI0f0peTA6X8xCB7iQr9ucpe30MEhe\', \'23456788760\', \'San Juan 349\', 1, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$Qc42Z7ej6cuff7trrCamWepbI0f0peTA6X8xCB7iQr9ucpe30MEhe\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$Qc42Z7ej6cuff7trrCamWepbI0f0peTA6X8xCB7iQr9ucpe30MEhe\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 02:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 02:43:00 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-05-25 02:43:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+[Method: POST, Route: registrarse]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:43:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$yWCT9nf4Yzpef28WsIa9Qut.oZ8Myfybt2mp3ArUsfswvdVMavI5S\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$yWCT9nf4Yzpef28WsIa9Qut.oZ8Myfybt2mp3ArUsfswvdVMavI5S\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 02:43:00 --> [Caused by] mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$yWCT9nf4Yzpef28WsIa9Qut.oZ8Myfybt2mp3ArUsfswvdVMavI5S\', \'23456788760\', \'San Juan 349\', 1, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$yWCT9nf4Yzpef28WsIa9Qut.oZ8Myfybt2mp3ArUsfswvdVMavI5S\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$yWCT9nf4Yzpef28WsIa9Qut.oZ8Myfybt2mp3ArUsfswvdVMavI5S\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 03:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 03:18:19 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil_2' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-05-25 03:18:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil_2'
+[Method: POST, Route: registrarse]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:18:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$9qXkfFJdCBQbpJ2wtpPF3.vySqv61x273WF/12dCfi9dmMi9fXpjO\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$9qXkfFJdCBQbpJ2wtpPF3.vySqv61x273WF/12dCfi9dmMi9fXpjO\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:18:19 --> [Caused by] mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil_2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$9qXkfFJdCBQbpJ2wtpPF3.vySqv61x273WF/12dCfi9dmMi9fXpjO\', \'23456788760\', \'San Juan 349\', 1, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$9qXkfFJdCBQbpJ2wtpPF3.vySqv61x273WF/12dCfi9dmMi9fXpjO\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (\'Marcela\', \'Martínez\', \'marcela@gmail.com\', \'$2y$10$9qXkfFJdCBQbpJ2wtpPF3.vySqv61x273WF/12dCfi9dmMi9fXpjO\', \'23456788760\', \'San Juan 349\', 1, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre_persona`, `apellido_persona`, `email_persona`, `contrasena_persona`, `cuil_persona`, `domicilio_persona`, `estado_persona`, `id_perfil`) VALUES (:nombre_persona:, :apellido_persona:, :email_persona:, :contrasena_persona:, :cuil_persona:, :domicilio_persona:, :estado_persona:, :id_perfil:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Personas_controller.php(127): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->registrarse()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 03:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 03:44:27 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 03:44:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:44:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:44:27 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 03:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 03:58:35 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 03:58:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:58:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:58:35 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 03:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 03:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 03:59:54 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 03:59:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:59:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 03:59:54 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 04:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 15:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 15:23:30 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 15:23:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 15:23:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 15:23:30 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(176): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:57:13 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: POST, Route: ingresar]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:57:16 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: GET, Route: ingresar]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:57:26 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:57:43 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:58:53 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 19:58:55 --> ParseError: syntax error, unexpected string content ");", expecting ")"
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 19:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 20:01:20 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 20:01:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 20:01:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 20:01:20 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 20:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 20:02:37 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 20:02:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 20:02:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 20:02:37 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 20:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 22:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 23:36:21 --> mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-25 23:36:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+[Method: POST, Route: ingresar]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 23:36:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-25 23:36:21 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personas`
+WHERE `email_persona` = \'mariana@gmail.com\'
+AND `estado_persona` = 1
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personas`
+WHERE `email_persona` = :email_persona:
+AND `estado_persona` = :estado_persona:
+AND `personas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Personas_controller.php(177): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Personas_controller->buscar_persona()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 23:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 23:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 23:55:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/form_cargar_prod.php"
+[Method: GET, Route: cargar_producto]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/form_cargar_prod.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/form_cargar_prod', [], true)
+ 3 APPPATH\Controllers\Home.php(80): view('backend/form_cargar_prod')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->cargar_producto()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-25 23:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
