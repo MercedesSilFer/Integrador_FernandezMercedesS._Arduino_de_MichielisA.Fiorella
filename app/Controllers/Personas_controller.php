@@ -137,7 +137,7 @@ class Personas_controller extends BaseController
         $validation->setRules(
             [
                 'correo' => 'required|valid_email',
-                'contrasena' => 'required|min_length[8]|max_length[5]',
+                'contrasena' => 'required|min_length[8]|max_length[20]',
             ],
             [   // Errors
                 'correo' => [
@@ -166,7 +166,7 @@ class Personas_controller extends BaseController
 
         $persona_model = new Personas_model();
         $persona = $persona_model -> where ('email_persona', $email) ->first();
-        echo 'aaaaa'; die;
+        
         if ($persona && password_verify($pass, $persona['contrasena_persona'])){
             
             $data=[

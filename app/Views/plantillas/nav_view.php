@@ -114,7 +114,7 @@
           </button>
 
           <div class="dropdown">
-          <button class="nav-link dropdown-toggle-visually-hidden <?= $ruta == '' ? 'active' : '' ?>" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
+          <button class="nav-link dropdown-toggle-visually-hidden" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
               <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
