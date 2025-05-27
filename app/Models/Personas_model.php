@@ -14,7 +14,7 @@ class Personas_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nombre_persona', 'apellido_persona', 'email_persona', 'domicilio_persona', 'cuil_persona', 'contrasena_persona', 'estado_persona', 'id_perfil'];
+    protected $allowedFields = ['nombre_persona', 'apellido_persona', 'cuil_persona', 'email_persona', 'contrasena_persona', 'estado_persona', 'domicilio_persona', 'telefono_persona', 'id_perfil'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

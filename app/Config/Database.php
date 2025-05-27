@@ -29,7 +29,7 @@ class Database extends Config
         'hostname'     => 'localhost',
         'username'     => 'root',
         'password'     => '',
-        'database'     => 'bd_fernandezmercedess_arduino_de_michielisa_fiorella',
+        'database'     => 'bd_fernandezmercedess__arduino_de_michielisa_fiorella',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

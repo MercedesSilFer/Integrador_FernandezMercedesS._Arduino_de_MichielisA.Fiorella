@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2025 a las 15:56:06
+-- Tiempo de generación: 27-05-2025 a las 14:09:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_fernandezmercedess._arduino_de_michielisa.fiorella`
+-- Base de datos: `bd_fernandezmercedess__arduino_de_michielisa_fiorella`
 --
 
 -- --------------------------------------------------------
@@ -60,7 +60,7 @@ INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `
 --
 
 CREATE TABLE `perfil` (
-  `id_perfil` int(11) NOT NULL,
+  `id_perfil` int(5) NOT NULL,
   `tipo_perfil` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -84,12 +84,20 @@ CREATE TABLE `personas` (
   `apellido_persona` varchar(50) NOT NULL,
   `cuil_persona` int(11) NOT NULL,
   `email_persona` varchar(100) NOT NULL,
-  `contrasena_persona` varchar(50) NOT NULL,
+  `contrasena_persona` varchar(350) NOT NULL,
   `estado_persona` tinyint(1) NOT NULL,
-  `id_perfil` int(11) NOT NULL,
   `domicilio_persona` varchar(50) NOT NULL,
-  `telefono_persona` int(15) NOT NULL
+  `telefono_persona` int(15) NOT NULL,
+  `id_perfil` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `personas`
+--
+
+INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
+(8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
+(9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -135,8 +143,8 @@ ALTER TABLE `perfil`
 --
 ALTER TABLE `personas`
   ADD PRIMARY KEY (`id_persona`),
-  ADD UNIQUE KEY `id_perfil` (`id_perfil`),
-  ADD UNIQUE KEY `email_persona` (`email_persona`);
+  ADD UNIQUE KEY `email_persona` (`email_persona`),
+  ADD KEY `id_perfil` (`id_perfil`);
 
 --
 -- Indices de la tabla `productos`
@@ -149,6 +157,12 @@ ALTER TABLE `productos`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `mensaje`
 --
 ALTER TABLE `mensaje`
@@ -158,7 +172,13 @@ ALTER TABLE `mensaje`
 -- AUTO_INCREMENT de la tabla `perfil`
 --
 ALTER TABLE `perfil`
-  MODIFY `id_perfil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_perfil` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `personas`
+--
+ALTER TABLE `personas`
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
@@ -168,7 +188,7 @@ ALTER TABLE `perfil`
 -- Filtros para la tabla `personas`
 --
 ALTER TABLE `personas`
-  ADD CONSTRAINT `personas_ibfk_1` FOREIGN KEY (`id_perfil`) REFERENCES `perfil` (`id_perfil`);
+  ADD CONSTRAINT `id_perfil` FOREIGN KEY (`id_perfil`) REFERENCES `perfil` (`id_perfil`);
 
 --
 -- Filtros para la tabla `productos`
