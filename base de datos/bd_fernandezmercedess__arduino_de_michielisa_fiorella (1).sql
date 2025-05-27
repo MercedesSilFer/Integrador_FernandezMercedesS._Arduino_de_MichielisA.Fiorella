@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-05-2025 a las 14:09:49
+-- Tiempo de generación: 27-05-2025 a las 14:52:34
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -84,7 +84,7 @@ CREATE TABLE `personas` (
   `apellido_persona` varchar(50) NOT NULL,
   `cuil_persona` int(11) NOT NULL,
   `email_persona` varchar(100) NOT NULL,
-  `contrasena_persona` varchar(350) NOT NULL,
+  `contrasena_persona` varchar(450) NOT NULL,
   `estado_persona` tinyint(1) NOT NULL,
   `domicilio_persona` varchar(50) NOT NULL,
   `telefono_persona` int(15) NOT NULL,
@@ -96,8 +96,9 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
-(8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
-(9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2);
+(9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
+(10, 'Mariana', 'Martínez', 2147483647, 'marcela1@gmail.com', '$2y$10$Q0efXgzvLmWSmz7vdJxbaOdSDc96lUK3IZFw2.MJSr1RRc2xqyzsm', 1, 'San Juan 345', 0, 2),
+(11, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$lON06YsqNyuBmGFjFv5s2u5szMEzrDqfkXEw3ie0YqZgtbYDXtoPW', 1, 'San Juan 345', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -178,7 +179,7 @@ ALTER TABLE `perfil`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
