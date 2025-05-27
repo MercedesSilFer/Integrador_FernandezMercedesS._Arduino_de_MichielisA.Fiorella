@@ -18,6 +18,7 @@ $routes->post('registrarse', 'Personas_controller::registrarse');
 
 $routes->get('ingresar', 'Home::ingresar');
 $routes->post('ingresar', 'Personas_controller::buscar_persona');
+$routes->get('logout', 'Personas_controller::cerrar_sesion');
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('eventos', 'Home::eventos');   
 $routes->get('terminos-y-condiciones', 'Home::terminosYcondiciones');
