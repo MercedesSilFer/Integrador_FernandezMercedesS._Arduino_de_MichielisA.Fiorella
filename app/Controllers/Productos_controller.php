@@ -1,22 +1,27 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Models\Productos_model;
+use App\Models\Categorias_model;
 
 class Productos_controller extends BaseController
 {
+    public function add_categorias()
+    {
+         $categoriaModel = new Categorias_model();
+         $data['categorias']= $categoriaModel->findAll();
+
+         $data['titulo'] = 'Agregar Producto';
+          return view('plantillas/header_view', $data)
+                . view('plantillas/nav_admin')
+                . view('Backend/form_cargar_productos_view')
+                . view('plantillas/footer_view');
+    }
     public function add_producto()
     {
-        $validation = \Config\Services::validation();
+
         $request = \Config\Services::request();
-        $categoriaModel = new \App\Models\Categorias_model();
-        $categorias = $categoriaModel->findAll();
-
-        return view('Backend/form_cargar_prod', [
-                'categorias' => $categorias
-            ]);
-
+        $validation = \Config\Services::validation();
         $validation->setRules(
             [
                 'nombreProducto' => 'required|max_length[30]',
@@ -67,7 +72,7 @@ class Productos_controller extends BaseController
             $producto = new Productos_model();
             $producto->insert($data);
 
-            return redirect()->route('cargar')->with('contenido_mensaje', 'Su consulta se envió exitosamente!');
+            return redirect()->route('cargar')->with('contenido_mensaje', 'Su producto se agregó exitosamente!');
         } else {
             $data['titulo'] = 'Cargar productos';
             $data['validation'] = $validation->getErrors();

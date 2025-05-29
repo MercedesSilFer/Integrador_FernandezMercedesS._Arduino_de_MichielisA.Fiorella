@@ -37,7 +37,7 @@
           <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Ver Consultas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?= $ruta == 'cargar' ? 'active' : '' ?>" href="<?= base_url('cargar'); ?>">Alta Producto</a>
+          <a class="nav-link <?= $ruta == 'cargar1' ? 'active' : '' ?>" href="<?= base_url('cargar1'); ?>">Alta Producto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $ruta == 'baja_producto' ? 'active' : '' ?>" href="<?= base_url('baja_producto'); ?>">Baja Producto</a>
@@ -48,7 +48,7 @@
           <a class="nav-link" href=" "><?php echo session('nombre'); ?></a>
         </li>
         <li class="">
-          <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
+          <a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
         </li>
      
       </ul>
@@ -95,7 +95,7 @@
             <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Ver consultas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= $ruta == 'cargar' ? 'active' : '' ?>" href="<?= base_url('cargar'); ?>">Alta Producto</a>
+            <a class="nav-link <?= $ruta == 'cargar1' ? 'active' : '' ?>" href="<?= base_url('cargar1'); ?>">Alta Producto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?= $ruta == 'baja_producto' ? 'active' : '' ?>" href="<?= base_url('baja_producto'); ?>">Baja Producto</a>
@@ -104,7 +104,7 @@
           <a class="nav-link" href=" "><?php echo session('nombre'); ?></a>
           </li>
           <li class="">
-          <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
+          <a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
           </li>
         </ul>
       </div>

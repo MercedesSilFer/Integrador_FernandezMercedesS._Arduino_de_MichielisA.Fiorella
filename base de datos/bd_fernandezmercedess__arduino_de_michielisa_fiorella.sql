@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
-<<<<<<< HEAD:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella (1).sql
--- Tiempo de generación: 27-05-2025 a las 14:52:34
-=======
 -- Tiempo de generación: 27-05-2025 a las 15:23:45
->>>>>>> 0a96a2ff9f52c9a44bf360a5bed4d8f0754871f6:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella.sql
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -100,15 +96,9 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
-<<<<<<< HEAD:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella (1).sql
-(9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
-(10, 'Mariana', 'Martínez', 2147483647, 'marcela1@gmail.com', '$2y$10$Q0efXgzvLmWSmz7vdJxbaOdSDc96lUK3IZFw2.MJSr1RRc2xqyzsm', 1, 'San Juan 345', 0, 2),
-(11, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$lON06YsqNyuBmGFjFv5s2u5szMEzrDqfkXEw3ie0YqZgtbYDXtoPW', 1, 'San Juan 345', 0, 2);
-=======
 (8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
 (9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
 (12, 'Juan', 'Perez', 2147483647, 'popopop@gmail.com', '$2y$10$y8u/j8M7qiBsHT7215HMxO88R8si51r.1kAdxDh1ylOF1ZaZrIxLa', 1, '567 fffff', 0, 1);
->>>>>>> 0a96a2ff9f52c9a44bf360a5bed4d8f0754871f6:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella.sql
 
 -- --------------------------------------------------------
 
@@ -189,11 +179,7 @@ ALTER TABLE `perfil`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-<<<<<<< HEAD:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella (1).sql
-  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-=======
   MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
->>>>>>> 0a96a2ff9f52c9a44bf360a5bed4d8f0754871f6:base de datos/bd_fernandezmercedess__arduino_de_michielisa_fiorella.sql
 
 --
 -- Restricciones para tablas volcadas
