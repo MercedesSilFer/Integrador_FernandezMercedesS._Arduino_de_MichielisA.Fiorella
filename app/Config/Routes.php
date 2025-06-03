@@ -33,3 +33,5 @@ $routes->get('admin', 'Home::admin');
 $routes->get('gestionarProductos', 'Productos_controller::gestionar_productos');
 $routes->get('editarProducto/(:num)', 'Productos_controller::editar_producto/$1');
 $routes->post('actualizarProducto', 'Productos_controller::actualizar_producto');
+$routes->get('eliminarProducto/(:num)', 'Productos_controller::eliminar_producto/$1');
+$routes->get('activarProducto/(:num)', 'Productos_controller::activar_producto/$1');

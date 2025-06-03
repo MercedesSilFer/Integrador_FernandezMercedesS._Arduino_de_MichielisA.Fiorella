@@ -168,10 +168,19 @@ class Productos_controller extends BaseController
             $producto->update($id_producto, $data);
 
             return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'Su producto se actualizó exitosamente!');
-        } else {
-            $id_producto = $request->getPost('id_producto');
-           return redirect()->route('editarProducto/' . $id_producto)->withInput()->with('validation', $validation->getErrors());
+        }
+     }
+        public function eliminar_producto($id_producto = null){
+            $data = array('estado_producto' => 0); // Assuming 0 means inactive
+            $producto_model = new Productos_model();
+            $producto_model->update($id_producto, $data);
+            return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se eliminó exitosamente!');
         }
     
+    public function activar_producto($id_producto = null){
+        $data = array('estado_producto' => 1);
+        $producto_model = new Productos_model();
+        $producto_model->update($id_producto, $data);
+        return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se activó exitosamente!');
     }
     }
