@@ -92,7 +92,7 @@ class Productos_controller extends BaseController
         $data['titulo'] = 'Listar Productos';
         return view('plantillas/header_view', $data)
             . view('Backend/nav_admin_view')
-            . view('Backend/listar_productos_view')
+            . view('Backend/gestion_productos_view')
             . view('plantillas/footer_view');
     }
     public function editar_producto($id_producto=null)
@@ -194,7 +194,7 @@ class Productos_controller extends BaseController
         $data['titulo'] = 'Catalogo de Productos';
         return view('plantillas/header_view', $data)
             . view('plantillas/nav_view')
-            . view('front-end/Catalogo_view', $data)
+            . view('Backend/catalogo_admin_view', $data)
             . view('plantillas/footer_view');
     }
     public function filtrar_productos($id_categoria=null)   
