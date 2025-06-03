@@ -62,6 +62,18 @@ class Personas_controller extends BaseController
                 . view('plantillas/footer_view');
         }
     }
+
+    public function listar_consultas(){
+    $mensajeModel = new Mensaje_model();
+    $data['consultas'] = $mensajeModel->findAll();
+
+    $data['titulo'] = 'Listado de Consultas';
+    return view('plantillas/header_view', $data)
+        . view('plantillas/nav_view')
+        . view('front-end/informe_consultas', $data)
+        . view('plantillas/footer_view');
+    }
+
     public function registrarse()
     {
         $validation = \Config\Services::validation();

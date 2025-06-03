@@ -13,7 +13,7 @@ class Productos_controller extends BaseController
         $categoriaModel = new \App\Models\Categorias_model();
         $categorias = $categoriaModel->findAll();
 
-        return view('Backend/form_cargar_prod', [
+        return view('Backend/cargar_productos_view', [
                 'categorias' => $categorias
             ]);
 
@@ -73,7 +73,7 @@ class Productos_controller extends BaseController
             $data['validation'] = $validation->getErrors();
             return view('plantillas/header_view', $data)
                 . view('plantillas/nav_view')
-                . view('front-end/form_cargar_prod', $data)
+                . view('front-end/cargar_productos_view', $data)
                 . view('plantillas/footer_view');
         }
     }

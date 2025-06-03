@@ -31,6 +31,7 @@ $routes->get('salir', 'Personas_controller::cerrar_sesion');
 $routes->get('cargar', 'Home::cargar_producto');
 $routes->post('cargar', 'Productos_controller::add_producto');
 $routes->get('admin', 'Home::admin');
+$routes->get('consultas', 'Home::listar_consultas');
 
 
 
