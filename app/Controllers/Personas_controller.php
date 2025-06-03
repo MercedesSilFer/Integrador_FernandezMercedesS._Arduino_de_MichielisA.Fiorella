@@ -183,11 +183,10 @@ class Personas_controller extends BaseController
         }
         $email= $request->getPost('email');
         $pass = $request->getPost('password');
-        
 
-        $persona_model = new Personas_model();        
+        $persona_model = new Personas_model(); 
+
         $persona = $persona_model->where('email_persona', $email)->where('estado_persona', 1)->first();
-       
         if ($persona && password_verify($pass, $persona['contrasena_persona']))
         {
             $data=[

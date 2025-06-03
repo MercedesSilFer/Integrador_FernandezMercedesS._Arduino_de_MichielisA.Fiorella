@@ -1,7 +1,24 @@
 <section class="container-fluid acceso" id=" ">
   <div class="row justify-content-center align-items-center">
+    <div class="col-12 mt-2">
+          <?php if (!empty ($validation)) : ?>
+            <div class="alert alert-danger m-3" role="alert">
+              <ul>
+                <?php foreach ($validation as $error) : ?>
+                 <li><?= esc($error) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endif ?>
+
+         <?php if (session('contenido_mensaje')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('contenido_mensaje'); ?>
+            </div>
+          <?php } ?>
+        </div>
     <div class="col-md-4 container-mensaje">
-      <?php echo form_open('cargar', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
+      <?php echo form_open('cargar2', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
         <h3 class="section-title">Alta Producto</h3>
 
         <label for="nombreProducto">
@@ -16,15 +33,17 @@
         </label>
         <br>
 
-        <label for="categoria">
-          Selecciona una categoría*
-          <select id="numeroCategoria" name="categoria">
-            <option value="1">1_</option>
-            <option value="2">2_</option>
-            <option value="3">3_</option>
-            <option value="4">4_</option>
-            <option value="5">5_</option>
-          </select>
+        <label for="categorias">
+          Categoría*
+        <?php
+          $lista['0'] = 'Seleccione una categoría';
+          foreach ($categorias as $row){
+            $categoria_id=$row['id_categoria'];
+            $categoria_desc=$row['nombre_categoria'];
+            $lista[$categoria_id] = $categoria_desc;
+          }
+          echo form_dropdown('categorias', $lista, '0', ['class' => 'form-select input-styles', 'id' => 'categorias', 'required' => 'required']);
+        ?>
         </label>
         <br>
 
@@ -42,7 +61,7 @@
 
         <label for="imagenProducto" class="form-label">
           Imagen del producto*
-          <input type="file" class="form-control" id="imagenProducto" name="imagenProducto" accept="image/*" required>
+          <input type="file" class="form-control" id="imagenProducto" name="imagenProducto" value='imagen' accept="image/*" required>
         </label>
         <br>
 

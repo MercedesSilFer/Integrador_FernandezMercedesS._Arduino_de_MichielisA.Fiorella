@@ -75,18 +75,11 @@ class Home extends BaseController
         $data['titulo']= "Colección Cápsula Color";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/Coleccioncapsula_view').view('plantillas/footer_view');
     }
-    public function cargar_producto(){
-        $data['titulo']= "Cargar Producto";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_admin').view('backend/cargar_productos_view').view('plantillas/footer_view');
-    }
+   
     public function admin()
     {
         $data['titulo']= "Administración";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_admin').view('plantillas/footer_view');
-    }
-    public function listar_consulta(){
-        $data['titulo']= "Listado de Consultas";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_admin').view('backend/informe_consultas').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data).view('Backend/nav_admin_view').view('plantillas/footer_view');
     }
 
 }
