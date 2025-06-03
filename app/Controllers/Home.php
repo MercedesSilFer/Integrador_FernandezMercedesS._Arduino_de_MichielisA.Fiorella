@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+
+
 class Home extends BaseController
 {
     public function index(): string
@@ -35,11 +37,16 @@ class Home extends BaseController
         $data['titulo']= "ingresar";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Ingresar_view').view('plantillas/footer_view');
     }
-    public function catalogo()
+    /*public function catalogo()
     {
         $data['titulo']= "catalogo";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/CarterasXL_view').view('front-end/Carteras_view').view('front-end/Mochilas_view').view('front-end/Rinoneras_view').view('front-end/Coleccioncapsula_view').view('plantillas/footer_view');
-    }
+    }*/
+
+
+    
+
+
     public function eventos()
     {
         $data['titulo']= "Eventos";
@@ -50,7 +57,7 @@ class Home extends BaseController
         $data['titulo']= "términos de uso";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Terminos-y-condiciones_view').view('plantillas/footer_view');
     }
-    public function totebags()
+    /*public function totebags()
     {
         $data['titulo']= "Tote bags";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/CarterasXL_view').view('plantillas/footer_view');
@@ -74,7 +81,7 @@ class Home extends BaseController
     {
         $data['titulo']= "Colección Cápsula Color";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/Coleccioncapsula_view').view('plantillas/footer_view');
-    }
+    }*/
    
     public function admin()
     {

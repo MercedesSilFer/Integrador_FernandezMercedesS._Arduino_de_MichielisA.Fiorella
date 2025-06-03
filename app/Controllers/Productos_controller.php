@@ -170,12 +170,12 @@ class Productos_controller extends BaseController
             return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'Su producto se actualizó exitosamente!');
         }
      }
-        public function eliminar_producto($id_producto = null){
-            $data = array('estado_producto' => 0); // Assuming 0 means inactive
-            $producto_model = new Productos_model();
-            $producto_model->update($id_producto, $data);
-            return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se eliminó exitosamente!');
-        }
+    public function eliminar_producto($id_producto = null){
+        $data = array('estado_producto' => 0); // Assuming 0 means inactive
+        $producto_model = new Productos_model();
+        $producto_model->update($id_producto, $data);
+        return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se eliminó exitosamente!');
+    }
     
     public function activar_producto($id_producto = null){
         $data = array('estado_producto' => 1);
@@ -183,4 +183,37 @@ class Productos_controller extends BaseController
         $producto_model->update($id_producto, $data);
         return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se activó exitosamente!');
     }
+
+    public function listar_productos()
+    {
+        $productos = new Productos_model();
+        $categorias = new Categorias_model();
+        $data['productos'] = $productos-> where('estado_producto', 1)->where('stock_producto >', 0)
+            ->join('categorias', 'categorias.id_categoria = productos.id_categoria')
+            ->findAll();
+        $data['titulo'] = 'Catalogo de Productos';
+        return view('plantillas/header_view', $data)
+            . view('plantillas/nav_view')
+            . view('front-end/Catalogo_view', $data)
+            . view('plantillas/footer_view');
     }
+    public function filtrar_productos($id_categoria=null)   
+    {
+        $productos= new Productos_model();
+        $categorias= new Categorias_model();
+
+        $data['categorias'] = $categorias->findAll();
+        $data['titulo'] = 'Productos de la Categoría';
+    // Trae todos los productos de la categoría seleccionada y que estén activos
+        $data['productos'] = $productos
+        ->where('productos.id_categoria', $id_categoria)
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categorias', 'productos.id_categoria = categorias.id_categoria')
+        ->findAll();
+        return view('plantillas/header_view', $data)
+            . view('plantillas/nav_view')
+            . view('front-end/Catalogo_view', $data)
+            . view('plantillas/footer_view');
+    }
+}

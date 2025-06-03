@@ -12,7 +12,7 @@
             <th>Imagen</th>
             <th>Editar</th>
             <th>Activar/Eliminar</th>
-        </thead>
+        </thead> 
         <tbody>
             <?php foreach ($productos as $row){?>
                 <tr>
