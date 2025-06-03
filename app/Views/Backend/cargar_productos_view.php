@@ -11,9 +11,11 @@
             </div>
           <?php endif ?>
 
-          <?php if (session('contenido_mensaje')) {
-            echo session ('contenido_mensaje');
-          }?>
+         <?php if (session('contenido_mensaje')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('contenido_mensaje'); ?>
+            </div>
+          <?php } ?>
         </div>
     <div class="col-md-4 container-mensaje">
       <?php echo form_open('cargar2', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
@@ -40,7 +42,7 @@
             $categoria_desc=$row['nombre_categoria'];
             $lista[$categoria_id] = $categoria_desc;
           }
-          echo form_dropdown('categorias', $lista, '0', ['class' => 'form-select input-styles', 'id' => 'categoria', 'required' => 'required']);
+          echo form_dropdown('categorias', $lista, '0', ['class' => 'form-select input-styles', 'id' => 'categorias', 'required' => 'required']);
         ?>
         </label>
         <br>

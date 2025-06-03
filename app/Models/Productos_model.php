@@ -12,7 +12,7 @@ class Productos_model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nombre_producto', 'precio_producto', 'id_categoria', 'descripcion_producto', 'imagen_producto', 'stock_producto', 'estado_producto'];
 

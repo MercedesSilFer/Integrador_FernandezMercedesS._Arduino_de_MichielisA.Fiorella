@@ -13,9 +13,11 @@
          
     </div>
     <div class="col-md-4 container-mensaje my-5 py-4 w-md-50">
-       <?php if (session('contenido_mensaje')) {
-            echo session ('contenido_mensaje');
-          }?>
+        <?php if (session('contenido_mensaje')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('contenido_mensaje'); ?>
+            </div>
+          <?php } ?>
      <?php echo form_open('ingresar', ['class' => 'section-form', 'method' => 'post']); ?> 
         <h3 class="section-title mt-3">Iniciar sesión</h3>
         <br>

@@ -11,9 +11,11 @@
             </div>
           <?php endif ?>
 
-          <?php if (session('contenido_mensaje')) {
-            echo session ('contenido_mensaje');
-          }?>
+          <?php if (session('contenido_mensaje')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('contenido_mensaje'); ?>
+            </div>
+          <?php } ?>
         </div>
     <div class="col-md-4 container-mensaje">
       <?php echo form_open('registrarse', ['class' => 'section-form w-md-50', 'method' => 'post']); ?>

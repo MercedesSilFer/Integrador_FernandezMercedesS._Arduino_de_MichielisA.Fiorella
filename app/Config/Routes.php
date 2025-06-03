@@ -27,9 +27,9 @@ $routes->get('carteras', 'Home::carteras');
 $routes->get('mochilas', 'Home::mochilas');
 $routes->get('rinoneras', 'Home::rinoneras');
 $routes->get('coleccion', 'Home::coleccion');
-$routes->get('cargar1', 'Home::cargar_producto');
+$routes->get('cargar1', 'Productos_controller::cargar_producto');
 $routes->post('cargar2', 'Productos_controller::add_producto');
 $routes->get('admin', 'Home::admin');
-$routes->get('cargar3', 'Productos_controller::add_categorias');
-
-
+$routes->get('gestionarProductos', 'Productos_controller::gestionar_productos');
+$routes->get('editarProducto/(:num)', 'Productos_controller::editar_producto/$1');
+$routes->post('actualizarProducto', 'Productos_controller::actualizar_producto');

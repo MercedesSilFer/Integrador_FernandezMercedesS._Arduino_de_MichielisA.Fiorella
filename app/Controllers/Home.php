@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Categorias_model;
 
 class Home extends BaseController
 {
@@ -76,16 +75,11 @@ class Home extends BaseController
         $data['titulo']= "Colección Cápsula Color";
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/Coleccioncapsula_view').view('plantillas/footer_view');
     }
-    public function cargar_producto(){
-         $categoriaModel = new Categorias_model();
-         $data['categorias']= $categoriaModel->findAll();
-        $data['titulo']= "Cargar Producto";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_admin').view('Backend/cargar_productos_view').view('plantillas/footer_view');
-    }
+   
     public function admin()
     {
         $data['titulo']= "Administración";
-        return  view('plantillas/header_view', $data).view('plantillas/nav_admin').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data).view('Backend/nav_admin_view').view('plantillas/footer_view');
     }
 
 }
