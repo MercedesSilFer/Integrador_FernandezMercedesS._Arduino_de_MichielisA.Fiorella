@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2025 a las 03:06:13
+-- Tiempo de generación: 05-06-2025 a las 15:57:43
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -55,15 +55,18 @@ CREATE TABLE `mensaje` (
   `nombre_remitente` varchar(20) NOT NULL,
   `apellido_remitente` varchar(20) NOT NULL,
   `email_mensaje` varchar(100) NOT NULL,
-  `contenido_mensaje` text NOT NULL
+  `contenido_mensaje` text NOT NULL,
+  `estado_mensaje` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `mensaje`
 --
 
-INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `email_mensaje`, `contenido_mensaje`) VALUES
-(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj');
+INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `email_mensaje`, `contenido_mensaje`, `estado_mensaje`) VALUES
+(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj', 0),
+(4, 'Ana', 'Gomez', 'aaaa@gmail.com', 'lorem ipsum', 0),
+(5, 'Ana', 'Perez', 'bababa@gmail.com', 'consulta generica sobre algun producto presente en el catalogo', 0);
 
 -- --------------------------------------------------------
 
@@ -214,7 +217,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `mensaje`
 --
 ALTER TABLE `mensaje`
-  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `perfil`

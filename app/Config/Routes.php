@@ -39,4 +39,5 @@ $routes->post('actualizarProducto', 'Productos_controller::actualizar_producto')
 $routes->get('eliminarProducto/(:num)', 'Productos_controller::eliminar_producto/$1');
 $routes->get('activarProducto/(:num)', 'Productos_controller::activar_producto/$1');
 $routes->get('consultas', 'Personas_controller::listar_consultas');
+$routes->get('modificar_estado/(:num)', 'Personas_controller::modificar_estado/$1');
 $routes->get('ver_catalogo', 'Productos_controller::tabla_productos');

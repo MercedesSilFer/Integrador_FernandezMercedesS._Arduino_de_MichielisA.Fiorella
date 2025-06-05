@@ -73,6 +73,19 @@ class Personas_controller extends BaseController
         . view('Backend/informe_consultas_view', $data)
         . view('plantillas/footer_view');
     }
+    public function modificar_estado($id_mensaje)
+    {
+        $mensajeModel = new Mensaje_model();
+        $mensaje = $mensajeModel->find($id_mensaje);
+
+        if ($mensaje) {
+            $nuevo_estado = $mensaje['estado_mensaje'] == 0 ? 1 : 0; // Cambia el estado
+            $mensajeModel->update($id_mensaje, ['estado_mensaje' => $nuevo_estado]);
+            return redirect()->route('consultas');
+        } else {
+            return redirect()->route('consultas');
+        }
+    }
 
     public function registrarse()
     {

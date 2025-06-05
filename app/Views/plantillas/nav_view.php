@@ -51,9 +51,7 @@
         <li class="">
           <a class="nav-link" href="<?= base_url('ver_carrito'); ?>">Ver carrito</a>
         </li>
-        <li class="">
-          <a class="nav-link" href=" "><?php echo session('nombre'); ?></a>
-        </li>
+        <li class="nav-link"><?php echo session('nombre'); ?></li>
         <li class="">
           <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
         </li>
@@ -117,7 +115,7 @@
           <form class="busqueda d-none d-lg-flex" role="search" action="<?= base_url('buscar'); ?>" method="get">
             <div class="input-group">
               <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search" name="q">
-              <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+              <button class="btn standard-button" type="submit">Buscar</button>
             </div>
           </form>       
           <?php if (session('login')){?>
@@ -127,7 +125,7 @@
               <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
             </button>
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li><a class="nav-link" href="<?= base_url('personas'); ?>"> <?= esc(session('nombre_sesion')) ?></a></li>
+                <li class="nav-link"><?php echo session('nombre'); ?></li>
                 <li><a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
               </ul>
           <?php }?>

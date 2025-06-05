@@ -14,7 +14,7 @@ class Mensaje_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre_remitente', 'apellido_remitente', 'email_mensaje', 'contenido_mensaje'];
+    protected $allowedFields = ['nombre_remitente', 'apellido_remitente', 'email_mensaje', 'contenido_mensaje', 'estado_mensaje'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
