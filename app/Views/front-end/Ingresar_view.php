@@ -32,7 +32,7 @@
         </label>
           <br>
           <div class="button-container mb-4">
-            <button id="btnRegistrarse"class="btn mt-3" type="submit">Ingresar</button>
+            <button id="btnRegistrarse"class="btn standard-button mt-3" type="submit">Ingresar</button>
             <?php echo form_close(); ?>
           </div>
       

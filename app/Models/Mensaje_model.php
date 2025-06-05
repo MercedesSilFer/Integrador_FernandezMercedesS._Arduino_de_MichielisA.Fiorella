@@ -12,7 +12,7 @@ class Mensaje_model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nombre_remitente', 'apellido_remitente', 'email_mensaje', 'contenido_mensaje'];
 

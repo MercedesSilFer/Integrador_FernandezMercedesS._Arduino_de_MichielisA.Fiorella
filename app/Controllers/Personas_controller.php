@@ -69,8 +69,8 @@ class Personas_controller extends BaseController
 
     $data['titulo'] = 'Listado de Consultas';
     return view('plantillas/header_view', $data)
-        . view('plantillas/nav_view')
-        . view('front-end/informe_consultas', $data)
+        . view('Backend/nav_admin_view')
+        . view('Backend/informe_consultas_view', $data)
         . view('plantillas/footer_view');
     }
 

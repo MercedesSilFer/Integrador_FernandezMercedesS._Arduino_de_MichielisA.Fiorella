@@ -6,5 +6,6 @@
     <title><?=$titulo?></title>
     <link rel="stylesheet" href="<?php echo base_url ('assets/css/bootstrap.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('assets/css/estilos.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url ('assets/bootstrap-icons-1.13.1/bootstrap-icons.css');?>">
   </head>
   <body>

@@ -184,7 +184,7 @@ class Productos_controller extends BaseController
         return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se activó exitosamente!');
     }
 
-    public function listar_productos()
+    public function tabla_productos()
     {
         $productos = new Productos_model();
         $categorias = new Categorias_model();
@@ -193,10 +193,28 @@ class Productos_controller extends BaseController
             ->findAll();
         $data['titulo'] = 'Catalogo de Productos';
         return view('plantillas/header_view', $data)
-            . view('plantillas/nav_view')
+            . view('Backend/nav_admin_view')
             . view('Backend/catalogo_admin_view', $data)
             . view('plantillas/footer_view');
     }
+    
+
+
+    public function listar_productos()
+    {
+        $productos = new Productos_model();
+        $categorias = new Categorias_model();
+        $data['productos'] = $productos-> where('estado_producto', 1)->where('stock_producto >', 0)
+            ->join('categorias', 'categorias.id_categoria = productos.id_categoria')
+            ->findAll();
+        $data['categorias'] = $categorias->findAll();
+        $data['titulo'] = 'Catalogo de Productos';
+        return view('plantillas/header_view', $data)
+            . view('plantillas/nav_view')
+            . view('front-end/Catalogo_view', $data)
+            . view('plantillas/footer_view');
+    }
+
     public function filtrar_productos($id_categoria=null)   
     {
         $productos= new Productos_model();

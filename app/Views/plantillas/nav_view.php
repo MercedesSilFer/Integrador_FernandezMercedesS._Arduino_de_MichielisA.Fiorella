@@ -94,11 +94,11 @@
                 Catálogo
             </a>
             <ul class="dropdown-menu" aria-labelledby="catalogDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('totebags'); ?>">Tote bags</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('carteras'); ?>">Carteras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('mochilas'); ?>">Mochilas</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('rinoneras'); ?>">Riñoneras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('coleccion'); ?>">Colección Cápsula Color</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?= base_url('catalogo/3'); ?>">Tote bags</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?= base_url('catalogo/4'); ?>">Carteras</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/5'); ?>">Mochilas</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/6'); ?>">Riñoneras</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/7'); ?>">Colección Cápsula Color</a></li>
             </ul>
           </li>
           <li class="nav-item">

@@ -12,17 +12,11 @@ body {
   color: rgb(212, 128, 94);
   text-decoration: none;
 }
-h1{
-  color:#290e01;
-  text-decoration: underline;
+.title{
+  color:#4d1a0a;
   text-decoration-thickness: 2px;
 }
-h2{
-  color:#290e01;
-  font-weight:400;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
+
 h3{
   color:#290e01;
   font-weight:700;
@@ -70,10 +64,6 @@ li, ul {
 }
 
 
-
-.card button:hover {
-  opacity: 0.7;
-}
 /* ========== TARJETAS========== */ 
 .tarjetas{
   background-color: #f4f0ed;
@@ -116,7 +106,7 @@ li, ul {
 
 
 /* ========== BOTONES ========== */
-.btn {
+.standard-button {
   color: white;
   background-color: #da6638;
   outline-color: #ffffff;
@@ -125,12 +115,24 @@ li, ul {
   border-style: solid;
 }
 
-.btn:hover {
+.standard-button:hover {
   outline-color: #b6471b;
-  border-color: #b6471b;
-  border-style: solid;
   background-color: #b6471b;
   color: white;
+}
+.standard-button-outline {
+  color: #da6638;
+  background-color: transparent;
+  outline-color: #da6638;
+  border-color: #da6638;
+  border-width: 2px;
+  border-style: solid;
+}
+.standard-button-outline:hover {
+  color: white;
+  background-color: #da6638;
+  outline-color: #ffffff;
+  border-color: #da6638;
 }
 .btn-offcanvas{
   color: #a0350b;
@@ -141,7 +143,7 @@ li, ul {
   border-style: solid;
 }
 
-.card button {
+.card-button {
   border: none;
   outline: 0;
   padding: 10px;
@@ -152,7 +154,11 @@ li, ul {
   width: 100%;
   font-size: 16px;
 }
-
+.card-button:hover {
+  background-color: #a0350b;
+  color: white;
+  transition: all 0.2s ease;
+}
 /* ========== DROPDOWNS ========== */
 .dropdown-hover:hover .dropdown-menu {
   display: block;

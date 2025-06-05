@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="container-fluid text-center mt-3 mb-5 pt-5 pb-5">
-        <h2>Galería</h2>
+        <h2 class="title">Galería</h2>
         <div class="row align-items-center">
             <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
                 <img src="<?php echo base_url('assets/img/galeria2.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn mt-1 mb-4" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
+                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn mt-1 mb-4" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
+                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn mt-1 mb-4" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
+                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn mt-1 mb-4" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
+                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
             </div>
         </div>
     </div>
@@ -154,14 +154,14 @@
     <hr class="bg-light opacity-25 my-1">
 
     <div class="container-fluid text-center tarjetas mt-3 mb-3 pt-3 pb-3">
-        <h2>Tendencias & Noticias</h2>
+        <h2 class="title">Tendencias & Noticias</h2>
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-6 col-xxl-6 mt-2">
                 <img src="<?php echo base_url('assets/img/feriapurodiseño1.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">  
             </div>     
             <div class="col-sm-12 col-md-6 col-xxl-5 mt-2">
                 <p>Participamos en desfiles y ferias, exponiendo nuestro espíritu emprendedor en eventos locales y nacionales.</p>
-                <p><button class="btn btn-primary" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
+                <p><button class="btn standard-button" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
                 <p>Enterate de los próximos eventos en nuestras redes sociales.</p> 
             </div>
         </div>

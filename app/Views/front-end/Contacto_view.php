@@ -1,6 +1,6 @@
-<section class="contacto">
+<section class="contacto container-fluid">
   
-  <div class= "container-fluid container-mensaje">
+  <div class= "container container-mensaje">
     <div class="row pt-5 mt-5">
       <div class="col-12">
         <?php if (!empty ($validation)) : ?>
@@ -13,9 +13,9 @@
           </div>
         <?php endif ?>
 
-        <?php if (session('contenido_mensaje')) {
-          echo session ('contenido_mensaje');
-        }?>
+        <?php if (session('contenido_mensaje')):?>
+          <span class="alert alert-success"> <?php echo session ('contenido_mensaje');?></span>
+         <?php endif; ?>
       </div>
     </div>
   <?php echo form_open('contacto', ['class' => 'section-form', 'method' => 'post']); ?>
@@ -40,7 +40,7 @@
           <textarea class="input-styles-text form-control" name="mensaje" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
         <div class="button-container">
-          <button id="btnContacto"class="btn mt-4" type="submit">Enviar</button>
+          <button id="btnContacto"class="btn standard-button mt-4" type="submit">Enviar</button>
         </div>
     <?php echo form_close(); ?>
 </div>

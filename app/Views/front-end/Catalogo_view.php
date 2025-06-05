@@ -1,82 +1,137 @@
+<section class="catalogo container-fluid">
+    <?php 
+    $ruta = service('uri')->getSegment(1);
+    $isLoggedIn = session('login');
+    ?>
 
-<section class="catalogo">
-    <?php $ruta = service('uri')->getSegment(1); ?>
-    <!-- versión mobile -->
+    <!-- Versión Mobile -->
     <div class="catalogo-mobile d-md-none">
-        <button class="btn-offcanvas py-2" type="button" data-bs-toggle="offcanvas" 
-            data-bs-target="#offcanvasCatalogo" aria-controls="offcanvasCatalogo">Categorías
+        <button class="btn btn-outline-primary w-100 py-2 mb-3" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasCatalogo" aria-controls="offcanvasCatalogo">
+            <i class="bi bi-filter-left me-2"></i> Ver Categorías
         </button>
-        <hr class="my-1">
-        <div class="offcanvas-sm offcanvas-start" tabindex="-1"
-         id="offcanvasCatalogo" aria-labelledby="offcanvasCatalogoLabel">
-            <div class="offcanvas-header">
+        
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCatalogo" aria-labelledby="offcanvasCatalogoLabel">
+            <div class="offcanvas-header bg-light">
                 <h5 class="offcanvas-title" id="offcanvasCatalogoLabel">Categorías</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" 
-                data-bs-target="#offcanvasCatalogo" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body px-2">
-                <ul class="ps-1">
+            <div class="offcanvas-body p-0">
+                <ul class="list-group list-group-flush">
                     <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>">Todos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('totebags'); ?>">Tote bags</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('carteras'); ?>">Carteras</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('mochilas'); ?>">Mochilas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('rinoneras'); ?>">Riñoneras</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('coleccion'); ?>">Cápsula Kurundú color</a>
-                    </li>
+                            <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('catalogo') ?>">Todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '3' ? 'active' : '' ?>" href="<?= base_url('catalogo/3') ?>">Tote bags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '4' ? 'active' : '' ?>" href="<?= base_url('catalogo/4') ?>">Carteras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '5' ? 'active' : '' ?>" href="<?= base_url('catalogo/5') ?>">Mochilas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '6' ? 'active' : '' ?>" href="<?= base_url('catalogo/6') ?>">Riñoneras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '7' ? 'active' : '' ?>" href="<?= base_url('catalogo/7') ?>">Cápsula Color</a>
+                        </li>
                 </ul>
             </div>
         </div>
+
+        <!-- Productos en móvil -->
+        <div class="row row-cols-2 g-3 mt-2">
+            <?php foreach ($productos as $row): ?>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="<?= base_url('assets/uploads/'.$row['imagen_producto']) ?>" 
+                         class="card-img-top" 
+                         alt="<?= $row['descripcion_producto'] ?>">
+                    <div class="card-body">
+                        <h6 class="card-title"><?= $row['nombre_producto'] ?></h6>
+                        <p class="card-text text-muted small"><?= $row['nombre_categoria'] ?></p>
+                        <p class="price fw-bold mb-1"><?= '$'.$row['precio_producto'] ?></p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pt-0">
+                        <?php if($isLoggedIn): ?>
+                            <button class="btn btn-sm btn-primary w-100 agregar-carrito" 
+                                    data-producto-id="<?= $row['id_producto'] ?>">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        <?php else: ?>
+                            <button class="btn btn-sm btn-primary w-100" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#authModal">
+                                <i class="bi bi-cart-plus"></i>
+                            </button>
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach ?>
+        </div>
     </div>
-    <!-- versión desktop -->
+
+    <!-- Versión Desktop -->
     <div class="catalogo-desktop d-none d-md-block">
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="row">
                 <div class="col-12">
-                    <ul class="nav nav-tabs justify-content-center mt-2 mb-4" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('catalogo'); ?>">Todos</a>
+                    <ul class="nav nav-tabs justify-content-center gap-2 mb-4" id="catalogTab">
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('catalogo') ?>">Todos</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '3' ? 'active' : '' ?>" href="<?= base_url('catalogo/3'); ?>">Tote bags</a>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '3' ? 'active' : '' ?>" href="<?= base_url('catalogo/3') ?>">Tote bags</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '4' ? 'active' : '' ?>" href="<?= base_url('catalogo/4'); ?>">Carteras</a>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '4' ? 'active' : '' ?>" href="<?= base_url('catalogo/4') ?>">Carteras</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '5' ? 'active' : '' ?>" href="<?= base_url('catalogo/5'); ?>">Mochilas</a>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '5' ? 'active' : '' ?>" href="<?= base_url('catalogo/5') ?>">Mochilas</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '6' ? 'active' : '' ?>" href="<?= base_url('catalogo/6'); ?>">Riñoneras</a>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '6' ? 'active' : '' ?>" href="<?= base_url('catalogo/6') ?>">Riñoneras</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link <?= $ruta == '7' ? 'active' : '' ?>" href="<?= base_url('catalogo/7'); ?>">Cápsula Kurundú color</a>
+                        <li class="nav-item">
+                            <a class="nav-link <?= $ruta == '7' ? 'active' : '' ?>" href="<?= base_url('catalogo/7') ?>">Cápsula Color</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row mt-2"> 
-                <?php foreach ($productos as $row){ ?>  
-                    <div class="col-6 col-xl-3 mt-2"> 
-                        <div class="card w-75 h-auto mx-auto my-4">
-                            <img src="<?php echo base_url('assets/uploads/'.$row['imagen_producto']); ?>" alt="<?php echo $row['descripcion_producto']?>" style="width:100%">
-                            <h4><?php echo $row ['nombre_producto']?></h4>
-                            <div class="card-footer border-none align-items-bottom">
-                                <p><?php echo 'Categoria: '; echo $row ['nombre_categoria']?></p>
-                                <p class="price"><?php echo '$'; echo $row ['precio_producto']?></p>
-                                <p><?php echo 'Cantidad: '; echo $row ['stock_producto']?></p>
-                                <button class="rounded-2">Agregar al carrito</button>
-                            </div>   
+            
+            <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 my-4 g-4">
+                <?php foreach ($productos as $row) { ?>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="<?php echo base_url('assets/uploads/' . $row['imagen_producto']); ?>" 
+                                class="card-img-top" 
+                                alt="<?php echo $row['descripcion_producto']; ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row['nombre_producto']; ?></h5>
+                                <p class="card-text text-muted"><?php echo $row['nombre_categoria']; ?></p>
+                                <p class="price fw-bold"><?php echo '$' . $row['precio_producto']; ?></p>
+                                <p class="small text-muted"><?php echo $row['stock_producto']; ?> disponibles</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <?php if ($isLoggedIn) { ?>
+                                    <button class="btn card-button w-100" 
+                                            data-producto-id="<?php echo $row['id_producto']; ?>">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                    <!-- <?php echo  ?>-->
+
+
+                                <?php } else { ?>
+                                    <button class="btn card-button w-100" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#authModal">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
@@ -84,3 +139,30 @@
         </div>
     </div>
 </section>
+
+<!-- Modal de Autenticación -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="authModalLabel">Acceso requerido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <i class="bi bi-cart-plus fs-1 text-dark mb-3"></i>
+                <p>Para agregar productos al carrito, necesitas iniciar sesión o registrarte.</p>
+                <div class="d-grid gap-3">
+                    <a href="<?= base_url('ingresar') ?>" class="btn standard-button">
+                        Iniciar sesión
+                    </a>
+                    <a href="<?= base_url('registrarse') ?>" class="btn standard-button-outline">
+                        Crear cuenta nueva
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn text-muted" data-bs-dismiss="modal">Continuar sin iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>

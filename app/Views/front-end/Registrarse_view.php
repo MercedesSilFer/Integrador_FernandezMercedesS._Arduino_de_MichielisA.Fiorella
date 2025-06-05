@@ -62,7 +62,7 @@
           </label>
         </div>
         <div class="button-container">
-          <button id="btnRegistrarse" class="btn mt-3" type="submit">Registrarse</button>
+          <button id="btnRegistrarse" class="btn standard-button mt-3" type="submit">Registrarse</button>
         </div>
         <?php echo form_close(); ?>
         
