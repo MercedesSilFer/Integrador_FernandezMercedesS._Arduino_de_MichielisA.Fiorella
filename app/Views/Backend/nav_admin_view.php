@@ -44,9 +44,7 @@
         </li>     
       <!-- Acceso mobile -->
        
-        <li class="">
-          <a class="nav-link" href=" "><?php echo session('nombre'); ?></a>
-        </li>
+        <li class="nav-link"><?php echo session('nombre'); ?></li>
         <li class="">
           <a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
         </li>
