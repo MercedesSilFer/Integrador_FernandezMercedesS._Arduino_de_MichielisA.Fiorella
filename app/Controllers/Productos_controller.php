@@ -184,7 +184,6 @@ class Productos_controller extends BaseController
                 . view('Backend/editar_productos_view')
                 . view('plantillas/footer_view');
         }
-<<<<<<< HEAD
     }
     public function eliminar_producto($id_producto = null){
             $data = array('estado_producto' => 0); // Assuming 0 means inactive
@@ -192,15 +191,6 @@ class Productos_controller extends BaseController
             $producto_model->update($id_producto, $data);
             return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se eliminó exitosamente!');
      }
-=======
-     }
-    public function eliminar_producto($id_producto = null){
-        $data = array('estado_producto' => 0); // Assuming 0 means inactive
-        $producto_model = new Productos_model();
-        $producto_model->update($id_producto, $data);
-        return redirect()->route('gestionarProductos')->with('contenido_mensaje', 'El producto se eliminó exitosamente!');
-    }
->>>>>>> 8ff8a69a2b26c813a023a6d8f6e2333574ed5470
     
     public function activar_producto($id_producto = null){
         $data = array('estado_producto' => 1);

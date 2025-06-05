@@ -1,5 +1,4 @@
 <div class="container">
-<<<<<<< HEAD:app/Views/Backend/listar_productos_view.php
     <h1 class="text-center my-4">Listado de Productos</h1>
      <div class="col-12 mt-2">
           <?php if (!empty ($validation)) : ?>
@@ -11,7 +10,6 @@
               </ul>
             </div>
           <?php endif ?>
-
          <?php if (session('contenido_mensaje')) { ?>
             <div class="alert alert-light m-2" role="alert">
               <?php echo session('contenido_mensaje'); ?>
@@ -42,21 +40,18 @@
                     <td><a href="<?php echo base_url('editarProducto/' . $row['id_producto']); ?>" class="btn standard-button">Editar</a></td> 
 
                     <?php if ($row['estado_producto'] == 1) { ?>
-<<<<<<< HEAD:app/Views/Backend/listar_productos_view.php
+
                     <td><a href="<?php echo base_url('eliminarProducto/' . $row['id_producto']); ?>" class="btn">Eliminar</a>
-=======
-                    <td><a href="<?php echo base_url('Productos_controller/eliminar_producto/' . $row['id_producto']); ?>" class="btn standard-button">Eliminar</a>
->>>>>>> 8ff8a69a2b26c813a023a6d8f6e2333574ed5470:app/Views/Backend/gestion_productos_view.php
-                    </td>                    
+                    </td>
+                    
                     <?php } else { ?>
                     <td><a href="<?php echo base_url('activarProducto/' . $row['id_producto']); ?>" class="btn btn-light">Activar</a>
                     </td>
                     <?php } ?>
                 </tr>
             <?php } ?>
-        </tbody>
-                    
+        </tbody>                 
 
-     </table>
+    </table>
   </div>
 </div>
