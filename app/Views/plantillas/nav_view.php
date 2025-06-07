@@ -125,7 +125,7 @@
               <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
             </button>
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-link"><?php echo session('nombre'); ?></li>
+                <li class="nav-link"><?php echo session('nombre_sesion'); ?></li>
                 <li><a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
               </ul>
           <?php }?>

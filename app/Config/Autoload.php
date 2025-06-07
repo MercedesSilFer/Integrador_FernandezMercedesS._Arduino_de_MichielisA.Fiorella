@@ -4,6 +4,7 @@ namespace Config;
 
 use CodeIgniter\Config\AutoloadConfig;
 
+
 /**
  * -------------------------------------------------------------------
  * AUTOLOADER CONFIGURATION
@@ -41,6 +42,8 @@ class Autoload extends AutoloadConfig
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH,
+        'Config' => APPPATH.'Config',
+        'CodeIgniterCart' => ROOTPATH.'Cart/src',
     ];
 
     /**

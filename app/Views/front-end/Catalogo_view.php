@@ -117,13 +117,12 @@
                             </div>
                             <div class="card-footer bg-white">
                                 <?php if ($isLoggedIn) { ?>
-                                    <button class="btn card-button w-100" 
-                                            data-producto-id="<?php echo $row['id_producto']; ?>">
-                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
-                                    </button>
-                                    <!-- <?php echo  ?>-->
-
-
+                                    <?= form_open('agregar_carrito'); ?>
+                                    <?= form_hidden('id', $row['id_producto']); ?>
+                                    <?= form_hidden('nombre', $row['nombre_producto']); ?>
+                                    <?= form_hidden('precio', $row['precio_producto']); ?>
+                                    <?= form_submit('comprar', 'Agregar al carrito', "class='btn card-button w-100'"); ?>
+                                    <?= form_close(); ?>
                                 <?php } else { ?>
                                     <button class="btn card-button w-100" 
                                             data-bs-toggle="modal" 
