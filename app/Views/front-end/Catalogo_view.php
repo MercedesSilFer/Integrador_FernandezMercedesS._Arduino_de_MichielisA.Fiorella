@@ -43,7 +43,7 @@
 
         <!-- Productos en móvil -->
         <div class="row row-cols-2 g-3 mt-2">
-            <?php foreach ($productos as $row): ?>
+            <?php foreach ($productos as $row){ ?>
             <div class="col">
                 <div class="card h-100">
                     <img src="<?= base_url('assets/uploads/'.$row['imagen_producto']) ?>" 
@@ -55,22 +55,28 @@
                         <p class="price fw-bold mb-1"><?= '$'.$row['precio_producto'] ?></p>
                     </div>
                     <div class="card-footer bg-white border-top-0 pt-0">
-                        <?php if($isLoggedIn): ?>
-                            <button class="btn btn-sm btn-primary w-100 agregar-carrito" 
-                                    data-producto-id="<?= $row['id_producto'] ?>">
-                                <i class="bi bi-cart-plus"></i>
-                            </button>
-                        <?php else: ?>
+                        <?php if($isLoggedIn) {?>
+                             <?php   echo form_open('agregarCarrito'); ?>
+                                      <?php  echo form_hidden('id', $row['id_producto']); ?>
+                                       <?php echo form_hidden('nombre', $row['nombre_producto']);?>
+                                       <?php echo form_hidden('precio', $row['precio_producto']);?>
+                                       <?php echo form_submit('comprar', 'Agregar al carrito', 
+                                            ['class' => 'btn card-button w-100']); ?>
+                                        
+                            <?php echo form_close(); ?>
+                           
+                        <?php } else { ?>
+                       
                             <button class="btn btn-sm btn-primary w-100" 
                                     data-bs-toggle="modal" 
                                     data-bs-target="#authModal">
                                 <i class="bi bi-cart-plus"></i>
                             </button>
-                        <?php endif ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-            <?php endforeach ?>
+            <?php } ?>
         </div>
     </div>
 

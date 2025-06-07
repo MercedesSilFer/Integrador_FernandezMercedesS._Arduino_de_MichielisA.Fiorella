@@ -18,7 +18,7 @@
           <?php } ?>
         </div>
     <div class="col-md-4 container-mensaje">
-      <?php echo form_open('actualizarProducto', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
+      <?php echo form_open('actualizarProducto1', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
         <h3 class="section-title">Edición de Productos</h3>
 
         <label for="nombreProducto">
@@ -49,7 +49,7 @@
 
         <label for="precioProducto">
           Precio de lista*
-          <?php echo form_input(['name'=>'precioProducto', 'id'=>'precioProducto', 'class'=>'input-styles', 'value'=>number_format($producto['precio_producto'], 2, ',', '.'), 'required' => 'required', 'step' => '0.01', 'min' => '0']); ?>
+          <?php echo form_input(['name'=>'precioProducto', 'id'=>'precioProducto', 'class'=>'input-styles', 'value'=>$producto['precio_producto'], 'required' => 'required', 'step' => '0.01']); ?>
         
         </label>
         <br>
@@ -66,7 +66,7 @@
           <?php echo form_input(['name'=>'imagenProducto', 'id'=>'imagenProducto', 'class'=>'form-control', 'type'=>'file', 'accept'=>'image/*']); ?>
         </label>
         <br>
-        <?php echo form_hidden('idProducto', $producto['id_producto']); ?>
+        <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
 
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="checkConfirmar" required>
