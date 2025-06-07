@@ -41,3 +41,5 @@ $routes->get('activarProducto/(:num)', 'Productos_controller::activar_producto/$
 $routes->get('consultas', 'Personas_controller::listar_consultas');
 $routes->get('modificar_estado/(:num)', 'Personas_controller::modificar_estado/$1');
 $routes->get('ver_catalogo', 'Productos_controller::tabla_productos');
+$routes->get('verCarrito', 'Carrito_controller::ver_carrito');
+$routes->post('agregarCarrito', 'Carrito_controller::agregar_carrito');
