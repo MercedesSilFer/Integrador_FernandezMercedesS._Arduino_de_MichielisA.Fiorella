@@ -56,7 +56,7 @@
                     </div>
                     <div class="card-footer bg-white border-top-0 pt-0">
                         <?php if($isLoggedIn) {?>
-                             <?php   echo form_open('agregarCarrito'); ?>
+                             <?php   echo form_open('agregar_carrito'); ?>
                                       <?php  echo form_hidden('id', $row['id_producto']); ?>
                                        <?php echo form_hidden('nombre', $row['nombre_producto']);?>
                                        <?php echo form_hidden('precio', $row['precio_producto']);?>

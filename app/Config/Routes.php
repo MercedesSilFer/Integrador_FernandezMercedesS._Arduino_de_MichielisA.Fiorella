@@ -43,4 +43,6 @@ $routes->get('modificar_estado/(:num)', 'Personas_controller::modificar_estado/$
 $routes->get('ver_catalogo', 'Productos_controller::tabla_productos');
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
-
+$routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
+$routes->get('vaciar_carrito/all', 'Carrito_controller::vaciar_carrito/all');
+$routes->post('actualizarCantidad', 'Carrito_controller::actualizarCantidad');

@@ -92,11 +92,11 @@
                 Catálogo
             </a>
             <ul class="dropdown-menu" aria-labelledby="catalogDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('catalogo/3'); ?>">Tote bags</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('catalogo/4'); ?>">Carteras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/5'); ?>">Mochilas</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/6'); ?>">Riñoneras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('catalogo/7'); ?>">Colección Cápsula Color</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('catalogo/3'); ?>">Tote bags</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('catalogo/4'); ?>">Carteras</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?php echo base_url('catalogo/5'); ?>">Mochilas</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?php echo base_url('catalogo/6'); ?>">Riñoneras</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?php echo base_url('catalogo/7'); ?>">Colección Cápsula Color</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -112,33 +112,43 @@
 
         <!-- Elementos del lado derecho -->
         <div class="d-flex flex-column flex-lg-row align-items-end gap-3">
-          <form class="busqueda d-none d-lg-flex" role="search" action="<?= base_url('buscar'); ?>" method="get">
-            <div class="input-group">
-              <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search" name="q">
-              <button class="btn standard-button" type="submit">Buscar</button>
-            </div>
-          </form>       
-          <?php if (session('login')){?>
-            <a href="<?php echo base_url('verCarrito'); ?>" class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
-              data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
-              <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
-              <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
-          </a>
-              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-link"><?php echo session('nombre_sesion'); ?></li>
-                <li><a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
-              </ul>
-          <?php }?>
-           <?php if(!session('login')){?>
-            <div class="dropdown">
-              <button class="nav-link dropdown-toggle-visually-hidden <?= $ruta == '' ? 'active' : '' ?>" data-bs-toggle="dropdown" aria-expanded="false">Acceder</button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
-              </ul>
-            </div>
-          <?php }?>
-        </div>
+          <!-- Search Form -->
+          <form class="busqueda pb-2 d-none d-lg-flex" role="search" action="<?= base_url('buscar'); ?>" method="get">
+              <div class="input-group">
+                  <input class="form-control" type="search" placeholder="Búsqueda" aria-label="Search" name="q">
+                  <button class="btn standard-button" type="submit">Buscar</button>
+              </div>
+          </form>
+
+          <ul class="d-flex align-items-center list-unstyled gap-3 mb-0">
+              <?php if (session('login')){ ?>
+                  <li>
+                      <a href="<?= base_url('ver_carrito') ?>" class="btn">
+                          <i class="nav-link bi bi-cart fs-5"></i>
+                      </a>
+                  </li>
+                
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <?= session('nombre_sesion') ?>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+                      </ul>
+                  </li>
+              <?php } else {?>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle <?= $ruta == '' ? 'active' : '' ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Acceder
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item navbar-item" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
+                          <li><a class="dropdown-item navbar-item" href="<?= base_url('registrarse'); ?>">Registrarse</a></li>
+                      </ul>
+                  </li>
+              <?php } ?>
+          </ul>
+      </div>
       </div>
     </div>
   </nav>
