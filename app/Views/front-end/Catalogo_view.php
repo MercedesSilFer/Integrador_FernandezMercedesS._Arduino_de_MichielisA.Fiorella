@@ -6,7 +6,7 @@
 
     <!-- Versión Mobile -->
     <div class="catalogo-mobile d-md-none">
-        <button class="btn btn-outline-primary w-100 py-2 mb-3" type="button" data-bs-toggle="offcanvas" 
+        <button class="btn standard-button-outline w-100 py-2 mb-3" type="button" data-bs-toggle="offcanvas" 
             data-bs-target="#offcanvasCatalogo" aria-controls="offcanvasCatalogo">
             <i class="bi bi-filter-left me-2"></i> Ver Categorías
         </button>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Productos en móvil -->
-        <div class="row row-cols-2 g-3 mt-2">
+        <div class="row row-cols-2 g-3 py-3 my-2">
             <?php foreach ($productos as $row){ ?>
             <div class="col">
                 <div class="card h-100">
@@ -54,26 +54,25 @@
                         <p class="card-text text-muted small"><?= $row['nombre_categoria'] ?></p>
                         <p class="price fw-bold mb-1"><?= '$'.$row['precio_producto'] ?></p>
                     </div>
-                    <div class="card-footer bg-white border-top-0 pt-0">
-                        <?php if($isLoggedIn) {?>
-                             <?php   echo form_open('agregar_carrito'); ?>
-                                      <?php  echo form_hidden('id', $row['id_producto']); ?>
-                                       <?php echo form_hidden('nombre', $row['nombre_producto']);?>
-                                       <?php echo form_hidden('precio', $row['precio_producto']);?>
-                                       <?php echo form_submit('comprar', 'Agregar al carrito', 
-                                            ['class' => 'btn card-button w-100']); ?>
-                                        
-                            <?php echo form_close(); ?>
-                           
-                        <?php } else { ?>
-                       
-                            <button class="btn btn-sm btn-primary w-100" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#authModal">
-                                <i class="bi bi-cart-plus"></i>
-                            </button>
-                        <?php } ?>
-                    </div>
+                    <div class="card-footer bg-white">
+                                <?php if ($isLoggedIn) { ?>
+                                    <?= form_open('agregar_carrito'); ?>
+                                    <?= form_hidden('id', $row['id_producto']); ?>
+                                    <?= form_hidden('nombre', $row['nombre_producto']); ?>
+                                    <?= form_hidden('precio', $row['precio_producto']); ?>
+                                    <!-- No se puede utilizar form_submit si quiero que tenga un icono al lado -->
+                                    <button type="submit" class="btn card-button w-100">  
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                    <?= form_close(); ?>
+                                <?php } else { ?>
+                                    <button class="btn card-button w-100" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-target="#authModal">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                <?php } ?>
+                            </div>
                 </div>
             </div>
             <?php } ?>
@@ -127,7 +126,9 @@
                                     <?= form_hidden('id', $row['id_producto']); ?>
                                     <?= form_hidden('nombre', $row['nombre_producto']); ?>
                                     <?= form_hidden('precio', $row['precio_producto']); ?>
-                                    <?= form_submit('comprar', 'Agregar al carrito', "class='btn card-button w-100'"); ?>
+                                    <button type="submit" class="btn card-button w-100">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
                                     <?= form_close(); ?>
                                 <?php } else { ?>
                                     <button class="btn card-button w-100" 

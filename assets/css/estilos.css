@@ -14,7 +14,6 @@ body {
 }
 .title{
   color:#4d1a0a;
-  text-decoration-thickness: 2px;
 }
 
 h3{
@@ -42,6 +41,7 @@ li, ul {
   width: 100%;
   margin: 20px ;
 }
+
 /*===========CATALOGO==========*/
 .card {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2);

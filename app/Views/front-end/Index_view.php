@@ -55,6 +55,89 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid py-5 my-3 text-center">
+        <h2 class="mb-4 title">Lo Más Buscado</h2>
+        <div class="row g-3 justify-content-center">
+            <!-- Totebags -->
+            <div class="card col-12 col-md-6 col-xl-3">
+                <div class="carousel slide car" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="<?php echo base_url('assets/img/Cartera azulXL.jpg'); ?>" class="d-block w-100 img-fluid" alt="Totebag azul" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/Cartera negra XL.jpg'); ?>" class="d-block w-100 img-fluid" alt="Totebag negra" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/Cartera marrón claro XL.jpg'); ?>" class="d-block w-100 img-fluid" alt="Totebag marrón" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <h5 class="title py-2">Tote bags</h5>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
+            </div>
+
+            <!-- Carteras -->
+            <div class="card col-12 col-md-6 col-xl-3">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="<?php echo base_url('assets/img/carteraeusabiamarron.jpg'); ?>" class="d-block w-100 img-fluid" alt="Cartera marrón" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/carteraeusebiaverde.jpg'); ?>" class="d-block w-100 img-fluid" alt="Cartera verde" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/eusebiaclasica.jpg'); ?>" class="d-block w-100 img-fluid" alt="Cartera clásica" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <h5 class="title py-2">Carteras</h5>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
+            </div>
+
+            <!-- Colección -->
+            <div class="card col-12 col-md-6 col-xl-3">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="<?php echo base_url('assets/img/capsula3.jpg'); ?>" class="d-block w-100 img-fluid" alt="Colección 1" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/capsula2.jpg'); ?>" class="d-block w-100 img-fluid" alt="Colección 2" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/capsula1.jpg'); ?>" class="d-block w-100 img-fluid" alt="Colección 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <h5 class="title py-2">Colección Kurundú</h5>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
+            </div>
+
+            <!-- Riñoneras -->
+            <div class="card col-12 col-md-6 col-xl-3">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="<?php echo base_url('assets/img/bandolera4.jpg'); ?>" class="d-block w-100 img-fluid" alt="Riñonera 1" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/bandolera2.jpg'); ?>" class="d-block w-100 img-fluid" alt="Riñonera 2" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<?php echo base_url('assets/img/bandolera3.jpg'); ?>" class="d-block w-100 img-fluid" alt="Riñonera 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <h5 class="title py-2">Riñoneras</h5>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="bg-light opacity-25 my-1">
     <div class="container-fluid text-center mt-3 mb-5 pt-5 pb-5">
         <h2 class="title">Galería</h2>
         <div class="row align-items-center">
@@ -81,79 +164,7 @@
 
     <hr class="bg-light opacity-25 my-1">
 
-    <div class="container-fluid text-center mt-3 mb-5 pt-5 pb-5">
-        <h2>Lo Más Buscado</h2>
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<?php echo base_url('assets/img/Cartera azulXL.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/Cartera negra XL.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/Cartera marrón claro XL.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
-            </div>
-            <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<?php echo base_url('assets/img/carteraeusabiamarron.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/carteraeusebiaverde.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/eusebiaclasica.jpg'); ?>" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
-            </div>
-            <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<?php echo base_url('assets/img/capsula3.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/capsula2.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/capsula1.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
-            </div>
-            <div class="col-sm-12 col-md-6 col-xl-3 mt-2">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<?php echo base_url('assets/img/bandolera4.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/bandolera2.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/img/bandolera3.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn standard-button mt-1 mb-4" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
-            </div>
-        </div>
-    </div>
-
-    <hr class="bg-light opacity-25 my-1">
-
-    <div class="container-fluid text-center tarjetas mt-3 mb-3 pt-3 pb-3">
+    <div class="container-fluid text-center mt-3 mb-3 pt-3 pb-3">
         <h2 class="title">Tendencias & Noticias</h2>
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-6 col-xxl-6 mt-2">

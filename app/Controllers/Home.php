@@ -43,10 +43,6 @@ class Home extends BaseController
         return  view('plantillas/header_view', $data).view('plantillas/nav_view').view('front-end/Catalogo_view').view('front-end/CarterasXL_view').view('front-end/Carteras_view').view('front-end/Mochilas_view').view('front-end/Rinoneras_view').view('front-end/Coleccioncapsula_view').view('plantillas/footer_view');
     }*/
 
-
-    
-
-
     public function eventos()
     {
         $data['titulo']= "Eventos";

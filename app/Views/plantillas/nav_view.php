@@ -11,13 +11,6 @@
         </a>
         
         <!-- Carrito y toggler -->
-        <div class="d-flex align-items-center gap-3">
-          <button class="btn-offcanvas border-0 bg-body-tertiary" type="button" data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
-            <img src="<?= base_url('assets/img/cart.svg'); ?>" alt="Carrito" class="img-fluid" style="max-height: 35px;" loading="lazy">
-            <span class="position-relative top-0 start-25 translate-middle badge rounded-pill bg-secondary">0</span>
-          </button>
-          
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
             data-bs-target="#mobileMenu" aria-controls="mobileMenu"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +42,9 @@
       <!-- Acceso mobile -->
        <?php if(session('ingresar')){ ?>
         <li class="">
-          <a class="nav-link" href="<?= base_url('ver_carrito'); ?>">Ver carrito</a>
+          <a href="<?= base_url('ver_carrito') ?>" class="nav-link">
+            <i class="bi bi-cart fs-5"></i>
+          </a>
         </li>
         <li class="nav-link"><?php echo session('nombre'); ?></li>
         <li class="">
@@ -123,8 +118,8 @@
           <ul class="d-flex align-items-center list-unstyled gap-3 mb-0">
               <?php if (session('login')){ ?>
                   <li>
-                      <a href="<?= base_url('ver_carrito') ?>" class="btn">
-                          <i class="nav-link bi bi-cart fs-5"></i>
+                      <a href="<?= base_url('ver_carrito') ?>" class="btn nav-link">
+                          <i class="bi bi-cart fs-5"></i>
                       </a>
                   </li>
                 
@@ -152,13 +147,4 @@
       </div>
     </div>
   </nav>
-</div>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel" style="width: 100%; max-width: 400px;">
-  <div class="offcanvas-header bg-body-tertiary">
-    <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito de compras</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body bg-body-tertiary px-2">
-    <p>Su carrito se encuentra vacío actualmente</p>
-  </div>
 </div>
