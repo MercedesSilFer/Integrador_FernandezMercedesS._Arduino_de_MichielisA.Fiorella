@@ -48,6 +48,9 @@
         </li>
         <li class="nav-link"><?php echo session('nombre'); ?></li>
         <li class="">
+          <a class="nav-link" href="<?= base_url('ventas'); ?>">Ver mis compras</a>
+        </li>
+        <li class="">
           <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
         </li>
       <?php } else { ?>
@@ -128,7 +131,10 @@
                           <?= session('nombre_sesion') ?>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+                        <li class="">
+                          <a class="dropdown-item" href="<?= base_url('ventas'); ?>">Ver mis compras</a>
+                        </li>
+                        <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
                       </ul>
                   </li>
               <?php } else {?>
