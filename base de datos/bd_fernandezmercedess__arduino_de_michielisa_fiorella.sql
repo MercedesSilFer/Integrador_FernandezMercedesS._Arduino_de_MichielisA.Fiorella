@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2025 a las 15:57:43
+-- Tiempo de generación: 10-06-2025 a las 15:53:24
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -64,8 +64,8 @@ CREATE TABLE `mensaje` (
 --
 
 INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `email_mensaje`, `contenido_mensaje`, `estado_mensaje`) VALUES
-(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj', 0),
-(4, 'Ana', 'Gomez', 'aaaa@gmail.com', 'lorem ipsum', 0),
+(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj', 1),
+(4, 'Ana', 'Gomez', 'aaaa@gmail.com', 'lorem ipsum', 1),
 (5, 'Ana', 'Perez', 'bababa@gmail.com', 'consulta generica sobre algun producto presente en el catalogo', 0);
 
 -- --------------------------------------------------------
@@ -118,7 +118,8 @@ INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cui
 (14, 'Franco', 'Rodriguez', 2147483647, 'franco23@gmail.com', '$2y$10$vBqHH3ZoqU84OmWS8.b.l.d1Lf6ETgHhV3.TxU.sr4VwS4Fcj5NDS', 1, 'San Lorenzo 3678', 0, 2),
 (15, 'Hugo', 'Gonzalez', 2147483647, 'hugo@gmail.com', '$2y$10$oJUmtXJnZtJWSpeMD/zMoezC8WrQdlUBbRfsDHrIqF9bV6XOcnaou', 1, 'Uruguay 987', 0, 2),
 (16, 'Hugo', 'Martínez', 2147483647, 'hugo2@gmail.com', '$2y$10$/VNeaP72dEfV7F.2l6d1C.0lBAFHp22i/O36iDrXWdtxROhJVZfHi', 1, 'Uruguay 987', 0, 2),
-(17, 'Mariana', 'Fernández', 2147483647, 'mariana2@gmail.com', '$2y$10$3ZYfpYFcnrXy7o4YEeeTCOv5MfG.A5EVtHV67x4ToPlUfYGt3ojke', 1, 'San Lorenzo 3678', 0, 2);
+(17, 'Mariana', 'Fernández', 2147483647, 'mariana2@gmail.com', '$2y$10$3ZYfpYFcnrXy7o4YEeeTCOv5MfG.A5EVtHV67x4ToPlUfYGt3ojke', 1, 'San Lorenzo 3678', 0, 2),
+(18, 'Ana', 'Gomez', 2147483647, 'abc@gmail.com', '$2y$10$pl392eAvR53BYq8O5WKS5OQ6/0m9GfJtsjVjV0pQxJ9mKk78kcRSO', 1, 'calle 234', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -166,6 +167,31 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `d
 (22, 'Eliana', 30000, 'Brazalete con aplicaciones cuero rojo.', 7, '1748622153_1de440d7afb03ae39090.jpg', 6, 1),
 (23, 'Aldo', 80000, 'Maxi riñonera cuero natural', 6, '1748622238_d56513edd7df0b66b40d.png', 9, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `venta`
+--
+
+CREATE TABLE `venta` (
+  `id_venta` int(11) NOT NULL,
+  `id_persona` int(11) NOT NULL,
+  `venta_fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `venta_detalles`
+--
+
+CREATE TABLE `venta_detalles` (
+  `id_venta` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `detalle_precio` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -204,6 +230,18 @@ ALTER TABLE `productos`
   ADD KEY `id_categoria` (`id_categoria`);
 
 --
+-- Indices de la tabla `venta`
+--
+ALTER TABLE `venta`
+  ADD PRIMARY KEY (`id_venta`);
+
+--
+-- Indices de la tabla `venta_detalles`
+--
+ALTER TABLE `venta_detalles`
+  ADD PRIMARY KEY (`id_venta`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -229,13 +267,19 @@ ALTER TABLE `perfil`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT de la tabla `venta`
+--
+ALTER TABLE `venta`
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

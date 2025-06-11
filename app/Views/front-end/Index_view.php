@@ -57,7 +57,7 @@
     </div>
 
     <div class="container-fluid py-5 my-3 text-center">
-        <h2 class="mb-4 title">Lo Más Buscado</h2>
+        <h2 class="mb-4 title">Lo Más Comprado</h2>
         <div class="row g-3 justify-content-center">
             <!-- Totebags -->
             <div class="card col-12 col-md-6 col-xl-3">
