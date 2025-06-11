@@ -176,6 +176,9 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `d
 CREATE TABLE `venta` (
   `id_venta` int(11) NOT NULL,
   `id_persona` int(11) NOT NULL,
+  `forma_de_pago` varchar(15) NOT NULL,
+  `forma_de_envio` varchar(20) NOT NULL,
+  `total_venta` decimal(10,0) NOT NULL,  
   `venta_fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -185,7 +188,8 @@ CREATE TABLE `venta` (
 -- Estructura de tabla para la tabla `venta_detalles`
 --
 
-CREATE TABLE `venta_detalles` (
+CREATE TABLE `venta_detalles` (  
+  `id_detalle_venta` int(11) NOT NULL,
   `id_venta` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
@@ -239,7 +243,7 @@ ALTER TABLE `venta`
 -- Indices de la tabla `venta_detalles`
 --
 ALTER TABLE `venta_detalles`
-  ADD PRIMARY KEY (`id_venta`);
+  ADD PRIMARY KEY (`id_detalle_venta`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -290,6 +294,17 @@ ALTER TABLE `venta`
 --
 ALTER TABLE `personas`
   ADD CONSTRAINT `id_perfil` FOREIGN KEY (`id_perfil`) REFERENCES `perfil` (`id_perfil`);
+--
+-- Filtros para la tabla `venta`
+--
+ALTER TABLE `venta`
+  ADD CONSTRAINT `id_persona` FOREIGN KEY (`id_persona`) REFERENCES `personas` (`id_persona`);
+--
+-- Filtros para la tabla `venta_detalles`
+--
+ALTER TABLE `venta_detalles`
+  ADD CONSTRAINT `id_venta` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`id_venta`),
+  ADD CONSTRAINT `id_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`);
 
 --
 -- Filtros para la tabla `productos`

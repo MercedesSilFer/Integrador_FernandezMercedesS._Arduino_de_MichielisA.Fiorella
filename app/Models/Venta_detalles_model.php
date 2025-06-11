@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Ventas_model extends Model
+class Venta_detalles_model extends Model
 {
-    protected $table      = 'venta';
-    protected $primaryKey = 'id_venta';
+    protected $table      = 'venta_detalles';
+    protected $primaryKey = 'id_detalle_venta';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_persona', 'forma_de_pago', 'forma_de_envio', 'total_venta', 'venta_fecha'];
+    protected $allowedFields = ['id_venta', 'id_producto', 'cantidad', 'detalle_precio'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
