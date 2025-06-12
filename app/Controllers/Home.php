@@ -84,6 +84,7 @@ class Home extends BaseController
         $data['titulo']= "Administración";
         return  view('plantillas/header_view', $data).view('Backend/nav_admin_view').view('Backend/Index_admin_view').view('plantillas/footer_view');
     }
+    
 
 }
 
