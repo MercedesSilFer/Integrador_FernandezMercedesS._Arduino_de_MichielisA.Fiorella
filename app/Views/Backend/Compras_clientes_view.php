@@ -16,11 +16,11 @@
                         <thead class="table-light">
                             <tr>
                                 <th class="text-center col-1">N°</th>
-                                <th class="col-4 col-md-2">Fecha</th>
-                                <th class="text-center col-2">Total</th>
-                                <th class="text-center col-2 col-lg-1">Forma de Pago</th>
+                                <th class="text-center col-1">Fecha</th>
+                                <th class="text-center col-1">Total</th>
+                                <th class="text-center col-2">Forma de Pago</th>
                                 
-                                <th class="text-center col-3 col-lg-2">Detalles</th>
+                                <th class="text-center col-4 col-lg-3">Detalles</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,7 +43,7 @@
                                                         Cantidad: <?= $detalle['cantidad'] ?>
                                                     </li>
                                                     <li>
-                                                        Precio: $<?= number_format($detalle['detalle_precio'], 2) ?>
+                                                        Precio unitario: $<?= number_format($detalle['detalle_precio'], 2) ?>
                                                     </li>
                                                 <?php endforeach; ?>
                                             </ul>
