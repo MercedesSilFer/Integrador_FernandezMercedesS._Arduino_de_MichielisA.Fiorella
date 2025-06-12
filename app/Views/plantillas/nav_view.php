@@ -132,7 +132,7 @@
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
                         <li class="">
-                          <a class="dropdown-item" href="<?= base_url('ventas'); ?>">Ver mis compras</a>
+                          <a class="dropdown-item" href="<?= base_url('verComprasCliente'); ?>">Ver mis compras</a>
                         </li>
                         <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
                       </ul>
