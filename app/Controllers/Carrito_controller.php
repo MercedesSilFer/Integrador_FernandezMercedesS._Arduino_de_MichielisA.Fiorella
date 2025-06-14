@@ -112,9 +112,9 @@ class Carrito_controller extends BaseController{
                       'forma_pago' => 'Tarjeta de Crédito',  // Ejemplo de forma de pago, agregar lógica de ingreso de forma de pago
                       'forma_envio' => 'Envío a Domicilio', // Ejemplo de forma de envío, agregar lógica de ingreso de forma de envío
                       'total_venta' => $cart->total(),
-                      'venta_fecha' => date('Y-m-d H:i:s'),);
-        $venta->insert($data);
-        $venta_id = $venta->insertID();
+                      'venta_fecha' => date('Y-m-d'),);
+        
+        $venta_id = $venta->insert($data);
         if (!$venta_id) {
             session()->setFlashdata('error', 'Error al registrar la venta');
             return redirect()->to('ver_carrito');
