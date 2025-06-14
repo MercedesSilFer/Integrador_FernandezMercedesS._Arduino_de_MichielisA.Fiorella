@@ -1,4 +1,4 @@
-<section class="container-fluid py-3">
+<section class="container-fluid pt-3">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center title my-4">Detalle de Compras</h1>
@@ -16,10 +16,11 @@
                         <thead class="table-light">
                             <tr>
                                 <th class="text-center col-1">N°</th>
-                                <th class="col-4 col-md-2">Fecha</th>
-                                <th class="text-center col-2">Total</th>
-                                <th class="text-center col-2 col-lg-1">Forma de Pago</th>
-                                <th class="text-center col-3 col-lg-2">Detalles</th>
+                                <th class="text-center col-1">Fecha</th>
+                                <th class="text-center col-1">Total</th>
+                                <th class="text-center col-2">Forma de Pago</th>
+                                
+                                <th class="text-center col-4 col-lg-3">Detalles</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,34 +29,31 @@
                             foreach ($ventas as $venta) { ?>
                                 <tr>
                                     <td class="text-center align-middle"><?php echo $venta['id_venta']; ?></td>
-                                    <td class="align-middle"><?php echo date('d-m-Y', strtotime($venta['fecha'])); ?></td>
-                                    <td class="text-center align-middle">$ <?php echo number_format($venta['total'], 2); ?></td>
-                                    <td class="text-center align-middle"><?php echo $venta['forma_pago']; ?></td>                
-                                </tr>
-                                <?php if (!empty($detalles[$venta['id_venta']])): ?>
-                                    <tr>
+                                    <td class="align-middle"><?php echo date('Y-m-d', strtotime($venta['venta_fecha'])); ?></td> 
+                                    <td class="text-center align-middle">$ <?php echo number_format($venta['total_venta'], 2); ?></td>
+                                    <td class="text-center align-middle"><?php echo $venta['forma_de_pago']; ?></td>                
+                                    <?php if (!empty($detalles[$venta['id_venta']])): ?>
                                         <td colspan="5">
-                                            <strong>Detalles:</strong>
                                             <ul>
                                                 <?php foreach ($detalles[$venta['id_venta']] as $detalle): ?>
                                                     <li>
-                                                        Producto: <?= $detalle['descripcion_producto'] ?> |
-                                                        Cantidad: <?= $detalle['cantidad'] ?> |
-                                                        Precio: $<?= number_format($detalle['detalle_precio'], 2) ?>
+                                                        Producto: <?= $detalle['descripcion_producto']['nombre_producto'] ?>
+                                                    </li>
+                                                    <li>
+                                                        Cantidad: <?= $detalle['cantidad'] ?>
+                                                    </li>
+                                                    <li>
+                                                        Precio unitario: $<?= number_format($detalle['detalle_precio'], 2) ?>
                                                     </li>
                                                 <?php endforeach; ?>
                                             </ul>
                                         </td>
-                                    </tr>
-                                <?php endif; ?>
+                                    <?php endif; ?>
+                                </tr>
                             <?php } ?>
                         </tbody>
                     </table>
-                </div>           
-                               
-                <div class="container">
-                    <a href="<?php echo base_url('catalogo'); ?>" class="btn standard-button" role="button">Ver productos</a>         
-                </div>           
+                </div>                   
             <?php } ?>
         </div>
     </div>

@@ -6,12 +6,12 @@ use App\Models\Ventas_model;
 use App\Models\Venta_detalles_model;
 use App\Models\Personas_model;
 
-class Venta_controller extends BaseController {
+class Ventas_controller extends BaseController {
      public function ver_comprasCliente() {
         $session = \Config\Services::session();
         $ventasModel = new Ventas_model();
-        if (!$session->has('id_persona')) {
-            return redirect()->route('login');
+        if (!$session->has('id_sesion')) {
+            return redirect()->route('ingresar');
         }
         $id_cliente = $session->get('id_sesion');
         $data['titulo'] = 'Tus Compras';
@@ -26,9 +26,9 @@ class Venta_controller extends BaseController {
             $data['detalles'][$venta['id_venta']] = $detalles;
         }
 
-        return view('plantillas/header_view', $data)
+        return  view('plantillas/header_view', $data)
             . view('plantillas/nav_view')
-            . view('Backend/Compras_cliente_view', $data)
+            . view('Backend/Compras_clientes_view', $data)
             . view('plantillas/footer_view');
     } 
 }

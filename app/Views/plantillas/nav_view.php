@@ -40,7 +40,7 @@
           <a class="nav-link <?= $ruta == 'contacto' ? 'active' : '' ?>" href="<?= base_url('contacto'); ?>">Contacto</a>
         </li>     
       <!-- Acceso mobile -->
-       <?php if(session('ingresar')){ ?>
+       <?php if(session('login')){ ?>
         <li class="">
           <a href="<?= base_url('ver_carrito') ?>" class="nav-link">
             <i class="bi bi-cart fs-5"></i>
@@ -51,7 +51,7 @@
           <a class="nav-link" href="<?= base_url('ventas'); ?>">Ver mis compras</a>
         </li>
         <li class="">
-          <a class="nav-link" href="<?= base_url('salir'); ?>">Cerrar sesión</a>
+          <a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
         </li>
       <?php } else { ?>
         <li><a class="nav-link" href="<?= base_url('ingresar'); ?>">Iniciar sesión</a></li>
@@ -132,7 +132,7 @@
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
                         <li class="">
-                          <a class="dropdown-item" href="<?= base_url('verComprasCliente'); ?>">Ver mis compras</a>
+                          <a class="dropdown-item" href="<?= base_url('ver_comprasCliente'); ?>">Ver mis compras</a>
                         </li>
                         <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
                       </ul>
