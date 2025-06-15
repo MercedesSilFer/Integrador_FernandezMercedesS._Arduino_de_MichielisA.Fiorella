@@ -6,7 +6,7 @@
     <nav class="navbar sticky-top py-2 bg-body-tertiary">
       <div class="container-fluid">
         <!-- Logo -->
-        <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
+        <a class="navbar-brand px-1 me-auto" href="<?= base_url('admin'); ?>">
           <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
         </a>
         
@@ -60,7 +60,7 @@
   <nav class="navbar navbar-expand-lg sticky-top py-2 bg-body-tertiary">
     <div class="container-fluid">
       <!-- Logo -->
-      <a class="navbar-brand px-1 me-auto" href="<?= base_url(); ?>">
+      <a class="navbar-brand px-1 me-auto" href="<?= base_url('admin'); ?>">
         <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
       </a>
       
