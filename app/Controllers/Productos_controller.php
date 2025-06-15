@@ -9,7 +9,7 @@ class Productos_controller extends BaseController
      public function cargar_producto(){
         $session = \Config\Services::session();
         if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
-            return redirect()->route('ingresar');
+            return redirect()->route('ingresar'); 
         }
         if( $session->get('id_perfil') !== '1'){
             return redirect()->route('/');

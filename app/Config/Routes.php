@@ -40,5 +40,5 @@ $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
 $routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
 $routes->get('vaciar_carrito/all', 'Carrito_controller::vaciar_carrito/all');
 $routes->post('actualizarCantidad', 'Carrito_controller::actualizarCantidad');
-$routes->get('finalizar_compra', 'Carrito_controller::finalizar_compra');
+$routes->post('finalizar_compra', 'Carrito_controller::finalizar_compra');
 $routes->get('ver_comprasCliente', 'Ventas_controller::ver_comprasCliente');
