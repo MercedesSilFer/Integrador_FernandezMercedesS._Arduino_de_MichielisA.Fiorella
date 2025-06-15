@@ -10,8 +10,11 @@ class Ventas_controller extends BaseController {
      public function ver_comprasCliente() {
         $session = \Config\Services::session();
         $ventasModel = new Ventas_model();
-        if (!$session->has('id_sesion')) {
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
             return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '2'){
+            return redirect()->route('/');
         }
         $id_cliente = $session->get('id_sesion');
         $data['titulo'] = 'Tus Compras';

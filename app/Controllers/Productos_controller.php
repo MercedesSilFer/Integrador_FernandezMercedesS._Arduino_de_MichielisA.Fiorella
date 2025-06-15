@@ -7,10 +7,20 @@ use App\Models\Categorias_model;
 class Productos_controller extends BaseController
 {
      public function cargar_producto(){
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
         $categoriaModel = new Categorias_model();
         $data['categorias']= $categoriaModel->findAll();
         $data['titulo']= "Cargar Producto";
-        return  view('plantillas/header_view', $data).view('Backend/nav_admin_view').view('Backend/cargar_productos_view').view('plantillas/footer_view');
+        return  view('plantillas/header_view', $data)
+                .view('Backend/nav_admin_view')
+                .view('Backend/cargar_productos_view')
+                .view('plantillas/footer_view');
     }
     public function add_producto()   // This method handles the form submission for adding a new product
     {
@@ -85,6 +95,13 @@ class Productos_controller extends BaseController
         }
     }
     function gestionar_productos() {
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
         $producto_model = new Productos_model();
         $categorias_model = new Categorias_model();
         $data['categorias'] = $categorias_model->findAll();
@@ -97,6 +114,13 @@ class Productos_controller extends BaseController
     }
     public function editar_producto($id_producto=null)
     {
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
         $producto_model = new Productos_model();
         $categorias_model = new Categorias_model();
         $data['categorias'] = $categorias_model->findAll();
@@ -201,6 +225,13 @@ class Productos_controller extends BaseController
 
     public function tabla_productos()
     {
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
         $productos = new Productos_model();
         $categorias = new Categorias_model();
         $data['productos'] = $productos-> where('estado_producto', 1)->where('stock_producto >', 0)

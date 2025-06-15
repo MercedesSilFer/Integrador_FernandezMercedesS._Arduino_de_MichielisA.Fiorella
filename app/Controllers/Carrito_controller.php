@@ -8,6 +8,13 @@ use App\Models\Venta_detalles_model;
 class Carrito_controller extends BaseController{
     public function ver_carrito() {
         $cart = \Config\Services::cart();
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '2'){
+            return redirect()->route('/');
+        }
         $data['titulo'] = 'Carrito de Compras';
         return view('plantillas/header_view', $data)
             . view('plantillas/nav_view')

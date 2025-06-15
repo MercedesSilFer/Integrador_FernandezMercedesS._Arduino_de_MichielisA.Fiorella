@@ -65,6 +65,13 @@ class Personas_controller extends BaseController
 
     public function listar_consultas(){
     $mensajeModel = new Mensaje_model();
+    $session = session();
+    if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
     $data['consultas'] = $mensajeModel->findAll();
 
     $data['titulo'] = 'Listado de Consultas';

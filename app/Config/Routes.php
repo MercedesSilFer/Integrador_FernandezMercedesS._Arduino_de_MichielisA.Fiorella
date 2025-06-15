@@ -22,14 +22,8 @@ $routes->get('logout', 'Personas_controller::cerrar_sesion');
 
 $routes->get('catalogo', 'Productos_controller::listar_productos');
 $routes->get('catalogo/(:num)', 'Productos_controller::filtrar_productos/$1');
-
 $routes->get('eventos', 'Home::eventos');   
 $routes->get('terminos-y-condiciones', 'Home::terminosYcondiciones');
-$routes->get('totebags', 'Home::totebags');
-$routes->get('carteras', 'Home::carteras');
-$routes->get('mochilas', 'Home::mochilas');
-$routes->get('rinoneras', 'Home::rinoneras');
-$routes->get('coleccion', 'Home::coleccion');
 $routes->get('cargar1', 'Productos_controller::cargar_producto');
 $routes->post('cargar2', 'Productos_controller::add_producto');
 $routes->get('admin', 'Home::admin');
