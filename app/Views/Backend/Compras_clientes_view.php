@@ -15,12 +15,11 @@
                 <div class="table-responsive px-4">
                     <table id="compras" class="table table-striped table-bordered w-100">
                         <thead class="table-light">
-                            <tr>
+                            <tr>                    
                                 <th class="text-center col-1">N°</th>
                                 <th class="text-center col-1">Fecha</th>
                                 <th class="text-center col-1">Total</th>
-                                <th class="text-center col-2">Forma de Pago</th>
-                                
+                                <th class="text-center col-2">Forma de Pago</th>                               
                                 <th class="text-center col-4 col-lg-3">Detalles</th>
                             </tr>
                         </thead>

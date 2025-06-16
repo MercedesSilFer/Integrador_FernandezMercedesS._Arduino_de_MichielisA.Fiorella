@@ -18,11 +18,11 @@ class Ventas_controller extends BaseController {
         }
         $id_cliente = $session->get('id_sesion');
         $data['titulo'] = 'Tus Compras';
-        $data['ventas'] = $ventasModel->where('id_persona', $id_cliente)->findAll();
+        $data['ventas'] = $ventasModel->where('id_persona', $id_cliente)->findAll(); //guarda ventas del cliente
         $ventaDetallesModel = new Venta_detalles_model();
         $data['detalles'] = [];
         foreach ($data['ventas'] as $venta) {
-            $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll();
+            $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll(); // obtiene detalles de cada venta
             foreach ($detalles as &$detalle) {
                 $detalle['descripcion_producto'] = (new Productos_model())->find($detalle['id_producto']);
             }
