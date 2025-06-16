@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <h5 class="title py-2">Tote bags</h5>
-                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('totebags'); ?>'">Ver Más</button>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url(''); ?>'">Ver Más</button>
             </div>
 
             <!-- Carteras -->

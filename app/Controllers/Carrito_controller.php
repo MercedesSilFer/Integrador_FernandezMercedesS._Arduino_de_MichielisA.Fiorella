@@ -8,6 +8,13 @@ use App\Models\Venta_detalles_model;
 class Carrito_controller extends BaseController{
     public function ver_carrito() {
         $cart = \Config\Services::cart();
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '2'){
+            return redirect()->route('/');
+        }
         $data['titulo'] = 'Carrito de Compras';
         return view('plantillas/header_view', $data)
             . view('plantillas/nav_view')
@@ -95,6 +102,12 @@ class Carrito_controller extends BaseController{
         return redirect()->to('ver_carrito');
     }
     public function finalizar_compra() {
+        $formaPago = $this->request->getPost('forma_de_pago');
+        $formaEnvio = $this->request->getPost('forma_de_envio');
+        if(empty($formaPago) || empty($formaEnvio)) {
+            session()->setFlashdata('error', 'Seleccione método de pago y envío');
+            return redirect()->to('ver_carrito');
+        }
         $cart = \Config\Services::cart();
         $venta = new Ventas_model();
         $productos = new Productos_model();
@@ -121,8 +134,8 @@ class Carrito_controller extends BaseController{
         //Crear una venta
         $data = array(
             'id_persona' => session('id_sesion'),
-            'forma_de_pago' => 'Tarjeta de Crédito',
-            'forma_de_envio' => 'Envío a Domicilio',
+            'forma_de_pago' => $formaPago,
+            'forma_de_envio' => $formaEnvio,
             'total_venta' => $cart->total(),
             'venta_fecha' => date('Y-m-d'),
         );

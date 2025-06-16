@@ -22,14 +22,8 @@ $routes->get('logout', 'Personas_controller::cerrar_sesion');
 
 $routes->get('catalogo', 'Productos_controller::listar_productos');
 $routes->get('catalogo/(:num)', 'Productos_controller::filtrar_productos/$1');
-
 $routes->get('eventos', 'Home::eventos');   
 $routes->get('terminos-y-condiciones', 'Home::terminosYcondiciones');
-$routes->get('totebags', 'Home::totebags');
-$routes->get('carteras', 'Home::carteras');
-$routes->get('mochilas', 'Home::mochilas');
-$routes->get('rinoneras', 'Home::rinoneras');
-$routes->get('coleccion', 'Home::coleccion');
 $routes->get('cargar1', 'Productos_controller::cargar_producto');
 $routes->post('cargar2', 'Productos_controller::add_producto');
 $routes->get('admin', 'Home::admin');
@@ -46,5 +40,6 @@ $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
 $routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
 $routes->get('vaciar_carrito/all', 'Carrito_controller::vaciar_carrito/all');
 $routes->post('actualizarCantidad', 'Carrito_controller::actualizarCantidad');
-$routes->get('finalizar_compra', 'Carrito_controller::finalizar_compra');
+$routes->post('finalizar_compra', 'Carrito_controller::finalizar_compra');
 $routes->get('ver_comprasCliente', 'Ventas_controller::ver_comprasCliente');
+$routes->get('listar_ventas', 'Ventas_controller::listar_ventas');
