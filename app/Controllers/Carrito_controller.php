@@ -122,14 +122,7 @@ class Carrito_controller extends BaseController{
                 return redirect()->to('ver_carrito');
             }
         }
-<<<<<<< HEAD
-        $data = array('id_persona' => session('id_sesion'),
-                      'forma_pago' => 'Tarjeta de Crédito',  // Ejemplo de forma de pago, agregar lógica de ingreso de forma de pago
-                      'forma_envio' => 'Envío a Domicilio', // Ejemplo de forma de envío, agregar lógica de ingreso de forma de envío
-                      'total_venta' => $cart->total(),
-                      'venta_fecha' => date('Y-m-d'),);
-        
-=======
+
 
         //Crear una venta
         $data = array(
@@ -139,8 +132,6 @@ class Carrito_controller extends BaseController{
             'total_venta' => $cart->total(),
             'venta_fecha' => date('Y-m-d'),
         );
-
->>>>>>> 03e7710bdfbe63469780fb525aa5b0bf70987778
         $venta_id = $venta->insert($data);
         if (!$venta_id) {
             session()->setFlashdata('error', 'Error al registrar la venta');
