@@ -1,426 +1,51 @@
-DEBUG - 2025-06-17 00:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 00:08:36 --> ErrorException: Undefined variable $titulo
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Views\plantillas\header_view.php on line 6.
- 1 APPPATH\Views\plantillas\header_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php', 6)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php')
- 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/header_view', [], true)
- 5 APPPATH\Controllers\Ventas_controller.php(240): view('plantillas/header_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 00:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 00:09:39 --> ErrorException: Undefined variable $titulo
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Views\plantillas\header_view.php on line 6.
- 1 APPPATH\Views\plantillas\header_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php', 6)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php')
- 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/header_view', [], true)
- 5 APPPATH\Controllers\Ventas_controller.php(240): view('plantillas/header_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 00:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 00:49:49 --> ErrorException: Undefined variable $titulo
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Views\plantillas\header_view.php on line 6.
- 1 APPPATH\Views\plantillas\header_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php', 6)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\plantillas\\header_view.php')
- 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/header_view', [], true)
- 5 APPPATH\Controllers\Ventas_controller.php(241): view('plantillas/header_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 00:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 00:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 01:16:21 --> ParseError: syntax error, unexpected token "else", expecting "function" or "const"
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Controllers\Ventas_controller.php on line 243.
- 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Controllers\\Ventas_controller.php')
- 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Ventas_controller')
- 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Ventas_controller')
- 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Ventas_controller', true)
- 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
- 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 01:25:23 --> ParseError: syntax error, unexpected token "else", expecting "function" or "const"
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Controllers\Ventas_controller.php on line 243.
- 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Controllers\\Ventas_controller.php')
- 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Ventas_controller')
- 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Ventas_controller')
- 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Ventas_controller', true)
- 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
- 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-06-17 01:26:50 --> mysqli_sql_exception: Unknown column 'personas.nombre' in 'field list' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
-Stack trace:
-#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`....', 0)
-#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`....')
-#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`....')
-#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`....', Array, false)
-#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
-#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
-#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
-#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
-#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-CRITICAL - 2025-06-17 01:26:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.nombre' in 'field list'
-[Method: POST, Route: buscarVtaProd]
-in SYSTEMPATH\Database\BaseConnection.php on line 692.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 4 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:26:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 6 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:26:50 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `cliente_nombre`, `productos`.`nombre` as `producto_nombre`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 7 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 01:30:02 --> ErrorException: Undefined array key "nombre_persona"
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Views\Backend\ventas_view.php on line 46.
- 1 APPPATH\Views\Backend\ventas_view.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_persona"', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php', 46)
+DEBUG - 2025-06-17 13:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 13:09:48 --> ErrorException: Undefined array key "nombre_cliente"
+[Method: POST, Route: buscarVtaCliente]
+in APPPATH\Views\Backend\ventas_view.php on line 71.
+ 1 APPPATH\Views\Backend\ventas_view.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_cliente"', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php', 71)
  2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php')
  3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Backend/ventas_view', [], true)
- 5 APPPATH\Controllers\Ventas_controller.php(240): view('Backend/ventas_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
+ 5 APPPATH\Controllers\Ventas_controller.php(220): view('Backend/ventas_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscar_ventas_cliente()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-06-17 01:35:41 --> mysqli_sql_exception: Unknown column 'personas.nombre' in 'field list' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
-Stack trace:
-#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`....', 0)
-#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`....')
-#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`....')
-#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`....', Array, false)
-#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
-#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
-#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
-#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
-#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-CRITICAL - 2025-06-17 01:35:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.nombre' in 'field list'
-[Method: POST, Route: buscarVtaProd]
-in SYSTEMPATH\Database\BaseConnection.php on line 692.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 4 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:35:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personas.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'1\'')
- 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'1\'')
- 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 6 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:35:41 --> [Caused by] mysqli_sql_exception: Unknown column 'personas.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'1\'', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'1\'')
- 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'1\'')
- 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre` as `nombre_persona`, `personas`.`nombre` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 7 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-06-17 01:38:58 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php:327
-Stack trace:
-#0 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`....', 0)
-#1 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`....')
-#2 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`....')
-#3 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`....', Array, false)
-#4 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
-#6 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\app\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
-#7 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
-#8 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-#9 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
-#11 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 C:\xampp\htdocs\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-CRITICAL - 2025-06-17 01:38:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
-[Method: POST, Route: buscarVtaProd]
-in SYSTEMPATH\Database\BaseConnection.php on line 692.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 4 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:38:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 6 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
- 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-06-17 01:38:58 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = \'2\'')
- 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `venta`.*, `venta_detalles`.*, `personas`.`nombre_persona` as `nombre_persona`, `personas`.`apellido_persona` as `apellido_persona`, `productos`.`nombre` as `nombre_producto`
-FROM `venta_detalles`
-JOIN `venta` ON `venta`.`id_venta` = `venta_detalles`.`id_venta`
-JOIN `personas` ON `personas`.`id_persona` = `venta`.`id_persona`
-JOIN `productos` ON `productos`.`id_producto` = `venta_detalles`.`id_producto`
-WHERE `venta_detalles`.`id_producto` = :venta_detalles.id_producto:', [...], false)
- 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 7 APPPATH\Controllers\Ventas_controller.php(228): CodeIgniter\BaseModel->findAll()
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
- 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
-10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-06-17 01:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-06-17 01:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-06-17 01:39:41 --> ErrorException: Undefined array key "cuil_persona"
-[Method: POST, Route: buscarVtaProd]
-in APPPATH\Views\Backend\ventas_view.php on line 47.
- 1 APPPATH\Views\Backend\ventas_view.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cuil_persona"', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php', 47)
+DEBUG - 2025-06-17 13:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 13:10:02 --> ErrorException: Undefined array key "nombre_cliente"
+[Method: POST, Route: buscarVtaCliente]
+in APPPATH\Views\Backend\ventas_view.php on line 71.
+ 1 APPPATH\Views\Backend\ventas_view.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_cliente"', 'C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php', 71)
  2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Integrador_FernandezMercedesS._Arduino_de_MichielisA.Fiorella\\app\\Views\\Backend\\ventas_view.php')
  3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Backend/ventas_view', [], true)
- 5 APPPATH\Controllers\Ventas_controller.php(240): view('Backend/ventas_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscarVentaProducto()
+ 5 APPPATH\Controllers\Ventas_controller.php(220): view('Backend/ventas_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->buscar_ventas_cliente()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 DEBUG - 2025-06-17 01:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-17 01:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-17 01:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -504,3 +129,26 @@ DEBUG - 2025-06-17 12:36:28 --> Session: Class initialized using 'CodeIgniter\Se
 INFO - 2025-06-17 12:36:28 --> Cart Class Initialized
 DEBUG - 2025-06-17 12:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-17 12:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-06-17 13:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> e749daaf41f092ac3da0c575e557cee12f17bf52
