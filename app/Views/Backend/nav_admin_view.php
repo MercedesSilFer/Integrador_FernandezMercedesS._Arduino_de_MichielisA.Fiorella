@@ -25,6 +25,9 @@
 
     <!-- Menú colapsable mobile -->
     <div class="collapse navbar-collapse bg-body-tertiary px-3" id="mobileMenu">
+      <li class="nav-item">
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Listar Clientes</a>
+        </li>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>">Listar Ventas</a>
@@ -73,13 +76,15 @@
       <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Listar Clientes</a>
+        </li>
+          <li class="nav-item dropdown-hover">
             <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>" id="ventasDropdown">Listar Ventas</a>
             <ul class="dropdown-menu" aria-labelledby="ventasDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('listar_toteBags'); ?>">Por Cliente</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('listar_carteras'); ?>">Por Producto</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_mochilas'); ?>">Por Fecha</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_rinoneras'); ?>">Por Monto</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_coleccion'); ?>"></a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaCliente'); ?>">Por Cliente</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaProducto'); ?>">Por Producto</a></li>
+              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('buscarPorFecha'); ?>">Por Fecha</a></li>
+
             </ul>
           </li>
           <li class="nav-item dropdown-hover">

@@ -100,7 +100,8 @@
     <div class="modal fade" id="pagoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="<?= base_url('finalizar_compra') ?>" method="post">
+            <?php echo form_open('finalizar_compra', ['class' => 'section-form w-md-50', 'method' => 'post']); ?>
+            
                 <div class="modal-header">
                     <h5 class="modal-title">Datos de envío y pago</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -192,7 +193,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn standard-button">Confirmar Compra</button>
                 </div>
-            </form>
+            <?php echo form_close(); ?>
         </div>
     </div>
 </div>
