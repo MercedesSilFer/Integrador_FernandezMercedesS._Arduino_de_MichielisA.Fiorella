@@ -75,7 +75,7 @@ class Ventas_controller extends BaseController {
         . view('Backend/nav_admin_view')
         . view('Backend/ventas_view', $data)
         . view('plantillas/footer_view');
-}
+    }
     public function filtrar_ventas() {
         $session = \Config\Services::session();
         $ventasModel = new Ventas_model();
@@ -101,71 +101,6 @@ class Ventas_controller extends BaseController {
             . view('Backend/nav_admin_view')
             . view('Backend/ventas_view', $data)
             . view('plantillas/footer_view');
-    }
-    public function buscar_ventas_fecha()
-    {
-        $session = \Config\Services::session();
-        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
-            return redirect()->route('ingresar');
-        }
-        $validation = \Config\Services::validation();
-        $request = \Config\Services::request();
-
-        $validation->setRules(
-            [
-                'fecha_inicio' => 'required|valid_date[Y-m-d]',
-                'fecha_fin' => 'required|valid_date[Y-m-d]',
-            ],
-            [   // Errors
-                'fecha_inicio' => [
-                    'required' => 'La fecha de inicio es obligatoria.',
-                    'valid_date' => 'La fecha de inicio debe ser una fecha válida en el formato Y-m-d.',
-                ],
-                'fecha_fin' => [
-                    'required' => 'La fecha de fin es obligatoria.',
-                    'valid_date' => 'La fecha de fin debe ser una fecha válida en el formato Y-m-d.',
-                ],
-            ]
-        );
-
-        if ($validation->withRequest($request)->run()) {
-            $data = [
-                'fecha_inicio' => $request->getPost('fecha_inicio'),
-                'fecha_fin' => $request->getPost('fecha_fin'),
-            ];
-
-            $ventasModel = new Ventas_model();
-            $ventas = $ventasModel->where('venta_fecha >=', $data['fecha_inicio'])
-                ->where('venta_fecha <=', $data['fecha_fin'])->join('personas', 'venta.id_persona = personas.id_persona')->findAll();
-
-            $ventaDetallesModel = new Venta_detalles_model();
-            $data['ventas'] = $ventas;
-            $data['detalles'] = [];
-        foreach ($data['ventas'] as $venta) {
-            $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll(); // obtiene detalles de cada venta
-            foreach ($detalles as &$detalle) {
-                $detalle['descripcion_producto'] = (new Productos_model())->find($detalle['id_producto']);
-            }
-            $data['detalles'][$venta['id_venta']] = $detalles;
-            $data['titulo'] = 'Ventas desde ' . $data['fecha_inicio'] . ' hasta ' . $data['fecha_fin'];
-        }
-        if (empty($data['ventas'])) {
-            $data['titulo'] = 'No se encontraron ventas';
-            return redirect()->route('buscarPorFecha')->with('contenido_mensaje', 'No se encontraron ventas registradas en el período indicado!');
-        }else {
-            return  view('plantillas/header_view', $data)
-                . view('Backend/nav_admin_view')
-                . view('Backend/ventas_view', $data)
-                . view('plantillas/footer_view');}
-        } else {
-            // Si la validación falla, redirigir con errores
-            $data['titulo'] = 'Error en la búsqueda de ventas';
-            $data['validation'] = $validation->getErrors();
-           return view('plantillas/header_view', $data)
-                . view('Backend/nav_admin_view')
-                . view('Backend/ver_ventasFechas_view', $data)
-                . view('plantillas/footer_view');
-        }
     }
     public function buscar_ventas_cliente()
     {
@@ -203,7 +138,16 @@ class Ventas_controller extends BaseController {
             ];
             $data['ventas'] = $ventas;
             $data['detalles'] = [];
-            foreach ($data['ventas'] as $venta) {
+            $personasModel = new Personas_model();
+            foreach ($data['ventas'] as &$venta) {
+                // Enriquecer datos del cliente
+                $persona = $personasModel->find($venta['id_persona']);
+                $venta['nombre_cliente'] = trim(($persona['nombre_persona'] ?? '') . ' ' . ($persona['apellido_persona'] ?? ''));
+                $venta['cuil_cliente'] = $persona['cuil_persona'] ?? '';
+                $venta['direccion'] = $persona['domicilio_persona'] ?? '';
+                $venta['cuotas'] = $venta['cuotas'] ?? '';
+
+                // Detalles de la venta
                 $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll();
                 foreach ($detalles as &$detalle) {
                     $detalle['descripcion_producto'] = (new Productos_model())->find($detalle['id_producto']);
@@ -211,6 +155,7 @@ class Ventas_controller extends BaseController {
                 $data['detalles'][$venta['id_venta']] = $detalles;
                 $data['titulo'] = 'Ventas de ' . $cliente['nombre_persona'] . ' ' . $cliente['apellido_persona'];
             }
+            unset($venta);
             if (empty($data['ventas'])) {
                 $data['titulo'] = 'No se encontraron ventas';
                 return redirect()->route('buscarVtaCliente')->with('contenido_mensaje', 'No se encontraron ventas registradas para el cliente indicado!');
@@ -230,6 +175,86 @@ class Ventas_controller extends BaseController {
                 . view('plantillas/footer_view');
         }
     }
+
+    public function buscar_ventas_fecha()
+    {
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+
+        $validation->setRules(
+            [
+                'fecha_inicio' => 'required|valid_date[Y-m-d]',
+                'fecha_fin' => 'required|valid_date[Y-m-d]',
+            ],
+            [   // Errors
+                'fecha_inicio' => [
+                    'required' => 'La fecha de inicio es obligatoria.',
+                    'valid_date' => 'La fecha de inicio debe ser una fecha válida en el formato Y-m-d.',
+                ],
+                'fecha_fin' => [
+                    'required' => 'La fecha de fin es obligatoria.',
+                    'valid_date' => 'La fecha de fin debe ser una fecha válida en el formato Y-m-d.',
+                ],
+            ]
+        );
+
+        if ($validation->withRequest($request)->run()) {
+            $data = [
+                'fecha_inicio' => $request->getPost('fecha_inicio'),
+                'fecha_fin' => $request->getPost('fecha_fin'),
+            ];
+
+            $ventasModel = new Ventas_model();
+            $ventas = $ventasModel->where('venta_fecha >=', $data['fecha_inicio'])
+                ->where('venta_fecha <=', $data['fecha_fin'])
+                ->join('personas', 'venta.id_persona = personas.id_persona')
+                ->findAll();
+
+            $ventaDetallesModel = new Venta_detalles_model();
+            $data['ventas'] = $ventas;
+            $data['detalles'] = [];
+            $personasModel = new Personas_model();
+            foreach ($data['ventas'] as &$venta) {
+                // Enriquecer datos del cliente
+                $persona = $personasModel->find($venta['id_persona']);
+                $venta['nombre_cliente'] = trim(($persona['nombre_persona'] ?? '') . ' ' . ($persona['apellido_persona'] ?? ''));
+                $venta['cuil_cliente'] = $persona['cuil_persona'] ?? '';
+                $venta['direccion'] = $persona['domicilio_persona'] ?? '';
+                $venta['cuotas'] = $venta['cuotas'] ?? '';
+
+                // Detalles de la venta
+                $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll();
+                foreach ($detalles as &$detalle) {
+                    $detalle['descripcion_producto'] = (new Productos_model())->find($detalle['id_producto']);
+                }
+                $data['detalles'][$venta['id_venta']] = $detalles;
+                $data['titulo'] = 'Ventas desde ' . $data['fecha_inicio'] . ' hasta ' . $data['fecha_fin'];
+            }
+            unset($venta);
+            if (empty($data['ventas'])) {
+                $data['titulo'] = 'No se encontraron ventas';
+                return redirect()->route('buscarPorFecha')->with('contenido_mensaje', 'No se encontraron ventas registradas en el período indicado!');
+            } else {
+                return  view('plantillas/header_view', $data)
+                    . view('Backend/nav_admin_view')
+                    . view('Backend/ventas_view', $data)
+                    . view('plantillas/footer_view');
+            }
+        } else {
+            // Si la validación falla, redirigir con errores
+            $data['titulo'] = 'Error en la búsqueda de ventas';
+            $data['validation'] = $validation->getErrors();
+            return view('plantillas/header_view', $data)
+                . view('Backend/nav_admin_view')
+                . view('Backend/ver_ventasFechas_view', $data)
+                . view('plantillas/footer_view');
+        }
+    }
+
     public function buscarVentaProducto()
     {
         $session = \Config\Services::session();
@@ -269,18 +294,29 @@ class Ventas_controller extends BaseController {
 
             $data = [
                 'codigo' => $codigo,
-                'producto' => $producto,];
+                'producto' => $producto,
+            ];
             $data['ventas'] = $ventas;
             $data['detalles'] = [];
-            foreach ($data['ventas'] as $venta) {
-                $detalles = $ventaDetallesModel->where('id_producto', $venta['id_producto'])->findAll();
+            $personasModel = new Personas_model();
+            foreach ($data['ventas'] as &$venta) {
+                // Enriquecer datos del cliente
+                $persona = $personasModel->find($venta['id_persona']);
+                $venta['nombre_cliente'] = trim(($persona['nombre_persona'] ?? '') . ' ' . ($persona['apellido_persona'] ?? ''));
+                $venta['cuil_cliente'] = $persona['cuil_persona'] ?? '';
+                $venta['direccion'] = $persona['domicilio_persona'] ?? '';
+                $venta['cuotas'] = $venta['cuotas'] ?? '';
+
+                // Detalles de la venta
+                $detalles = $ventaDetallesModel->where('id_venta', $venta['id_venta'])->findAll();
                 foreach ($detalles as &$detalle) {
                     $detalle['descripcion_producto'] = (new Productos_model())->find($detalle['id_producto']);
                 }
                 $data['detalles'][$venta['id_venta']] = $detalles;
                 $data['titulo'] = 'Ventas del producto ' . $producto['nombre_producto'];
             }
-             if (empty($data['ventas'])) {
+            unset($venta);
+            if (empty($data['ventas'])) {
                 $data['titulo'] = 'No se encontraron ventas';
                 return redirect()->route('buscarVtaProducto')->with('contenido_mensaje', 'No se encontraron ventas registradas para el producto indicado!');
             }

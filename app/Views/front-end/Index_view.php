@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <h5 class="title py-2">Tote bags</h5>
-                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url(''); ?>'">Ver Más</button>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/3'); ?>'">Ver Más</button>
             </div>
 
             <!-- Carteras -->
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <h5 class="title py-2">Carteras</h5>
-                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('carteras'); ?>'">Ver Más</button>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/4'); ?>'">Ver Más</button>
             </div>
 
             <!-- Colección -->
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <h5 class="title py-2">Colección Kurundú</h5>
-                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('coleccion'); ?>'">Ver Más</button>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/7'); ?>'">Ver Más</button>
             </div>
 
             <!-- Riñoneras -->
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <h5 class="title py-2">Riñoneras</h5>
-                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('rinoneras'); ?>'">Ver Más</button>
+                <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/6'); ?>'">Ver Más</button>
             </div>
         </div>
     </div>
