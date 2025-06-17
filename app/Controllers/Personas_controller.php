@@ -237,4 +237,34 @@ class Personas_controller extends BaseController
         $session->destroy();
         return redirect()->route('/')->with('contenido_mensaje', 'Se ha cerrado sesión exitosamente!');
     }
+    public function listar_clientes()
+    {
+        $session = session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if ($session->get('id_perfil') !== '1') {
+            return redirect()->route('/');
+        }
+        $personasModel = new Personas_model();
+        $data['clientes'] = $personasModel->where('id_perfil', 2)->findAll(); // Obtiene todos los clientes
+        $data['titulo'] = 'Listado de Clientes';
+        return view('plantillas/header_view', $data)
+            . view('Backend/nav_admin_view')
+            . view('Backend/clientes_view', $data)
+            . view('plantillas/footer_view');
+    }
+      public function eliminar_cliente($id_persona = null){
+            $data = array('estado_persona' => 0); // Assuming 0 means inactive
+            $persona_model = new Personas_model();
+            $persona_model->update($id_persona, $data);
+            return redirect()->route('listar_clientes')->with('contenido_mensaje', 'El cliente se dió de baja exitosamente!');
+     }
+    
+    public function activar_cliente($id_persona = null){
+        $data = array('estado_persona' => 1);
+        $persona_model = new Personas_model();
+        $persona_model->update($id_persona, $data);
+        return redirect()->route('listar_clientes')->with('contenido_mensaje', 'El cliente se activó exitosamente!');
+    }
 }

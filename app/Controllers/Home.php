@@ -61,7 +61,48 @@ class Home extends BaseController
         $data['titulo']= "Administración";
         return  view('plantillas/header_view', $data).view('Backend/nav_admin_view').view('Backend/Index_admin_view').view('plantillas/footer_view');
     }
-    
+    public function buscar_Ventas_fecha(){
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }   
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
+        $data['titulo'] = "Buscar Ventas por Fecha";
+        return  view('plantillas/header_view', $data)
+            . view('Backend/nav_admin_view')
+            . view('Backend/ver_ventasFechas_view', $data)
+            . view('plantillas/footer_view');
+    }
+    public function buscarVentaCliente(){
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
+        $data['titulo'] = "Buscar Ventas por Cliente";
+        return  view('plantillas/header_view', $data)
+            . view('Backend/nav_admin_view')
+            . view('Backend/buscar_vtas_cte_view', $data)
+            . view('plantillas/footer_view');
+    }
+    public function buscarVentaProducto(){
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '1'){
+            return redirect()->route('/');
+        }
+        $data['titulo'] = "Buscar Ventas por Producto";
+        return  view('plantillas/header_view', $data)
+            . view('Backend/nav_admin_view')
+            . view('Backend/buscarVtasProd_view', $data)
+            . view('plantillas/footer_view');
+    }
 
 }
 

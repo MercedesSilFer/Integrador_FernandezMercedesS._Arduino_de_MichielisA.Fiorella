@@ -123,6 +123,7 @@ class Carrito_controller extends BaseController{
             }
         }
 
+
         //Crear una venta
         $data = array(
             'id_persona' => session('id_sesion'),
@@ -131,7 +132,6 @@ class Carrito_controller extends BaseController{
             'total_venta' => $cart->total(),
             'venta_fecha' => date('Y-m-d'),
         );
-
         $venta_id = $venta->insert($data);
         if (!$venta_id) {
             session()->setFlashdata('error', 'Error al registrar la venta');

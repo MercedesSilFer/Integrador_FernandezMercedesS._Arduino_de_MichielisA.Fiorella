@@ -3,6 +3,32 @@
         <h1 class="title text-center">Panel de Ventas</h1>
         <h5 class="title text-center">Bienvenido al panel de ventas. Aquí puedes consultar las ventas realizadas</h5>
     </div>
+     <?php
+            if (isset($fecha_inicio) && isset($fecha_fin)): ?>
+                <div class="alert alert-info">
+                    Ventas desde <strong><?= esc($fecha_inicio) ?></strong> hasta <strong><?= esc($fecha_fin) ?></strong>
+                </div>
+            <?php endif; ?>
+            <?php if (isset($codigo)) { ?>
+                <div class="alert alert-info">
+                    Ventas del producto con código: <strong><?= esc($codigo) ?></strong>
+                </div>
+            <?php } ?>
+        
+            <?php
+            if (isset($cliente)&&isset($correo)) { ?>
+                <div class="alert alert-info">
+                    Ventas del cliente: <strong><?= esc($cliente['nombre_persona']) . ' ' . esc($cliente['apellido_persona']) ?></strong>
+                    con correo: <strong><?= esc($correo) ?></strong>
+                </div>
+            <?php } ?> 
+            
+            <?php if (empty($ventas)) { ?>
+                <div class="container-fluid">
+                    <h2 class="text-center alert">Ud no registra ventas realizadas!</h2>
+                </div>
+            <?php } ?>
+            <?php if (!empty($ventas)) { ?>
     <div class="row px-5">
         <table class="table table-responsive table-striped table-bordered ">
             <thead>
@@ -28,6 +54,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <?php } ?>
     </div>
     <?php foreach ($ventas as $venta): ?>
     <div class="modal fade" id="modalDetalles<?= $venta['id_venta']; ?>" tabindex="-1" aria-labelledby="modalDetallesLabel<?= $venta['id_venta']; ?>" aria-hidden="true">
