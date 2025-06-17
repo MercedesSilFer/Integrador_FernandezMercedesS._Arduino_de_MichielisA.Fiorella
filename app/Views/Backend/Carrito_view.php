@@ -100,7 +100,7 @@
     <div class="modal fade" id="pagoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <?php echo form_open('finalizar_compra', ['class' => 'section-form w-md-50', 'method' => 'post']); ?>
+            <?php echo form_open('finalizar_compra', ['class' => 'section-form', 'method' => 'post']); ?>
             
                 <div class="modal-header">
                     <h5 class="modal-title">Datos de envío y pago</h5>
