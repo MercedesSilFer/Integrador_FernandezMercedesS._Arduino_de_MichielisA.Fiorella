@@ -19,7 +19,7 @@
         </div>
     <div class="col-md-4 container-mensaje">
       <?php echo form_open('cargar2', ['class' => 'section-form w-md-50', 'method' => 'post', 'enctype' => 'multipart/form-data']); ?>
-        <h3 class="section-title">Alta Producto</h3>
+        <h3 class="section-title">Agregar un producto</h3>
 
         <label for="nombreProducto">
           Nombre*

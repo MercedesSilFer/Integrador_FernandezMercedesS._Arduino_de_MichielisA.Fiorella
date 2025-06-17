@@ -131,6 +131,9 @@
                           <?= session('nombre_sesion') ?>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="<?= base_url('perfil'); ?>">Mi perfil</a>
+                        </li>
                         <li class="">
                           <a class="dropdown-item" href="<?= base_url('ver_comprasCliente'); ?>">Ver mis compras</a>
                         </li>

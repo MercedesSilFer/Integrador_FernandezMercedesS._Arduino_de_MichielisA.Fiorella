@@ -267,4 +267,96 @@ class Personas_controller extends BaseController
         $persona_model->update($id_persona, $data);
         return redirect()->route('listar_clientes')->with('contenido_mensaje', 'El cliente se activó exitosamente!');
     }
+
+    public function perfil()
+    {
+        $session = session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        $personaModel = new Personas_model();
+        $data['usuario'] = $personaModel->find($session->get('id_sesion'));
+        $data['titulo'] = 'Perfil de Usuario';
+        return view('plantillas/header_view', $data)
+            . view('plantillas/nav_view')
+            . view('Backend/perfil_view', $data)
+            . view('plantillas/footer_view');
+    }
+    public function actualizarPerfil()
+    {
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+        $session = session();
+        $personaModel = new Personas_model();
+
+        // Detectar si es cambio de contraseña o actualización de datos
+        if ($request->getPost('currentPassword') && $request->getPost('newPassword')) {
+            // --- CAMBIO DE CONTRASEÑA ---
+            $validation->setRules([
+                'currentPassword' => 'required',
+                'newPassword' => 'required|min_length[8]|max_length[15]',
+                'confirmPassword' => 'required|matches[newPassword]',
+            ], [
+                'newPassword' => [
+                    'min_length' => 'La contraseña debe tener como mínimo 8 caracteres',
+                    'max_length' => 'La contraseña debe tener como máximo 15 caracteres',
+                ],
+                'confirmPassword' => [
+                    'matches' => 'Las contraseñas no coinciden',
+                ],
+            ]);
+
+            if (!$validation->withRequest($request)->run()) {
+                return redirect()->route('perfil')->with('contenido_mensaje', 'Error en los datos ingresados.')->with('validation', $validation->getErrors());
+            }
+
+            $usuario = $personaModel->find($session->get('id_sesion'));
+            if (!$usuario || !password_verify($request->getPost('currentPassword'), $usuario['contrasena_persona'])) {
+                return redirect()->route('perfil')->with('contenido_mensaje', 'La contraseña actual es incorrecta.');
+            }
+
+            $nueva = password_hash($request->getPost('newPassword'), PASSWORD_BCRYPT);
+            $personaModel->update($session->get('id_sesion'), ['contrasena_persona' => $nueva]);
+            return redirect()->route('perfil')->with('contenido_mensaje', 'Contraseña actualizada exitosamente!');
+        } else {
+            // --- ACTUALIZACIÓN DE DATOS PERSONALES ---
+            $validation->setRules(
+                [
+                    'nombreUsuario' => 'required|max_length[30]',
+                    'emailUsuario' => 'required|valid_email',
+                    'telefono' => 'max_length[15]',
+                ],
+                [
+                    'nombreUsuario' => [
+                        'required' => 'El nombre es requerido',
+                        'max_length' => 'El nombre debe tener como máximo 30 caracteres',
+                    ],
+                    'emailUsuario' => [
+                        'required' => 'El correo electrónico es obligatorio',
+                    ],
+                    'telefono' => [
+                        'max_length' => 'El teléfono debe tener como máximo 15 caracteres',
+                    ],
+                ]
+            );
+
+            if ($validation->withRequest($request)->run()) {
+                $data = [
+                    'nombre_persona' => $request->getPost('nombreUsuario'),
+                    'email_persona' => $request->getPost('emailUsuario'),
+                    'telefono_persona' => $request->getPost('telefono'),
+                ];
+                $personaModel->update($session->get('id_sesion'), $data);
+
+                return redirect()->route('perfil')->with('contenido_mensaje', 'Perfil actualizado exitosamente!');
+            } else {
+                $data['titulo'] = 'Perfil de Usuario';
+                $data['validation'] = $validation->getErrors();
+                return view('plantillas/header_view', $data)
+                    . view('plantillas/nav_view')
+                    . view('Backend/perfil_view', $data)
+                    . view('plantillas/footer_view');
+            }
+        }
+    }
 }
