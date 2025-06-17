@@ -1,19 +1,47 @@
 /* ========== ESTILOS GENERALES ========== */
 body {
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-family:  'Arial', sans-serif;
   background-color: white;
 }
-
+.degradado-naranja {
+  background: linear-gradient(
+    to bottom,
+    #dd613b 0%,
+    #ed6f4e 70%,
+    #f38d72 75%,
+    #f8a38a 80%,
+    #fcc3b2 85%,
+    #fdd7cb 90%,
+    #ffebe4 95%,
+    #ffffff 100%
+  );
+}
+.degradado-invertido {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffebe4 80%,
+    #fdd7cb 83%,
+    #fcc3b2 86%,
+    #f8a38a 89%,
+    #f38d72 92%,
+    #ed6f4e 95%,
+    #dd613b 100%
+  );
+}
 .bienvenida{
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: rgb(212, 128, 94);
+  color: #d4805e;
   text-decoration: none;
 }
 .title{
   color:#4d1a0a;
+}
+.title-light{
+  color:#fdebe0;
 }
 
 h3{
@@ -86,7 +114,7 @@ li, ul {
   text-decoration: underline;
 }
 .nav-link {
-  color: #a0350b;
+  color: #a02e0b;
   padding: 0.5rem 1.5rem;
   margin-inline: 3px;
   transition: all 0.2s ease;
@@ -109,31 +137,31 @@ li, ul {
 /* ========== BOTONES ========== */
 .standard-button {
   color: white;
-  background-color: #da6638;
+  background-color: #dd613b;
   outline-color: #ffffff;
-  border-color: #da6638;
+  border-color: #dd613b;
   border-width: 2px;
   border-style: solid;
 }
 
 .standard-button:hover {
-  outline-color: #b6471b;
-  background-color: #b6471b;
+  outline-color: #b63f1b;
+  background-color: #b63f1b;
   color: white;
 }
 .standard-button-outline {
-  color: #da6638;
+  color: #dd613b;
   background-color: transparent;
-  outline-color: #da6638;
-  border-color: #da6638;
+  outline-color: #dd613b;
+  border-color: #dd613b;
   border-width: 2px;
   border-style: solid;
 }
 .standard-button-outline:hover {
   color: white;
-  background-color: #da6638;
+  background-color: #dd613b;
   outline-color: #ffffff;
-  border-color: #da6638;
+  border-color: #dd613b;
 }
 
 

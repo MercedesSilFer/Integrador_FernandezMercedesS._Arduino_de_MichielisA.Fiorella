@@ -41,6 +41,15 @@
                                 Por favor ingresa tu nombre.
                             </div>
                         </div>
+                        <div class="mb-4 text">
+                            <label for="apellidoUsuario" class="mb-2">Apellido</label>
+                            <input type="text" id="apellidoUsuario" name="apellidoUsuario" 
+                                   class="input-styles" 
+                                   value="<?= esc($usuario['apellido_persona']) ?>" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu apellido.
+                            </div>
+                        </div>
                         
                         <div class="mb-4">
                             <label for="emailUsuario" class="mb-2">Email</label>

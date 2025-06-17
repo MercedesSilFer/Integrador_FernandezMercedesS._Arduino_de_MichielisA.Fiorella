@@ -322,13 +322,19 @@ class Personas_controller extends BaseController
             $validation->setRules(
                 [
                     'nombreUsuario' => 'required|max_length[30]',
-                    'emailUsuario' => 'required|valid_email',
+                    'apellidoUsuario' => 'required|max_length[50]',
+                    'emailUsuario' => 'required|valid_email'
+                    . '|is_unique[personas.email_persona,id_persona,' . $session->get('id_sesion') . ']',
                     'telefono' => 'max_length[15]',
                 ],
                 [
                     'nombreUsuario' => [
                         'required' => 'El nombre es requerido',
                         'max_length' => 'El nombre debe tener como máximo 30 caracteres',
+                    ],
+                    'apellidoUsuario' => [
+                        'required' => 'El apellido es requerido',
+                        'max_length' => 'El apellido debe tener como máximo 50 caracteres',
                     ],
                     'emailUsuario' => [
                         'required' => 'El correo electrónico es obligatorio',
@@ -342,6 +348,7 @@ class Personas_controller extends BaseController
             if ($validation->withRequest($request)->run()) {
                 $data = [
                     'nombre_persona' => $request->getPost('nombreUsuario'),
+                    'apellido_persona' => $request->getPost('apellidoUsuario'),
                     'email_persona' => $request->getPost('emailUsuario'),
                     'telefono_persona' => $request->getPost('telefono'),
                 ];
