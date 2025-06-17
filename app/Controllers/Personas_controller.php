@@ -17,7 +17,6 @@ class Personas_controller extends BaseController
                 'nombre' => 'required|max_length[30]',
                 'apellido' => 'required|max_length[50]',
                 'correo' => 'required|valid_email',
-                
                 'mensaje' => 'required|max_length[250]|min_length[10]',
             ],
             [   // Errors
