@@ -1,10 +1,9 @@
 <div class="container-fluid mt-3 justify-content-evenly"> 
-    <div class="row align-items-center pb-5">
+    <div class="row align-items-center pb-5 justify-content-center degradado-invertido">
         <div class="col-12 col-md-10 col-lg-5 justify-content-center">            
             <h1 class="bienvenida">¡Explorá nuestro mundo!</h1>
             <br>
-            <div class="sm-mx-5 sm-px-5 lg-mx-4 lg-px-4">
-
+            <div class="sm-mx-5 sm-px-5 lg-mx-4 lg-px-4 pb-3">
                 <p>Descubrí la artesanía sostenible, atemporal y única que tenemos para ofrecerte en Kurundú Cueros 
                 y sumergite en la belleza del cuero genuino.
                 </p>
@@ -12,12 +11,12 @@
                     <a class="a-parrafos" href="<?php echo base_url('nosotros'); ?>">Nosotros</a>,
                     donde te contamos sobre la pasión que hay detrás de cada creación. 
                 </p>
-                <br>
                 <hr>
+                <br>
             </div>
         </div>
         
-        <div class="col-12 col-md-10 col-lg-6 text-center">
+        <div class="col-12 col-md-10 col-lg-6 text-center pb-5">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-2">
                     <div class="carousel-item active" data-bs-interval="10000">
@@ -53,13 +52,20 @@
             </div>
         </div>
     </div>
-    <div class="row pb-5 justify-content-center text-center degradado-invertido "> 
-        <hr class="py-2">
-        <div class="col-12 text-center my-4"> <!-- Contenedor para el título -->
-            <h2 class="title">Lo Más Comprado</h2>
+    <!-- Título de lo mas comprado-->
+    <div class="row justify-content-center text-center pt-1 pb-5 degradado-naranja">
+        <hr class="w-75 text-white py-2">
+        <div class="col-12 text-center">
+            <h2 class="title-light fw-bold position-relative display-6">
+                <span class="px-4 pb-1">Lo mas comprado</span>
+            </h2>
+            <p class="lead title-light mt-1 pb-3">Descubrí los productos más populares y elegidos por nuestros clientes</p>
         </div>
+    </div>
+    <!-- Seccion de lo mas comprado -->
+    <div class="row pb-5 justify-content-center text-center degradado-invertido">
         <!-- Totebags -->
-        <div class="card col-12 col-md-6 col-xl-3">  
+        <div class="card tarjeta-index col-12 col-md-6 col-xl-3">  
             <div class="carousel slide car" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-3">
                     <div class="carousel-item active">
@@ -77,7 +83,7 @@
             <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/3'); ?>'">Ver Más</button>
         </div>
         <!-- Carteras -->
-        <div class="card col-12 col-md-6 col-xl-3">
+        <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
             <div class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-3">
                     <div class="carousel-item active">
@@ -95,7 +101,7 @@
             <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/4'); ?>'">Ver Más</button>
         </div>
         <!-- Colección -->
-        <div class="card col-12 col-md-6 col-xl-3">
+        <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
             <div class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-3">
                     <div class="carousel-item active">
@@ -113,7 +119,7 @@
             <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/7'); ?>'">Ver Más</button>
         </div>
         <!-- Riñoneras -->
-        <div class="card col-12 col-md-6 col-xl-3">
+        <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
             <div class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-3">
                     <div class="carousel-item active">
@@ -131,39 +137,134 @@
             <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/6'); ?>'">Ver Más</button>
         </div>
     </div>
-    <div class="row text-center mb-5 py-1 pb-5 degradado-naranja">
-        <h2 class="title-light fw-bold">Galería</h2>
-        <div class="row pb-3 align-items-center">
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria2.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">
+    <!-- Título con efecto especial -->
+    <div class="row justify-content-center mb-3 pb-2 degradado-naranja">
+        <hr class="w-75 text-white">
+        <div class="col-12 text-center">
+            <h2 class="title-light fw-bold position-relative display-5">
+                <span class="px-4 py-2">Galería Kurundú</span>
+            </h2>
+            <p class="lead title-light mt-1">Descubrí la artesanía detrás de cada pieza</p>
+        </div>
+            <!-- Grid de imágenes interactivo -->
+        <div class="row gx-4 justify-content-center">
+            <!-- Item 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                <div class="gallery-card">
+                    <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                        <img src="<?php echo base_url('assets/img/galeria2.jpg'); ?>" 
+                                class="img-fluid w-auto h-100 gallery-img" 
+                                alt="Producto artesanal Kurundú"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Tote Bag Clásica</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                    <div class="gallery-card">
+                        <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                            <img src="<?php echo base_url('assets/img/galeria5.jpg'); ?>" 
+                                class="img-fluid w-100 gallery-img" 
+                                alt="Cartera Kurundú"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Cartera Clásica</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                    <div class="gallery-card">
+                        <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                            <img src="<?php echo base_url('assets/img/galeria6.jpg'); ?>" 
+                                class="img-fluid w-100 gallery-img" 
+                                alt="Riñonera artesanal"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Mochila Negra Clásica</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                    <div class="gallery-card">
+                        <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                            <img src="<?php echo base_url('assets/img/galeria7.jpg'); ?>" 
+                                class="img-fluid w-100 gallery-img" 
+                                alt="Mochila Kurundú"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Mochila Viajera</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                    <div class="gallery-card">
+                        <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                            <img src="<?php echo base_url('assets/img/galeria8.jpg'); ?>" 
+                                class="img-fluid w-100 gallery-img" 
+                                alt="Accesorios de cuero"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Cartera Azul</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 w-auto">
+                    <div class="gallery-card">
+                        <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm">
+                            <img src="<?php echo base_url('assets/img/galeria4.jpg'); ?>" 
+                                class="img-fluid w-100 gallery-img" 
+                                alt="Detalle artesanal"
+                                loading="lazy">
+                            <div class="gallery-overlay d-flex flex-column align-items-center justify-content-center p-3">
+                                <h5 class="text-white text-center mb-3">Mochila Negra</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria5.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria6.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria7.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">  
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria8.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">  
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-2 mt-2">
-                <img src="<?php echo base_url('assets/img/galeria4.jpg'); ?>" class="d-block w-100 img-fluid rounded-2" alt="...">
-            </div>
+        <div class="text-center mt-5 py-4">
+            <button class="btn standard-button btn-lg px-5 py-2 rounded-pill shadow-sm hover-effect" 
+                    onclick="window.location.href='<?php echo base_url('catalogo'); ?>'">
+                Ver todos nuestros productos <i class="bi bi-arrow-right ms-2"></i>
+            </button>
         </div>
     </div>
+
     <div class="row text-center mt-3 mb-3 pt-3 pb-3 align-items-center">
         <hr> 
         <div class="col-sm-12 col-md-6 col-xxl-6 mt-2">
             <img src="<?php echo base_url('assets/img/feriapurodiseño1.jpg'); ?>" class="d-block w-100 img-fluid" alt="...">  
         </div>     
-        <div class="col-sm-12 col-md-6 col-xxl-5 mt-2">
-            <h2 class="title">Tendencias & Noticias</h2>
-            <p>Participamos en desfiles y ferias, exponiendo nuestro espíritu emprendedor en eventos locales y nacionales.</p>
-            <p><button class="btn standard-button" onclick="window.location.href='<?php echo base_url('eventos'); ?>'">Ver Mas</button></p>
-            <p>Enterate de los próximos eventos en nuestras redes sociales.</p> 
+        <div class="col-sm-12 col-md-6 col-xxl-5 mt-2 text-center">
+            <h2 class="title fw-bold position-relative display-5">
+                <span class="px-4 pb-3">Tendencias & Noticias</span>
+            </h2>
+            <p class="lead title mt-1">Participamos en diversos desfiles y ferias artesanales, exponiendo nuestro espíritu 
+                emprendedor en eventos locales, provinciales y nacionales.</p>
+            <p class="lead title mt-1">Te invitamos a conocer más sobre nuestras últimas participaciones y eventos en la sección
+                <a class="a-parrafos" href="<?php echo base_url('eventos'); ?>">Eventos</a>.</p>
+            <p class="lead title mt-1">¡Sumate a nuestra comunidad y sé parte de la experiencia Kurundú!</p>
+            <br>
+            <button class="btn standard-button btn-lg px-5 py-2 rounded-pill shadow-sm hover-effect" 
+                    onclick="window.location.href='<?php echo base_url('eventos'); ?>'">
+                Ver Eventos <i class="bi bi-arrow-right ms-2"></i>
+            </button>
         </div>
     </div>
 </div>
