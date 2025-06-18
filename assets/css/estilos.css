@@ -4,6 +4,15 @@ body {
   font-family:  'Arial', sans-serif;
   background-color: white;
 }
+
+.bg-cuero{
+  background-color: #7c5e6a57;
+  background-blend-mode: overlay;
+  background-image: url('../img/bg-cuero.jpg');
+  background-size: cover;
+  background-repeat:repeat-x;
+  background-position: center;
+}
 .degradado-naranja {
   background: linear-gradient(
     to bottom,
@@ -351,8 +360,9 @@ label {
   width: 270px;
   height: 30px;
   border: 2px solid #ddd2d2;
-  background-color: #e9e3e3;
-  border-radius: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .input-styles-text {
@@ -368,13 +378,27 @@ label {
   align-items: center;
   margin: 60px;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   box-shadow: -8px 6px 10px #5f5f5f56;
   color: #91370e;
   width: 40%;
   height: 40%;
+  border: 1px solid #dd613b1a;
 }
-
+.input-styles:focus {
+  border-color: #dd613b;
+  box-shadow: 0 0 0 0.25rem rgba(221, 97, 59, 0.15);
+  background-color: white;
+}
+    
+.form-floating label {
+  color: #632411;
+  font-weight: 500;
+}
+.modal-content {
+        border-radius: 12px;
+        overflow: hidden;
+    }
 /* ========== COMERCIALIZACIÓN ========== */
 .comercializacion {
   padding-top: 95px;

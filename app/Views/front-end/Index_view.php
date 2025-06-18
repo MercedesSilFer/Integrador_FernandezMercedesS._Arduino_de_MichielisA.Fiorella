@@ -53,14 +53,15 @@
         </div>
     </div>
     <!-- Título de lo mas comprado-->
-    <div class="row justify-content-center text-center pt-1 pb-5 degradado-naranja">
-        <hr class="w-75 text-white py-2">
+    <div class="row justify-content-center text-center pt-1 pt-1 pb-4 degradado-naranja">
+        <hr class="w-75 text-white pb-3">
         <div class="col-12 text-center">
             <h2 class="title-light fw-bold position-relative display-6">
-                <span class="px-4 pb-1">Lo mas comprado</span>
+                <span class="px-4 pt-2">Lo mas comprado</span>
             </h2>
-            <p class="lead title-light mt-1 pb-3">Descubrí los productos más populares y elegidos por nuestros clientes</p>
+            <p class="lead title-light mt-1 pt-1 pb-2">Descubrí los productos más populares y elegidos por nuestros clientes</p>
         </div>
+         <hr class="w-75 text-white pb-5">
     </div>
     <!-- Seccion de lo mas comprado -->
     <div class="row pb-5 justify-content-center text-center degradado-invertido">
@@ -139,13 +140,14 @@
     </div>
     <!-- Título con efecto especial -->
     <div class="row justify-content-center mb-3 pb-2 degradado-naranja">
-        <hr class="w-75 text-white">
+        <hr class="w-75 text-white pt-2">
         <div class="col-12 text-center">
             <h2 class="title-light fw-bold position-relative display-5">
                 <span class="px-4 py-2">Galería Kurundú</span>
             </h2>
             <p class="lead title-light mt-1">Descubrí la artesanía detrás de cada pieza</p>
         </div>
+        <hr class="w-75 text-white pb-2">
             <!-- Grid de imágenes interactivo -->
         <div class="row gx-4 justify-content-center">
             <!-- Item 1 -->
