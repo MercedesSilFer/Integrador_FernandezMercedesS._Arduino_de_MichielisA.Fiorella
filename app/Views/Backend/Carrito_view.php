@@ -1,6 +1,22 @@
-<?php $cart1 = \Config\Services::cart(); ?>
+ <?php $cart1 = \Config\Services::cart(); ?>
 <section class="container-fluid py-3">
     <div class="row">
+        <div class="col-12 mt-2">
+          <?php if (!empty ($validation)) : ?>
+            <div class="alert alert-danger m-3" role="alert">
+              <ul>
+                <?php foreach ($validation as $error) : ?>
+                 <li><?= esc($error) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endif ?>
+         <?php if (session('error')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('error'); ?>
+            </div>
+          <?php } ?>
+        </div>    
         <div class="col-12">
             <h1 class="text-center title my-4">Carrito de Compras</h1>
             <a href="<?= base_url('catalogo'); ?>" class="btn estilo-a mb-3" role="button">
@@ -184,8 +200,7 @@
                     <div id="direccion_envio" style="display: none;">
                         <div class="mb-3">
                             <label class="form-label">Dirección Completa</label>
-                            <textarea name="direccion" class="form-control" rows="3" 
-                                      placeholder="Calle, número, departamento, ciudad"></textarea>
+                            <textarea name="direccion" class="form-control" rows="3"><?= esc($direccion)?></textarea>
                         </div>
                     </div>
                 </div>
