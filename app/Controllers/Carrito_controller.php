@@ -4,6 +4,7 @@ use App\Models\Productos_model;
 use App\Models\Categorias_model;
 use App\Models\Ventas_model;
 use App\Models\Venta_detalles_model;
+use \App\Models\Personas_model;
 
 class Carrito_controller extends BaseController{
     public function ver_carrito() {
@@ -15,6 +16,12 @@ class Carrito_controller extends BaseController{
         if( $session->get('id_perfil') !== '2'){
             return redirect()->route('/');
         }
+        $id_cliente = $session->get('id_sesion'); 
+
+        $personasModel = new Personas_model();
+        $cliente = $personasModel->find($id_cliente);
+
+        $data['direccion'] = $cliente['domicilio_persona'];
         $data['titulo'] = 'Carrito de Compras';
         return view('plantillas/header_view', $data)
             . view('plantillas/nav_view')
@@ -102,6 +109,14 @@ class Carrito_controller extends BaseController{
         return redirect()->to('ver_carrito');
     }
     public function finalizar_compra() {
+        $session = \Config\Services::session();
+        if (!$session->has('id_sesion') || !$session->has('id_perfil')) {
+            return redirect()->route('ingresar');
+        }
+        if( $session->get('id_perfil') !== '2'){
+            return redirect()->route('/');
+        }
+
         $formaPago = $this->request->getPost('forma_de_pago');
         $formaEnvio = $this->request->getPost('forma_de_envio');
         if(empty($formaPago) || empty($formaEnvio)) {
@@ -118,7 +133,7 @@ class Carrito_controller extends BaseController{
         foreach ($cart1 as $item) {
             $producto = $productos->where('id_producto', $item['id'])->first();
             if ($producto['stock_producto'] < $item['qty']) {
-                session()->setFlashdata('error', 'No hay suficiente stock para el producto: ' . $item['name']);
+                session()->setFlashdata('error', 'No hay suficiente stock para el producto ' . $item['name'].' ' .'    Unidades solicitadas: '. $item['qty'].' '.' Stock disponible: ' . $producto['stock_producto']);
                 return redirect()->to('ver_carrito');
             }
         }
@@ -132,6 +147,13 @@ class Carrito_controller extends BaseController{
             'total_venta' => $cart->total(),
             'venta_fecha' => date('Y-m-d'),
         );
+        $id_cliente = session('id_sesion');
+        $nueva_direccion = $this->request->getPost('direccion');
+        if (!empty($nueva_direccion)) {
+        // Actualizar la dirección del cliente
+            $personasModel = new Personas_model();
+            $personasModel->update($id_cliente, ['domicilio_persona' => $nueva_direccion]);
+        }
         $venta_id = $venta->insert($data);
         if (!$venta_id) {
             session()->setFlashdata('error', 'Error al registrar la venta');
@@ -159,7 +181,7 @@ class Carrito_controller extends BaseController{
             }
         }
         // Vaciar carrito y redirigir
-        session()->setFlashdata('success', 'Compra finalizada con éxito');
+        session()->setFlashdata('sucess', 'Compra finalizada con éxito');
         $cart->destroy();
         return redirect()->to('ver_comprasCliente');
     }

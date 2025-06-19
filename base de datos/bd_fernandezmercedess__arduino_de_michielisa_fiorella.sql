@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2025 a las 16:59:44
+-- Tiempo de generación: 19-06-2025 a las 17:07:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -111,7 +111,7 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
-(8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
+(8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Martín 1355', 0, 2),
 (9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
 (12, 'Juan', 'Perez', 2147483647, 'popopop@gmail.com', '$2y$10$y8u/j8M7qiBsHT7215HMxO88R8si51r.1kAdxDh1ylOF1ZaZrIxLa', 1, '567 fffff', 0, 1),
 (13, 'Mercedes', 'Fernández', 2147483647, 'mercedessilvana@gmail.com', '$2y$10$khXx4oHoun4QqWwKYGjj7OOrD4CuAfSQFF2KdupQzltnfm/chyCQW', 1, 'B° Cremonte', 0, 1),
@@ -147,9 +147,9 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `d
 (1, 'Clara ', 150000, 'Teñida color verde, cosida a mano.', 3, '1748615940_31ac526796b8a2014713.jpg', 0, 1),
 (2, 'Pamela', 150000, 'Cartera XL teñida color negro, cosida a mano.', 3, '1748617793_8d8271aff58fd83f9cac.jpg', 0, 1),
 (3, 'Elisa', 150000, 'Cartera XL cuero natural, cosida a mano.', 3, '1748617953_60f233cd8b08ff503376.jpg', 4, 1),
-(4, 'Nadia', 150000, 'Cartera XL teñida azul, cosida a mano.', 3, '1748618027_146d787f9327a49651dd.jpg', 4, 1),
-(5, 'Eusebia', 120000, 'Cartera cuero teñida marrón chocolate, cosida a mano.', 4, '1748618154_a3ce4bedca4b356688ac.jpg', 6, 1),
-(6, 'Eusebia', 120000, 'Cartera cuero teñida color verde, bolsillo natural, cosida a mano.', 4, '1748618246_3fea4a369043f807cc92.jpg', 9, 1),
+(4, 'Nadia', 150000, 'Cartera XL teñida azul, cosida a mano.', 3, '1748618027_146d787f9327a49651dd.jpg', 1, 1),
+(5, 'Eusebia', 120000, 'Cartera cuero teñida marrón chocolate, cosida a mano.', 4, '1748618154_a3ce4bedca4b356688ac.jpg', 5, 1),
+(6, 'Eusebia', 120000, 'Cartera cuero teñida color verde, bolsillo natural, cosida a mano.', 4, '1748618246_3fea4a369043f807cc92.jpg', 6, 1),
 (7, 'Eusebia', 120000, 'Cartera cuero natural, cosida a mano.', 4, '1748618311_9a3d61b0bb060577c16f.jpg', 6, 1),
 (8, 'Nora', 120000, 'Cartera cuero teñido, color negro, redonda, cosida a mano.', 4, '1748618437_ae8c7a54e966c810c774.jpg', 2, 1),
 (9, 'Chiara', 110000, 'Mochila cuero teñido, color negro, cosida a mano.', 5, '1748618943_e70f41a48aa00a61d6cc.jpg', 4, 1),
@@ -157,16 +157,16 @@ INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `d
 (11, 'Carla', 180000, 'Portanotebook cuero teñido bordó.', 5, '1748619655_885591c008782fa64171.jpg', 8, 1),
 (12, 'Mara', 60000, 'Riñonera cuero teñido metalizada.', 6, '1748620142_a2f1634a31d30ca20ffe.jpg', 5, 1),
 (13, 'Andrea', 60000, 'Riñonera teñida metalizada combinada con cuero natural.', 6, '1748620214_ace04eeca9d71a15ffbb.jpg', 0, 1),
-(14, 'Ana ', 60000, 'Riñonera cuero chocolate', 6, '1748620362_9493b210960ad4840620.jpg', 10, 1),
+(14, 'Ana ', 60000, 'Riñonera cuero chocolate', 6, '1748620362_9493b210960ad4840620.jpg', 9, 1),
 (15, 'Noemí', 130000, 'Bandolera cuero teñida color bordó con tira combinada natural.', 8, '1748620478_c0c07d1d111c2fd1b727.jpg', 9, 1),
 (16, 'Ambar', 130000, 'Bandolera cuero teñido color negro.', 8, '1748620544_b4f4db67e29174840ab6.jpg', 14, 1),
 (17, 'Alexa', 115000, 'Bandolera cuero natural.', 8, '1748621726_a0e62906db9be1b1a8e6.jpg', 15, 1),
 (18, 'Candela', 150000, 'Bandolera redonda cuero teñido color negro.', 8, '1748621811_f3dc22c862f2d772cd79.jpg', 4, 1),
 (19, 'Eleonora', 160000, 'Cartera XL teñida azul francia', 7, '1748621877_9060aaf7a8536b5f8c01.jpg', 8, 1),
-(20, 'Priscila', 120000, 'Bandolera cuero teñido color amarillo.', 7, '1748621942_7695d7f48174abbf09d7.jpg', 3, 1),
+(20, 'Priscila', 120000, 'Bandolera cuero teñido color amarillo.', 7, '1748621942_7695d7f48174abbf09d7.jpg', 2, 1),
 (21, 'Viviana', 110000, 'Cartera redonda cuero teñida color rojo', 7, '1748622032_93f793bfd03c86c71f51.jpg', 2, 1),
 (22, 'Eliana', 30000, 'Brazalete con aplicaciones cuero rojo.', 7, '1748622153_1de440d7afb03ae39090.jpg', 0, 1),
-(23, 'Aldo', 80000, 'Maxi riñonera cuero natural', 6, '1748622238_d56513edd7df0b66b40d.png', 9, 1);
+(23, 'Aldo', 80000, 'Maxi riñonera cuero natural', 6, '1748622238_d56513edd7df0b66b40d.png', 8, 1);
 
 -- --------------------------------------------------------
 
@@ -198,7 +198,15 @@ INSERT INTO `venta` (`id_venta`, `id_persona`, `forma_de_pago`, `forma_de_envio`
 (12, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 150000, '2025-06-12'),
 (13, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 210000, '2025-06-12'),
 (14, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 250000, '2025-06-12'),
-(15, 19, 'Tarjeta de Créd', 'Envío a Domicilio', 1610000, '2025-06-12');
+(15, 19, 'Tarjeta de Créd', 'Envío a Domicilio', 1610000, '2025-06-12'),
+(16, 8, 'Efectivo', 'Retiro en Tienda', 450000, '2025-06-19'),
+(17, 8, 'Efectivo', 'Retiro en Tienda', 120000, '2025-06-19'),
+(18, 8, 'Efectivo', 'Retiro en Tienda', 120000, '2025-06-19'),
+(19, 8, 'Efectivo', 'Retiro en Tienda', 120000, '2025-06-19'),
+(20, 8, 'Efectivo', 'Retiro en Tienda', 120000, '2025-06-19'),
+(21, 8, 'Efectivo', 'Envío a Domicilio', 120000, '2025-06-19'),
+(22, 8, 'Efectivo', 'Envío a Domicilio', 60000, '2025-06-19'),
+(23, 8, 'Efectivo', 'Envío a Domicilio', 80000, '2025-06-19');
 
 -- --------------------------------------------------------
 
@@ -220,21 +228,25 @@ CREATE TABLE `venta_detalles` (
 
 INSERT INTO `venta_detalles` (`id_detalle_venta`, `id_venta`, `id_producto`, `cantidad`, `detalle_precio`) VALUES
 (1, 1, 1, 1, 150000),
-(2, 7, 22, 1, 30000),
 (3, 7, 22, 1, 30000),
-(4, 11, 3, 1, 150000),
 (5, 11, 3, 1, 150000),
 (6, 12, 3, 1, 150000),
-(7, 12, 3, 1, 150000),
 (8, 13, 4, 1, 150000),
-(9, 13, 4, 1, 150000),
 (10, 14, 16, 1, 130000),
 (11, 14, 5, 1, 120000),
 (12, 15, 2, 3, 150000),
 (13, 15, 4, 1, 150000),
 (14, 15, 8, 2, 120000),
 (15, 15, 16, 5, 130000),
-(16, 15, 13, 2, 60000);
+(16, 15, 13, 2, 60000),
+(17, 16, 4, 3, 150000),
+(18, 17, 5, 1, 120000),
+(19, 18, 20, 1, 120000),
+(20, 19, 6, 1, 120000),
+(21, 20, 6, 1, 120000),
+(22, 21, 6, 1, 120000),
+(23, 22, 14, 1, 60000),
+(24, 23, 23, 1, 80000);
 
 --
 -- Índices para tablas volcadas
@@ -326,13 +338,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `venta_detalles`
 --
 ALTER TABLE `venta_detalles`
-  MODIFY `id_detalle_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_detalle_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Restricciones para tablas volcadas

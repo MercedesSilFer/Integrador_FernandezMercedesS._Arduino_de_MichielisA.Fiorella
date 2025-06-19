@@ -2,6 +2,13 @@
 <section class="container-fluid pt-3">
     <div class="row">
         <div class="col-12">
+            <?php if (session('sucess')) { ?>
+            <div class="alert alert-light m-2" role="alert">
+              <?php echo session('sucess'); ?>
+            </div>
+          <?php } ?>
+        </div>
+        <div class="col-12">
             <h1 class="text-center title my-4">Detalle de Compras</h1>
             <a href="<?= base_url('catalogo'); ?>" class="btn estilo-a mb-3" role="button">
                 <i class="bi bi-arrow-left-circle"> Volver al Catálogo</i></a>

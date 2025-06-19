@@ -200,8 +200,7 @@
                     <div id="direccion_envio" style="display: none;">
                         <div class="mb-3">
                             <label class="form-label">Dirección Completa</label>
-                            <textarea name="direccion" class="form-control" rows="3" 
-                                      placeholder="Calle, número, departamento, ciudad"></textarea>
+                            <textarea name="direccion" class="form-control" rows="3"><?= esc($direccion)?></textarea>
                         </div>
                     </div>
                 </div>
