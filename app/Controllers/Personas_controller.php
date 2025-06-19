@@ -334,7 +334,7 @@ class Personas_controller extends BaseController
                     'apellidoUsuario' => 'required|max_length[50]',
                     'emailUsuario' => 'required|valid_email'
                     . '|is_unique[personas.email_persona,id_persona,' . $session->get('id_sesion') . ']',
-                    'telefono' => 'max_length[15]',
+                    'telefono' => 'required|regex_match[/^\+?\d{8,15}$/]',
                 ],
                 [
                     'nombreUsuario' => [
@@ -349,7 +349,9 @@ class Personas_controller extends BaseController
                         'required' => 'El correo electrónico es obligatorio',
                     ],
                     'telefono' => [
-                        'max_length' => 'El teléfono debe tener como máximo 15 caracteres',
+                        'required' => 'El teléfono es obligatorio.',
+                        'regex_match' => 'Formato inválido (ej: +51987654321 o 987654321).',
+                        
                     ],
                 ]
             );
@@ -367,7 +369,9 @@ class Personas_controller extends BaseController
             } else {
                 $data['titulo'] = 'Perfil de Usuario';
                 $data['validation'] = $validation->getErrors();
-                return redirect()->route('perfil');
+                return redirect()->route('perfil')
+            ->with('validation', $validation->getErrors())
+            ->withInput();
             }
         }
     }

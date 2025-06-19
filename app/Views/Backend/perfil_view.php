@@ -72,9 +72,8 @@
                             
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="tel" id="telefono" name="telefono" 
-                                           class="form-control input-styles" 
-                                           value="<?= esc($usuario['telefono_persona']) ?>" required>
+                                    <input type="tel" id="telefono" name="telefono" class="form-control input-styles" 
+                                    value="<?= esc($usuario['telefono_persona']) ?>" required>
                                     <label for="telefono">Teléfono</label>
                                     <div class="invalid-feedback">
                                         Por favor ingresa tu teléfono.

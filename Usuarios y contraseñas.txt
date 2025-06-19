@@ -1,0 +1,9 @@
+Cliente
+usuario: pameladiaz@gmail.com
+contraseña: pamelacliente12
+
+Administrador
+usuario: juanperezadmin@gmail.com
+contraseña: juanadmin
+
+Repositorio de GitHub en caso de que exista algún inconveniente con el archivo enviado:

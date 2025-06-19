@@ -24,9 +24,11 @@
                         <td><?php echo $row['domicilio_persona']; ?></td>
                         <?php if ($row['estado_persona'] == 1) { ?>
 
-                        <td><a href="<?php echo base_url('eliminar_cliente/' . $row['id_persona']); ?>" class="btn">Eliminar</a>
+                        <td><a href="<?php echo base_url('eliminar_cliente/' . $row['id_persona']); ?>" 
+                            class="btn btn-outline-danger fs-5">
+                            <i class="bi bi-trash"></i>
+                            </a>
                         </td>
-                    
                         <?php } else { ?>
                         <td><a href="<?php echo base_url('activar_cliente/' . $row['id_persona']); ?>" class="btn btn-light">Activar</a>
                         </td>

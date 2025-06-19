@@ -237,6 +237,7 @@ class Productos_controller extends BaseController
         $data['productos'] = $productos-> where('estado_producto', 1)->where('stock_producto >', 0)
             ->join('categorias', 'categorias.id_categoria = productos.id_categoria')
             ->findAll();
+        $data['categorias'] = $categorias->findAll(); // <-- CORREGIDO: ahora se pasa a la vista
         $data['titulo'] = 'Catalogo de Productos';
         return view('plantillas/header_view', $data)
             . view('Backend/nav_admin_view')

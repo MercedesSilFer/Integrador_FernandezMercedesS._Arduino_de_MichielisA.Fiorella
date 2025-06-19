@@ -16,7 +16,7 @@
                     <table id="compras" class="table table-striped table-bordered w-100">
                         <thead class="table-light">
                             <tr>                    
-                                <th class="text-center col-1">N°</th>
+                                <th class="text-center col-1">N° venta asignado</th>
                                 <th class="text-center col-1">Fecha</th>
                                 <th class="text-center col-1">Total</th>
                                 <th class="text-center col-2">Forma de Pago</th>                               

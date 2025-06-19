@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2025 a las 16:59:44
+-- Tiempo de generación: 19-06-2025 a las 05:30:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -64,7 +64,7 @@ CREATE TABLE `mensaje` (
 --
 
 INSERT INTO `mensaje` (`id_mensaje`, `nombre_remitente`, `apellido_remitente`, `email_mensaje`, `contenido_mensaje`, `estado_mensaje`) VALUES
-(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj', 1),
+(1, 'Juan', 'Perez', 'popopop@gmail.com', 'qwertyuioiuyrfdadfxghjhbhhgfdSDSDHJKHGFDqrsrftshsbtsfdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvhhljjjjjjjjjjjjjjjjjjjjjjjjjjjjjj', 0),
 (4, 'Ana', 'Gomez', 'aaaa@gmail.com', 'lorem ipsum', 1),
 (5, 'Ana', 'Perez', 'bababa@gmail.com', 'consulta generica sobre algun producto presente en el catalogo', 0);
 
@@ -113,13 +113,13 @@ CREATE TABLE `personas` (
 INSERT INTO `personas` (`id_persona`, `nombre_persona`, `apellido_persona`, `cuil_persona`, `email_persona`, `contrasena_persona`, `estado_persona`, `domicilio_persona`, `telefono_persona`, `id_perfil`) VALUES
 (8, 'Mariana', 'Martínez', 2147483647, 'mariana@gmail.com', '$2y$10$ncmAQBk/AqgxzrpuNW76UOpyX4OUOCZkiQWH9aLpu9.aHiQn7P6hi', 1, 'San Juan 345', 0, 2),
 (9, 'Marcela', 'Martínez', 2147483647, 'marcela@gmail.com', '$2y$10$7c/TWJmtcGoipzsEu8/2w.XTYKz8yU6RU0SF4m1szjooQJhSl9ET6', 1, 'San Juan 349', 0, 2),
-(12, 'Juan', 'Perez', 2147483647, 'popopop@gmail.com', '$2y$10$y8u/j8M7qiBsHT7215HMxO88R8si51r.1kAdxDh1ylOF1ZaZrIxLa', 1, '567 fffff', 0, 1),
+(12, 'Juan', 'Perez', 2147483647, 'juanperezadmin@gmail.com', '$2y$10$F6hZ2gIIf/1oviptDMPymu5oCjGc1WfiF9owKbvAj3ZgtN.CCB3pK', 1, '567 fffff', 12342342, 1),
 (13, 'Mercedes', 'Fernández', 2147483647, 'mercedessilvana@gmail.com', '$2y$10$khXx4oHoun4QqWwKYGjj7OOrD4CuAfSQFF2KdupQzltnfm/chyCQW', 1, 'B° Cremonte', 0, 1),
 (14, 'Franco', 'Rodriguez', 2147483647, 'franco23@gmail.com', '$2y$10$vBqHH3ZoqU84OmWS8.b.l.d1Lf6ETgHhV3.TxU.sr4VwS4Fcj5NDS', 1, 'San Lorenzo 3678', 0, 2),
 (15, 'Hugo', 'Gonzalez', 2147483647, 'hugo@gmail.com', '$2y$10$oJUmtXJnZtJWSpeMD/zMoezC8WrQdlUBbRfsDHrIqF9bV6XOcnaou', 1, 'Uruguay 987', 0, 2),
 (16, 'Hugo', 'Martínez', 2147483647, 'hugo2@gmail.com', '$2y$10$/VNeaP72dEfV7F.2l6d1C.0lBAFHp22i/O36iDrXWdtxROhJVZfHi', 1, 'Uruguay 987', 0, 2),
 (17, 'Mariana', 'Fernández', 2147483647, 'mariana2@gmail.com', '$2y$10$3ZYfpYFcnrXy7o4YEeeTCOv5MfG.A5EVtHV67x4ToPlUfYGt3ojke', 1, 'San Lorenzo 3678', 0, 2),
-(18, 'Ana', 'Gomez', 2147483647, 'abc@gmail.com', '$2y$10$pl392eAvR53BYq8O5WKS5OQ6/0m9GfJtsjVjV0pQxJ9mKk78kcRSO', 1, 'calle 234', 0, 2),
+(18, 'Ana', 'Gomez', 2147483647, 'anagomez@gmail.com', '$2y$10$RjS1OYZBbHxnfev9xhYZ0ec/c0r9kbk3d5rfqiazHCVKarHWbim4K', 1, 'calle 234', 123456789, 2),
 (19, 'Pamela', 'Diaz', 2147483647, 'bababa2@gmail.com', '$2y$10$eRUq/r1XUTnI9FDVNJk11eQ.04AU83zvPUcoXr4D2juLMBZ9ZDjqG', 1, 'calle 2345', 0, 2);
 
 -- --------------------------------------------------------
@@ -144,12 +144,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `descripcion_producto`, `id_categoria`, `imagen_producto`, `stock_producto`, `estado_producto`) VALUES
-(1, 'Clara ', 150000, 'Teñida color verde, cosida a mano.', 3, '1748615940_31ac526796b8a2014713.jpg', 0, 1),
-(2, 'Pamela', 150000, 'Cartera XL teñida color negro, cosida a mano.', 3, '1748617793_8d8271aff58fd83f9cac.jpg', 0, 1),
+(1, 'Clara ', 150000, 'Teñida color verde, cosida a mano.', 3, '1748615940_31ac526796b8a2014713.jpg', 7, 1),
+(2, 'Pamela', 150000, 'Cartera XL teñida color negro, cosida a mano.', 3, '1748617793_8d8271aff58fd83f9cac.jpg', 30, 1),
 (3, 'Elisa', 150000, 'Cartera XL cuero natural, cosida a mano.', 3, '1748617953_60f233cd8b08ff503376.jpg', 4, 1),
-(4, 'Nadia', 150000, 'Cartera XL teñida azul, cosida a mano.', 3, '1748618027_146d787f9327a49651dd.jpg', 4, 1),
-(5, 'Eusebia', 120000, 'Cartera cuero teñida marrón chocolate, cosida a mano.', 4, '1748618154_a3ce4bedca4b356688ac.jpg', 6, 1),
-(6, 'Eusebia', 120000, 'Cartera cuero teñida color verde, bolsillo natural, cosida a mano.', 4, '1748618246_3fea4a369043f807cc92.jpg', 9, 1),
+(4, 'Nadia', 150000, 'Cartera XL teñida azul, cosida a mano.', 3, '1748618027_146d787f9327a49651dd.jpg', 3, 1),
+(5, 'Eusebia', 120000, 'Cartera cuero teñida marrón chocolate, cosida a mano.', 4, '1748618154_a3ce4bedca4b356688ac.jpg', 5, 1),
+(6, 'Eusebia', 120000, 'Cartera cuero teñida color verde, bolsillo natural, cosida a mano.', 4, '1748618246_3fea4a369043f807cc92.jpg', 8, 1),
 (7, 'Eusebia', 120000, 'Cartera cuero natural, cosida a mano.', 4, '1748618311_9a3d61b0bb060577c16f.jpg', 6, 1),
 (8, 'Nora', 120000, 'Cartera cuero teñido, color negro, redonda, cosida a mano.', 4, '1748618437_ae8c7a54e966c810c774.jpg', 2, 1),
 (9, 'Chiara', 110000, 'Mochila cuero teñido, color negro, cosida a mano.', 5, '1748618943_e70f41a48aa00a61d6cc.jpg', 4, 1),
@@ -192,13 +192,17 @@ INSERT INTO `venta` (`id_venta`, `id_persona`, `forma_de_pago`, `forma_de_envio`
 (2, 18, '', '', 30000, '2025-06-12'),
 (3, 18, '', '', 30000, '2025-06-12'),
 (4, 18, '', '', 30000, '2025-06-12'),
-(6, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 30000, '2025-06-12'),
-(7, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 30000, '2025-06-12'),
-(11, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 150000, '2025-06-12'),
-(12, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 150000, '2025-06-12'),
-(13, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 210000, '2025-06-12'),
-(14, 18, 'Tarjeta de Créd', 'Envío a Domicilio', 250000, '2025-06-12'),
-(15, 19, 'Tarjeta de Créd', 'Envío a Domicilio', 1610000, '2025-06-12');
+(6, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 30000, '2025-06-12'),
+(7, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 30000, '2025-06-12'),
+(11, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 150000, '2025-06-12'),
+(12, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 150000, '2025-06-12'),
+(13, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 210000, '2025-06-12'),
+(14, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 250000, '2025-06-12'),
+(15, 19, 'Tarjeta de Crédito', 'Envío a Domicilio', 1610000, '2025-06-12'),
+(16, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 150000, '2025-06-15'),
+(17, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 120000, '2025-06-15'),
+(18, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 120000, '2025-06-15'),
+(19, 18, 'Tarjeta de Crédito', 'Envío a Domicilio', 300000, '2025-06-17');
 
 -- --------------------------------------------------------
 
@@ -234,7 +238,11 @@ INSERT INTO `venta_detalles` (`id_detalle_venta`, `id_venta`, `id_producto`, `ca
 (13, 15, 4, 1, 150000),
 (14, 15, 8, 2, 120000),
 (15, 15, 16, 5, 130000),
-(16, 15, 13, 2, 60000);
+(16, 15, 13, 2, 60000),
+(17, 16, 4, 1, 150000),
+(18, 17, 6, 1, 120000),
+(19, 18, 5, 1, 120000),
+(20, 19, 2, 2, 150000);
 
 --
 -- Índices para tablas volcadas
@@ -326,13 +334,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `venta_detalles`
 --
 ALTER TABLE `venta_detalles`
-  MODIFY `id_detalle_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_detalle_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Restricciones para tablas volcadas
