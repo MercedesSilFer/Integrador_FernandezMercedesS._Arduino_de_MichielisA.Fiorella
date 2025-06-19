@@ -7,8 +7,9 @@
                 <i class="bi bi-arrow-left-circle"> Volver al Catálogo</i></a>
             
             <?php if ($cart1->contents() == NULL) { ?>
-                <div class="container-fluid">
-                    <h2 class="text-center alert">El carrito está vacío</h2>
+                <div class="container-fluid py-5">
+                    <h2 class="title text-center alert mb-4">¡El carrito está vacío!</h2>
+                    <p class="text-center title pb-4 mb-5">No hay productos en tu carrito. Agrega productos desde el catálogo.</p>
                 </div>
             <?php } ?>
 

@@ -81,9 +81,9 @@
           <li class="nav-item dropdown-hover">
             <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>" id="ventasDropdown">Ventas</a>
             <ul class="dropdown-menu" aria-labelledby="ventasDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaCliente'); ?>">Por Cliente</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaProducto'); ?>">Por Producto</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('buscarPorFecha'); ?>">Por Fecha</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('buscarVtaCliente'); ?>">Por Cliente</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('buscarVtaProducto'); ?>">Por Producto</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?php echo base_url('buscarPorFecha'); ?>">Por Fecha</a></li>
 
             </ul>
           </li>
@@ -107,7 +107,12 @@
               <?= session('nombre_sesion') ?>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+              <li>
+                <a class="dropdown-item navbar-item" href="<?= base_url('perfil'); ?>">Mi perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item navbar-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
+              </li>
             </ul>
           </li>
         </ul>

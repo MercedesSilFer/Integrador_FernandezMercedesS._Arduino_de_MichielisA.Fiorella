@@ -276,10 +276,19 @@ class Personas_controller extends BaseController
         $personaModel = new Personas_model();
         $data['usuario'] = $personaModel->find($session->get('id_sesion'));
         $data['titulo'] = 'Perfil de Usuario';
-        return view('plantillas/header_view', $data)
+        if($session->get('id_perfil') === '2'){
+            return view('plantillas/header_view', $data)
             . view('plantillas/nav_view')
             . view('Backend/perfil_view', $data)
             . view('plantillas/footer_view');
+        }
+        if($session->get('id_perfil') === '1'){
+            return view('plantillas/header_view', $data)
+            . view('Backend/nav_admin_view')
+            . view('Backend/perfil_view', $data)
+            . view('plantillas/footer_view');
+
+        }
     }
     public function actualizarPerfil()
     {
@@ -358,10 +367,7 @@ class Personas_controller extends BaseController
             } else {
                 $data['titulo'] = 'Perfil de Usuario';
                 $data['validation'] = $validation->getErrors();
-                return view('plantillas/header_view', $data)
-                    . view('plantillas/nav_view')
-                    . view('Backend/perfil_view', $data)
-                    . view('plantillas/footer_view');
+                return redirect()->route('perfil');
             }
         }
     }
