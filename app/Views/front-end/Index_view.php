@@ -53,13 +53,13 @@
         </div>
     </div>
     <!-- Título de lo mas comprado-->
-    <div class="row justify-content-center text-center pt-1 pt-1 pb-4 degradado-naranja">
-        <hr class="w-75 text-white pb-3">
+    <div class="row justify-content-center text-center pb-5 degradado-naranja">
+        <hr class="w-75 text-white pb-2">
         <div class="col-12 text-center">
             <h2 class="title-light fw-bold position-relative display-6">
-                <span class="px-4 pt-2">Lo mas comprado</span>
+                <span class="px-4 pt-1">Lo mas comprado</span>
             </h2>
-            <p class="lead title-light mt-1 pt-1 pb-2">Descubrí los productos más populares y elegidos por nuestros clientes</p>
+            <p class="lead title-light mt-1 py-1">Descubrí los productos más populares y elegidos por nuestros clientes</p>
         </div>
          <hr class="w-75 text-white pb-5">
     </div>
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <h5 class="title py-2">Tote bags</h5>
-            <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/3'); ?>'">Ver Más</button>
+            <button class="btn btn-sm standard-button mb-1" onclick="window.location.href='<?php echo base_url('catalogo/3'); ?>'">Ver Más</button>
         </div>
         <!-- Carteras -->
         <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <h5 class="title py-2">Carteras</h5>
-            <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/4'); ?>'">Ver Más</button>
+            <button class="btn btn-sm standard-button mb-1" onclick="window.location.href='<?php echo base_url('catalogo/4'); ?>'">Ver Más</button>
         </div>
         <!-- Colección -->
         <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <h5 class="title py-2">Colección Kurundú</h5>
-            <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/7'); ?>'">Ver Más</button>
+            <button class="btn btn-sm standard-button mb-1" onclick="window.location.href='<?php echo base_url('catalogo/7'); ?>'">Ver Más</button>
         </div>
         <!-- Riñoneras -->
         <div class="card tarjeta-index col-12 col-md-6 col-xl-3">
@@ -135,8 +135,8 @@
                 </div>
             </div>
             <h5 class="title py-2">Riñoneras</h5>
-            <button class="btn btn-sm standard-button mb-3" onclick="window.location.href='<?php echo base_url('catalogo/6'); ?>'">Ver Más</button>
-        </div>
+            <button class="btn btn-sm standard-button mb-1" onclick="window.location.href='<?php echo base_url('catalogo/6'); ?>'">Ver Más</button>
+        </div> 
     </div>
     <!-- Título con efecto especial -->
     <div class="row justify-content-center mb-3 pb-2 degradado-naranja">
