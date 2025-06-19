@@ -1,4 +1,4 @@
-<?php $cart1 = \Config\Services::cart(); ?>
+ <?php $cart1 = \Config\Services::cart(); ?>
 <section class="container-fluid py-3">
     <div class="row">
         <div class="col-12 mt-2">
@@ -23,8 +23,9 @@
                 <i class="bi bi-arrow-left-circle"> Volver al Catálogo</i></a>
             
             <?php if ($cart1->contents() == NULL) { ?>
-                <div class="container-fluid">
-                    <h2 class="text-center alert">El carrito está vacío</h2>
+                <div class="container-fluid py-5">
+                    <h2 class="title text-center alert mb-4">¡El carrito está vacío!</h2>
+                    <p class="text-center title pb-4 mb-5">No hay productos en tu carrito. Agrega productos desde el catálogo.</p>
                 </div>
             <?php } ?>
 
@@ -115,8 +116,8 @@
     <!-- Modal finalizar compra -->
     <div class="modal fade" id="pagoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <?php echo form_open('finalizar_compra', ['class' => 'section-form', 'method' => 'post']); ?>
+        <div class="modal-content section-form w-auto">
+            <?php echo form_open('finalizar_compra', ['method' => 'post']); ?>
             
                 <div class="modal-header">
                     <h5 class="modal-title">Datos de envío y pago</h5>

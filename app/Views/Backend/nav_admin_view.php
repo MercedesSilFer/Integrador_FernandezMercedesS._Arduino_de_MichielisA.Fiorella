@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand px-1 me-auto" href="<?= base_url('admin'); ?>">
-          <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+          <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 50px;">
         </a>
         
         <!-- Carrito y toggler -->
@@ -26,18 +26,18 @@
     <!-- Menú colapsable mobile -->
     <div class="collapse navbar-collapse bg-body-tertiary px-3" id="mobileMenu">
       <li class="nav-item">
-          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Listar Clientes</a>
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Clientes</a>
         </li>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>">Listar Ventas</a>
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>">Ventas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $ruta == 'ver_catalogo' ? 'active' : '' ?>" href="<?= base_url('ver_catalogo'); ?>">
            Ver Catálogo
           </a>
         <li class="nav-item">
-          <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Ver Consultas</a>
+          <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Consultas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $ruta == 'cargar1' ? 'active' : '' ?>" href="<?= base_url('cargar1'); ?>">Alta Producto</a>
@@ -64,7 +64,7 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand px-1 me-auto" href="<?= base_url('admin'); ?>">
-        <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height: 40px;">
+        <img class="img-fluid" src="<?= base_url('assets/img/kurundu-logo-nav.png'); ?>" alt="Kurundu Logo" style="max-height:50px;">
       </a>
       
       <!-- Toggler (oculto en desktop pero necesario para estructura) -->
@@ -76,45 +76,44 @@
       <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Listar Clientes</a>
-        </li>
+          <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_clientes'); ?>">Clientes</a>
+          </li>
           <li class="nav-item dropdown-hover">
-            <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>" id="ventasDropdown">Listar Ventas</a>
+            <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" href="<?= base_url('listar_ventas'); ?>" id="ventasDropdown">Ventas</a>
             <ul class="dropdown-menu" aria-labelledby="ventasDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaCliente'); ?>">Por Cliente</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('buscarVtaProducto'); ?>">Por Producto</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('buscarPorFecha'); ?>">Por Fecha</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('buscarVtaCliente'); ?>">Por Cliente</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?= base_url('buscarVtaProducto'); ?>">Por Producto</a></li>
+              <li><a class="dropdown-item navbar-item" href="<?php echo base_url('buscarPorFecha'); ?>">Por Fecha</a></li>
 
             </ul>
           </li>
-          <li class="nav-item dropdown-hover">
+          <li class="nav-item">
             <a class="nav-link <?= $ruta == '' ? 'active' : '' ?>" 
-              href="<?= base_url('ver_catalogo'); ?>"
-              id="catalogDropdown">
+              href="<?= base_url('ver_catalogo'); ?>">
                 Ver Catálogo
             </a>
-            <ul class="dropdown-menu" aria-labelledby="catalogDropdown">
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('listar_toteBags'); ?>">Tote bags</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?= base_url('listar_carteras'); ?>">Carteras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_mochilas'); ?>">Mochilas</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_rinoneras'); ?>">Riñoneras</a></li>
-              <li><a class="dropdown-item catalogo-item" href="<?php echo base_url('listar_coleccion'); ?>">Colección Cápsula Color</a></li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Ver consultas</a>
+            <a class="nav-link <?= $ruta == 'ver_consultas' ? 'active' : '' ?>" href="<?= base_url('consultas'); ?>">Consultas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= $ruta == 'cargar1' ? 'active' : '' ?>" href="<?= base_url('cargar1'); ?>">Alta Producto</a>
+            <a class="nav-link <?= $ruta == 'cargar1' ? 'active' : '' ?>" href="<?= base_url('cargar1'); ?>">Agregar Producto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?= $ruta == 'gestionarProductos' ? 'active' : '' ?>" href="<?= base_url('gestionarProductos'); ?>">Gestionar Productos</a>
           </li>
-          <li class="">
-          <a class="nav-link" href=" "><?php echo session('nombre_sesion'); ?></a>
-          </li>
-          <li class="">
-          <a class="nav-link" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <?= session('nombre_sesion') ?>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item navbar-item" href="<?= base_url('perfil'); ?>">Mi perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item navbar-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

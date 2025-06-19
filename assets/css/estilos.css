@@ -1,19 +1,56 @@
 /* ========== ESTILOS GENERALES ========== */
 body {
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-family:  'Arial', sans-serif;
   background-color: white;
 }
 
+.bg-cuero{
+  background-color: #7c5e6a57;
+  background-blend-mode: overlay;
+  background-image: url('../img/bg-cuero.jpg');
+  background-size: cover;
+  background-repeat:repeat-x;
+  background-position: center;
+}
+.degradado-naranja {
+  background: linear-gradient(
+    to bottom,
+    #dd613b 0%,
+    #ed6f4e 70%,
+    #f38d72 75%,
+    #f8a38a 80%,
+    #fcc3b2 85%,
+    #fdd7cb 90%,
+    #ffebe4 95%,
+    #ffffff 100%
+  );
+}
+.degradado-invertido {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffebe4 82%,
+    #fdd7cb 85%,
+    #fcc3b2 88%,
+    #f8a38a 91%,
+    #f38d72 94%,
+    #ed6f4e 96%,
+    #dd613b 100%
+  );
+}
 .bienvenida{
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: rgb(212, 128, 94);
+  color: #d4805e;
   text-decoration: none;
 }
 .title{
-  color:#4d1a0a;
+  color:#632411;
+}
+.title-light{
+  color:#fdebe0;
 }
 
 h3{
@@ -42,6 +79,76 @@ li, ul {
   margin: 20px ;
 }
 
+.tarjeta-index {
+  background-color: #ffece7;
+  border-color:#ffece7;
+  color: #60290d;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== GALERÍA ========== */
+.gallery-card {
+  transition: all 0.3s ease;
+}
+.gallery-item {
+  height: 300px;
+  cursor: pointer;
+  border: 1px solid rgba(221, 97, 59, 0.2);
+}
+    
+.gallery-img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+    
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 97, 59, 0.85);
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 20px;
+}
+    
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+    
+.gallery-card:hover .gallery-img {
+  transform: scale(1.08);
+}
+    
+.hover-effect {
+  transition: all 0.3s ease;
+}
+.hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+/* Efecto de iluminación */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-card:hover .gallery-item::after {
+  opacity: 1;
+}    
+    
 /*===========CATALOGO==========*/
 .card {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2);
@@ -86,7 +193,7 @@ li, ul {
   text-decoration: underline;
 }
 .nav-link {
-  color: #a0350b;
+  color: #a02e0b;
   padding: 0.5rem 1.5rem;
   margin-inline: 3px;
   transition: all 0.2s ease;
@@ -109,31 +216,31 @@ li, ul {
 /* ========== BOTONES ========== */
 .standard-button {
   color: white;
-  background-color: #da6638;
+  background-color: #dd613b;
   outline-color: #ffffff;
-  border-color: #da6638;
+  border-color: #dd613b;
   border-width: 2px;
   border-style: solid;
 }
 
 .standard-button:hover {
-  outline-color: #b6471b;
-  background-color: #b6471b;
+  outline-color: #b63f1b;
+  background-color: #b63f1b;
   color: white;
 }
 .standard-button-outline {
-  color: #da6638;
+  color: #dd613b;
   background-color: transparent;
-  outline-color: #da6638;
-  border-color: #da6638;
+  outline-color: #dd613b;
+  border-color: #dd613b;
   border-width: 2px;
   border-style: solid;
 }
 .standard-button-outline:hover {
   color: white;
-  background-color: #da6638;
+  background-color: #dd613b;
   outline-color: #ffffff;
-  border-color: #da6638;
+  border-color: #dd613b;
 }
 
 
@@ -253,8 +360,9 @@ label {
   width: 270px;
   height: 30px;
   border: 2px solid #ddd2d2;
-  background-color: #e9e3e3;
-  border-radius: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .input-styles-text {
@@ -270,13 +378,27 @@ label {
   align-items: center;
   margin: 60px;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   box-shadow: -8px 6px 10px #5f5f5f56;
   color: #91370e;
   width: 40%;
   height: 40%;
+  border: 1px solid #dd613b1a;
 }
-
+.input-styles:focus {
+  border-color: #dd613b;
+  box-shadow: 0 0 0 0.25rem rgba(221, 97, 59, 0.15);
+  background-color: white;
+}
+    
+.form-floating label {
+  color: #632411;
+  font-weight: 500;
+}
+.modal-content {
+        border-radius: 12px;
+        overflow: hidden;
+    }
 /* ========== COMERCIALIZACIÓN ========== */
 .comercializacion {
   padding-top: 95px;

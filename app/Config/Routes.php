@@ -20,6 +20,9 @@ $routes->get('ingresar', 'Home::ingresar');
 $routes->post('ingresar', 'Personas_controller::buscar_persona');
 $routes->get('logout', 'Personas_controller::cerrar_sesion');
 
+$routes->get('perfil', 'Personas_controller::perfil');
+$routes->post('actualizarPerfil', 'Personas_controller::actualizarPerfil');
+
 $routes->get('catalogo', 'Productos_controller::listar_productos');
 $routes->get('catalogo/(:num)', 'Productos_controller::filtrar_productos/$1');
 $routes->get('eventos', 'Home::eventos');   

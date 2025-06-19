@@ -17,7 +17,7 @@
             </div>
           <?php } ?>
         </div>
-    <div class="col-md-4 container-mensaje">
+    <div class="col-md-4 container container-mensaje">
       <?php echo form_open('buscarVentasFecha', ['class' => 'section-form w-md-50', 'method' => 'post']); ?>
         <h3 class="section-title">Seleccionar Fechas</h3>
       

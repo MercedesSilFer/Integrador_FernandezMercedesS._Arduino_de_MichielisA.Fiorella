@@ -131,10 +131,13 @@
                           <?= session('nombre_sesion') ?>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li class="">
-                          <a class="dropdown-item" href="<?= base_url('ver_comprasCliente'); ?>">Ver mis compras</a>
+                        <li>
+                          <a class="dropdown-item navbar-item" href="<?= base_url('perfil'); ?>">Mi perfil</a>
                         </li>
-                        <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+                        <li class="">
+                          <a class="dropdown-item navbar-item" href="<?= base_url('ver_comprasCliente'); ?>">Ver mis compras</a>
+                        </li>
+                        <li><a class="dropdown-item navbar-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
                       </ul>
                   </li>
               <?php } else {?>
